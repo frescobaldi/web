@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>The LilyPond Documentation Browser - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc" class="selected">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>The LilyPond Documentation Browser</h2>
+
+<p>
+Frescobaldi has a built-in browser for LilyPond's extensive documentation,
+accessible by clicking on its tab at the right or by pressing
+<span><strong class="keycap">Meta+Alt+D</strong></span>. The browser can display locally installed documentation
+(e.g. installed in a local directory or via your operating system distribution)
+or the documentation at the LilyPond website.
+</p>
+
+<p>
+Frescobaldi first searches the LilyPond documentation on the local system;
+if it isn't found the documentation pages from
+<a href="http://lilypond.org/doc" target="_top">lilypond.org/doc</a> are shown.
+You can configure the URL or path to the LilyPond documentation under
+<em>Settings</em> » <em>Configure Frescobaldi...</em> » <em>Paths</em>. If you configure a local path, specify it including the
+<code class="filename">index.html</code> filename.
+</p>
+
+<p>
+The documentation browser works just like a normal browser. The Home button
+brings up the documentation start page. By right-clicking the browser view you
+can open any page in your default browser. By right-clicking a link in the
+browser view you can open the link in a new browser or other suitable application.
+</p>
+
+<p>
+You can also get context-sensitive help by right-clicking a LilyPond statement
+in the text editor. The <span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guimenuitem">LilyPond Help</span></span> context submenu
+then displays the relevant entries both from the Learning Manual and the Notation
+Reference.
+</p>
+
+<p>
+The other small buttons correspond with the so-called "rellinks" (related links)
+in the LilyPond documentation. This way you can easily navigate the documentation
+or jump to the table of contents, etcetera. (Different versions of the LilyPond
+documentation have subtle differences in the navigation.)
+</p>
+
+<p>
+If you click an image of music that links to a LilyPond snippet, the snippet is
+shown in a read-only editor view with LilyPond syntax highlighting.
+</p>
+
+<h3 class="title" style="clear: both"><a name="lilydoc-shortcuts"></a>Keyboard shortcuts</h3>
+
+<p>
+(Click once in the browser view to give it the keyboard focus, by default
+the keyboard focus remains in the text editor when the browser is opened.)
+</p>
+
+<table border="1"><tbody>
+<tr>
+  <td>
+    <strong class="keycap">BackSpace</strong>
+  </td>
+  <td>
+    Go back a page in the browser view.
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong class="keycap">/</strong>
+  </td>
+  <td>
+    Start entering a short search phrase to search for in the current page.
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong class="keycap">ESC</strong>
+  </td>
+  <td>
+    Quit entering a search phrase.
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong class="keycap">Enter</strong>
+  </td>
+  <td>
+    When in the search phrase entry, finds the next occurence.
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong class="keycap">Tab</strong>
+  </td>
+  <td>
+    Navigate the links in the page.
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong class="keycap">Arrows / PgUp / PgDn</strong>
+  </td>
+  <td>
+    Scroll the page or move the cursor.
+  </td>
+</tr>
+</tbody>
+</table>
+
+<address>
+Last modified: 16 nov 2009
+</address>
+
+</div>
+
+</body>
+</html>

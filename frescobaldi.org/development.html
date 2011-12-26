@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Development - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor" />
+	<meta name="keywords" content="lilypond, music notation, ide" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>Development</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="/"><u>H</u>ome</a>
+	<a accesskey="s" href="screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="download"><u>D</u>ownload</a>
+	<a accesskey="u" href="uguide/"><u>U</u>ser Guide</a>
+	<a accesskey="v" href="development" class="selected">De<u>v</u>elopment</a>
+	<a accesskey="l" href="links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Development of Frescobaldi</h2>
+
+<p>
+Frescobaldi 2.0 is developed in git on
+<a href="https://github.com/wbsoft/frescobaldi">Github</a>.
+Frescobaldi is written in Python with PyQt4 for its user interface,
+and is designed to run on all major platforms.
+</p>
+
+<p>
+Frescobaldi 1.2.x is in bug-fix mode developed in Googlecode's Subversion repository.
+This version uses the KDE4 libraries and can't be run on platforms that don't
+have the Python-KDE4 bindings.
+</p>
+
+<p>
+Frescobaldi is Free Software under the GNU General Public License (GPL).
+You are welcome to help find bugs and add features or translations.
+</p>
+
+<h4>Bugs and translations</h4>
+<p>
+If you find a bug, please report it in our 
+<a href="https://github.com/wbsoft/frescobaldi/issues">issue tracker</a>
+(if it hasn't been reported already).
+If you want to translate Frescobaldi to your own language, please read the file
+<a href="https://github.com/wbsoft/frescobaldi/blob/master/README-translations">README-translations</a>.
+</p>
+
+<h4>Feature requests</h4>
+<p>
+Feature requests and wishes can also be posted to the issue tracker.
+</p>
+
+<h4>Source code</h4>
+<p>
+If you want to check-out the source code to help develop Frescobaldi, it is recommended
+that you use the latest source code from the Git repository.
+You can get the source code by installing Git
+on your own machine and then entering the following commands.
+</p>
+
+<ul>
+<li>Frescobaldi 2.0 is developed using git at <a
+ href="https://github.com/wbsoft/frescobaldi">github.com/wbsoft/frescobaldi</a>:</li>
+
+<pre><code>git clone git://github.com/wbsoft/frescobaldi.git
+cd frescobaldi</code></pre>
+
+<li>To get the <a href="http://code.google.com/p/lilykde/source/browse/#svn/trunk/frescobaldi">1.x branch</a> (for KDE4):</li>
+
+<pre><code>svn checkout http://lilykde.googlecode.com/svn/trunk/frescobaldi
+cd frescobaldi</code></pre>
+
+</ul>
+
+<p>
+The file
+<a href="https://github.com/wbsoft/frescobaldi/blob/master/README-development">README-development</a>
+contains more information about the layout of the source code.
+If you want to add your changes to Frescobaldi, please send a patch to the mailing list or author address.
+Use the following command to create a patch with your changes against a fresh svn checkout:
+</p>
+
+<pre><code>git diff > mypatch.diff</code></pre>
+
+<p>
+You can also use <code>git format-patch</code> to send commits via e-mail.
+It is not necessary to send updated translations as patches: please
+send them as complete files.
+</p>
+
+<p>
+See <a href="https://github.com/wbsoft/frescobaldi">github.com/wbsoft/frescobaldi</a> for more information.
+</p>
+
+<address>
+<a href="development.nl.html">Nederlandse versie</a>
+| Last modified: 26 dec 2011
+</address>
+
+</div>
+
+</body>
+</html>

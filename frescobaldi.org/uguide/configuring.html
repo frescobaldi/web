@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Configuring Frescobaldi - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+<style type="text/css">
+dl dt { font-style: italic; }
+</style>
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring" class="selected">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Configuring Frescobaldi</h2>
+
+<p>
+This chapter documents how to configure Frescobaldi for your needs.
+</p>
+
+<h3><a name="settings-menu" id="settings-menu"></a>The Settings Menu</h3>
+
+<p>
+The <em>Settings</em> menu has options to show the full path of the
+file currently being edited in the window title bar or just the filename, to show or
+hide the toolbar and to switch the Frescobaldi window to full screen mode.
+</p>
+
+<p>
+The <em>Tool Views</em> sub menu lets you alter some settings of the
+tools in the sidebar docks of the Frescobaldi window. (Note that you can right-click
+on the tabs in the sidebar docks for more tool options.)
+</p>
+
+<p>
+Finally, Frescobaldi has the usual menu entries <em>Configure Shortcuts...</em>, 
+<em>Configure Toolbars...</em> and <em>Configure Frescobaldi...</em>.
+</p>
+
+<h3><a name="settings-dialog" id="settings-dialog"></a>The Settings Dialog</h3>
+
+<h4>General Preferences</h4>
+
+<p>
+Here you can set some general preferences to influence the behaviour of Frescobaldi and LilyPond:
+</p>
+
+<dl>
+<dt>Save Document when LilyPond is run</dt>
+<dd>
+  <p>
+  If checked, Frescobaldi will save the document (if modified) before running LilyPond.
+  </p>
+</dd>
+<dt>Let LilyPond delete intermediate files</dt>
+<dd>
+  <p>
+  If checked, Frescobaldi will run LilyPond with the <code class="option">delete-intermediate-files</code> option,
+  so that e.g. PostScript files are deleted after the PDF file has been generated.
+  </p>
+</dd>
+<dt>Run LilyPond with verbose output</dt>
+<dd>
+  <p>
+  If checked, Frescobaldi will run LilyPond with the <code class="option">verbose</code> option, displaying more information
+  during the compile process.
+  </p>
+</dd>
+<dt>Remember cursor position, bookmarks, etc.</dt>
+<dd>
+  <p>
+  If checked, Frescobaldi will save the cursor position, bookmarks and some view settings
+  for a document when it is closed. This meta-information is retained for one month.
+  </p>
+</dd>
+<dt>Disable the built-in PDF preview</dt>
+<dd>
+  <p>
+  If checked, the built-in PDF preview will be disabled. This is useful if you prefer an
+  external PDF viewer (e.g. <span class="productname">Okular</span>).
+  </p>
+</dd>
+<dt>LilyPond version number to use for new documents</dt>
+<dd>
+  <p>
+  Here you can set which version number you want Frescobaldi to insert by default with
+  the <em>Insert LilyPond Version</em> command or the Score Wizard. Choose one of three options:
+  </p>
+  <dl>
+  <dt>Use version number of installed LilyPond</dt>
+  <dd>
+    <p>
+    Frescobaldi will use the version number of the installed LilyPond by default.
+    </p>
+    <p>
+    (Frescobaldi determines the version by running
+    <code>lilypond -v</code> and looking at the first line of the output.)
+    </p>
+  </dd>
+  <dt>Use version number of last convert-ly rule</dt>
+  <dd>
+    <p>
+    Frescobaldi will use the version number of last rule of the installed
+    <code>convert-ly</code> program by default. This is useful if you just want
+    your document to conform to the latest LilyPond syntax without requiring the most
+    recent available version.
+    </p>
+    <p>
+    This makes document exchange easier.
+    E.g. when you use <strong class="userinput"><code>\version "2.12.2"</code></strong>, another user's LilyPond
+    version 2.12.0 might complain about your document's version being to new, even though there
+    are no syntax changes and the older LilyPond would just compile the document fine.
+    </p>
+    <p>
+    (Frescobaldi determines the last convert-ly rule version by running
+    <code>convert-ly --show-rules</code> and looking at the last line that starts with a version number.)
+    </p>
+  </dd>
+  <dt>Use custom version number</dt>
+  <dd>
+    <p>
+    Enables you to explicitly specify the version number you want to use by default
+    for new documents.
+    </p>
+  </dd>
+  <p>
+  Note that the Score Wizard is able to adjust its output depending on the version
+  you specify in the Score Wizard. It is therefore possible to write documents for
+  older LilyPond versions, although in general using the most recent stable LilyPond
+  release is recommended.
+  </p>
+  </dl>
+</dd>
+</dl>
+
+
+<h4><a name="settings-paths" id="settings-paths"></a>Paths</h4>
+
+<p>
+Here you can specify the paths to use for different commands. Normally you would just
+leave the defaults, but if you have multiple versions of LilyPond installed,
+you can specify which one to run by entering the exact path.
+</p>
+
+<p>
+Note: If you change the path to the <code>lilypond</code> command, be sure to also point the
+<code>convert-ly</code> command to the same directory.
+</p>
+
+<p>
+You can also set a default directory for all your LilyPond documents,
+and provide the URL or path to the documentation for the built-in <a href="lilydoc.html">LilyPond documentation browser</a>.
+</p>
+
+<p>
+Finally, at the bottom of the Paths section, you can configure a list of directories to search for hyphenation pattern
+files that can be used to break <a href="editing#lyrics">lyrics</a> into syllables.
+</p>
+
+<p>
+Frescobaldi currently does not include hyphenation pattern files by itself, but
+it can use the hyphenation patterns that are often installed with programs like
+OpenOffice.org, KOffice, Scribus or in specialized packages like myspell. 
+</p>
+
+<p>
+If Frescobaldi doesn't find any hyphenation files, while you're sure you
+installed some of the software mentioned above, try to find out where those
+files are in your file system, and list the paths in the text entry. If your
+operating system supports the locate command, you can open a terminal and use a
+command like this to get a list of paths that you can simply paste in the text
+entry to have Frescobaldi find all installed pattern files: 
+</p>
+
+<pre>locate *hyph_*.dic | sed s,/[^/]*$,, | sort -u</pre>
+
+<p>or:</p>
+
+<pre>locate *hyph_*.dic | xargs -n1 dirname | sort -u</pre>
+
+<h4><a name="settings-editor-component" id="settings-editor-component"></a>Editor Component</h4>
+
+<p>
+Here configuration options can be set for the KatePart editor component that is used by Frescobaldi.
+Documentation for the editor component can be found in the manuals for KWrite and Kate.
+</p>
+
+
+<h3><a name="" id=""></a>Configuring Point &amp; Click</h3>
+
+<p>
+Point &amp; Click is a LilyPond feature that embeds clickable URLs in the PDF output.
+Those URLs contain the source file path and line and column numbers. Clicking on those
+clickable objects lets the cursor in Frescobaldi jump to the corresponding position
+in the source document.
+</p>
+
+<p>
+If all is well, Point &amp; Click should "Just Work"™.
+But this section is here to help you setting it up in the case it doesn't work
+by default. Point &amp; Click in Frescobaldi is handled differently in KDE 4.1 and KDE 4.2.
+</p>
+
+<p>
+In KDE 4.1, you need to install the <code>lilypond-kde4</code> package.
+This contains a program that handles the <code>textedit:</code> service.
+If point and click still does not work, check if Frescobaldi is tied to the
+<code>text/x-lilypond</code> MIME type in the KDE System Settings
+(File Associations).
+</p>
+
+<p>
+In KDE 4.2, the Point &amp; Click URLs are handled by Okular itself.
+When you install Frescobaldi, on its first run it autoconfigures the Okular part
+to run Frescobaldi when a Point &amp; Click URL is clicked.
+But if for some reason this didn't happen, you can configure Okular manually
+to run Frescobaldi.
+Right-click the PDF preview tab and choose <em>Configure Okular...</em>
+(or use
+<em>Settings</em> » <em>Tool Views</em> » <em>Configure Okular...</em>) to open the Okular settings dialog.
+There, under <em>Editor</em>, you can configure a custom editor command.
+Enter the following command and click Ok:
+</p>
+<pre>frescobaldi --smart --line %l --column %c</pre>
+
+<p>
+(The <code>smart</code> option tells Frescobaldi to translate cursor positions according to
+changes in the document. This way, Point &amp; Click URLs remain working, even if
+you change the document without updating the PDF preview.)
+</p>
+
+<p>
+Note: Point &amp; Click URLs enlarge the PDF output documents significantly.
+It is therefore better to build PDF documents in publish mode when you
+want to distribute them (via e-mail or the World-wide Web) to others.
+</p>
+
+<p>
+Warning:
+In KDE 4.2, Okular's built-in Point &amp; Click support sometimes doesn't work if
+the path of your LilyPond source document contains spaces or accented
+characters. This is due to Okular not fully understanding the way LilyPond
+encodes URLs.
+</p>
+
+<h3><a name="highlight" id="highlight"></a>Highlighting and indenting</h3>
+
+<p>
+Frescobaldi uses the LilyPond syntax highlighting and indenting algorithm from KDE's 
+editing component KatePart. By default, indenting is switched on, using spaces,
+and the indent-width is 2 spaces.
+(Using spaces for indenting works better with Point &amp; Click in some cases.)
+For most LilyPond scores this indent-width will look good, and in some places
+this is currently hard-coded in Frescobaldi (e.g. the default snippets in the
+<a href="entering.html#expand" title="Quick Text Expansions">expand dialog</a>).
+</p>
+
+<p>
+You can configure other indent settings using kate variables in your document,
+or globally by setting kate variables in the LilyPond Kate mode.
+Setting variables in the document is described in the Kate manual.
+Setting variables globally for the LilyPond Kate mode is described
+in the Kate manual under "Modes &amp; Filetypes."
+</p>
+
+<address>
+Last modified: 4 mar 2009
+</address>
+
+</div>
+
+</body>
+</html>

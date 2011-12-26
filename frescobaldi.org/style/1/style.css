@@ -1,0 +1,169 @@
+/* all media */
+body
+{
+	font-family: "Bitstream Vera Sans", "Verdana", "Arial", sans-serif;
+	font-size: 90%;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+@media screen
+{
+
+body
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 120px;
+	line-height: 1.5;
+	color: black;
+	background: #eee;
+}
+
+address
+{
+	position: absolute;
+	left: 20px;
+	bottom: 5px;
+	padding: 1px 3em 0px 0px;
+	color: #888;
+	border-top: 1px solid #aaa;
+	font-size: smaller;
+}
+
+acronym[title]
+{
+	cursor: help;
+}
+
+a:link,
+a:visited
+{
+	text-decoration: none;
+}
+
+a:link
+{
+	color: #19e;
+}
+
+a:visited
+{
+	color: #91e;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+#header
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 89px;
+	background: #2af url(frescobaldi-icon.png) 1em center no-repeat;
+	color: white;
+	border-bottom: 1px solid #555;
+}
+
+#header h1
+{
+	position: absolute;
+	top: 20%;
+	right: 1em;
+	text-align: right;
+	margin: 0px;
+	font-size: 240%;
+	text-shadow: black 0px 0px 4px;
+}
+
+#maincontents
+{
+	position: absolute;
+	top: 90px;
+	left: 20%;
+	right: 0px;
+	min-height: 100%;
+	background: white url(shadow.png) top left repeat-y;
+	color: black;
+	padding: 0px 1em 30px 20px;
+	border-left: 1px solid #555;
+}
+
+#sidebar
+{
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	right: 81%;
+	min-height: 100%;
+	padding: 10px 1em 10px 1em;
+	background: url(frescobaldi-eee.png) bottom left no-repeat;
+}
+
+#sidebar a
+{
+	display: list-item;
+	list-style-position: inside;
+	list-style-type: circle;
+	color: black !important;
+	text-decoration: none !important;
+}
+
+#sidebar a:hover
+{
+	list-style-type: disc;
+}
+
+#sidebar a.selected
+{
+	list-style-type: disc;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+
+#maincontents h1,
+#maincontents h2,
+#maincontents h3,
+#maincontents h4
+{
+	text-shadow: #aaa 1px 1px 2px;
+}
+
+#releases
+{
+	display: inline-block;
+	background-color: #B0FFB9;
+	border: 2px solid #93D59B;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	padding: 0.3em;
+	margin: 0px;
+
+}
+
+.shadowed
+{
+	margin: 0px 10px 10px 4px;
+	-moz-box-shadow:    4px 6px 10px 0px #666;
+	-webkit-box-shadow:    4px 6px 10px 0px #666;
+	box-shadow:    4px 6px 10px 0px #666;
+}
+
+} /* @media screen */
+
+@media print
+{
+
+#sidebar
+{
+	display: none;
+}
+
+} /* @media print */

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Entering Scores - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering" class="selected">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Entering Scores</h2>
+
+<p>
+Frescobaldi provides a host of features to help you to enter LilyPond music scores as fast
+as possible.
+</p>
+
+<h3><a name="scorewiz" id="scorewiz"></a>Score Setup Wizard</h3>
+
+<p>
+The Score Setup Wizard (<em>LilyPond</em> » <em>Setup New Score...</em> or Ctrl+Shift+N), makes
+for a quick start of many types of music score. In the first tab you can enter titling information,
+in the second tab you can compose your score of many available part types. Doubleclick a part type 
+to add it to your score (or click <em>Add</em>). Select the part in the score list to change
+some settings for the selected part, if desired. Many parts, especially Choir, have powerful options
+to set up the score the way you want it:
+</p>
+
+<p>
+<div style="float:left;">
+<a href="/images/scorewiz1.png"
+><img border="0"
+width="286" height="213"
+src="/images/scorewiz1-small.png"
+alt="scorewiz 1" title="Click to enlarge" /></a><br />
+<em>1. Enter titling information</em>
+</div>
+
+<div style="float:left;">
+<a href="/images/scorewiz2.png"
+><img border="0"
+width="286" height="213"
+src="/images/scorewiz2-small.png"
+alt="scorewiz 2" title="Click to enlarge" /></a><br />
+<em>2. Set up the parts</em>
+</div>
+
+<div style="float:left;">
+<a href="/images/scorewiz3.png"
+><img border="0"
+width="286" height="213"
+src="/images/scorewiz3-small.png"
+alt="scorewiz 3" title="Click to enlarge" /></a><br />
+<em>3. Adjust general settings</em>
+</div>
+</p>
+
+
+<p style="clear:both;">
+In the third tab you can set some general adjustments, e.g. whether to create MIDI output or not,
+which key and time signature you want to use, etc.
+</p>
+
+<p>
+Clicking <em>Try</em> presents a demo score with some random notes filled in. Clicking <em>Ok</em>
+writes the LilyPond code to your text document, waiting for music etc. to be added.
+</p>
+
+<h3><a name="autocomplete" id="autocomplete"></a>Context Sensitive Autocompletion</h3>
+
+<p>
+Frescobaldi has a context-sensitive automatic completion feature.
+In most cases it will be enabled by default. It will pop up relevant completions as you type.
+The autocompletion popup can be enabled or disabled under
+<em>Settings</em> » <em>Configure Frescobaldi</em> » <em>Editor component</em> » <em>Editing</em> » <em>Auto Completion</em>.
+Even if disabled, you can always show the popup with Ctrl+Space.
+</p>
+
+<h3><a name="expand" id="expand"></a>Quick Text Expansions</h3>
+
+<p>
+Type e.g. <code>rel</code> and then press <code>Ctrl+.</code> (period). Frescobaldi will expand it to:
+</p>
+
+<pre><span style='color: #644a9b'><b>\relative c'</b></span><span style='color: #141312'> <b>{</b></span>
+
+<span style='color: #141312'><b>}</b></span></pre>
+
+<p>
+and place the cursor right after the pitch so you could change it. If you then move the cursor a line down,
+you can start typing music notes or other shortcuts. E.g. typing <code>F</code> and then <code>Ctrl+.</code>
+yields <code style='color: #644a9b'><b>\key&nbsp;f&nbsp;\major</b></code>. There are many many more default shortcuts.
+Press <code>Ctrl+.</code> (without having entered an existing shortcut) to have a dialog open with all
+defined shortcuts. In this dialog you can also add, alter or remove shortcuts.
+See the &quot;What's This&quot; info (Shift+F1) for more information.
+</p>
+
+<h3><a name="rumor" id="rumor"></a>MIDI input via Rumor (Linux only)</h3>
+
+<div style="float: right; width: 326px;"><a
+href="/uguide/images/rumor1.png"><img border="0"
+src="/uguide/images/rumor1-small.png"
+width="326" height="373" alt="Rumor" title="Click to enlarge"/></a><br />
+<em>The Rumor tab and settings dialog</em></div>
+
+<p>
+Frescobaldi can use <a href="http://www.volny.cz/smilauer/rumor/">Rumor</a>,
+enabling you to enter music just by playing it on a MIDI keyboard (or even your computer keyboard).
+This has some limitations: you can only play monophonic music (notes or chords). Rumor also does not support tuplets.
+To use Rumor within Frescobaldi, you must have installed it separately.
+Refer to the <a href="http://www.volny.cz/smilauer/rumor/">Rumor homepage</a>
+for download and install information.
+</p>
+
+<p><strong>Setup:</strong>
+Start the Rumor plugin by clicking on its tab in the bottom of the Frescobaldi window.
+The Rumor panel appears at the bottom. In the panel is a settings dialog where you can
+configure which MIDI input and output you want to use.
+</p>
+
+<p>
+If you have a MIDI keyboard controller but no audible output device you can run an ALSA
+MIDI-client like TiMidity++. Frescobaldi can do this for you when you press the TiMidity-button
+(you can configure it to run any command in the main config dialog under
+<em>Settings</em> » <em>Configure Frescobaldi...</em> » <em>Paths</em>).
+Frescobaldi remembers the settings, so the next time it will automatically start the MIDI client.
+</p>
+
+<p>
+If you have no MIDI-controller you can also set the MIDI input to &#x27;Computer Keyboard&#x27;
+in the settings screen of the Rumor plugin. This way you can play on your computer keyboard like a piano.
+</p>
+
+<p><strong>Entering music:</strong>
+Clicking the <strong>Record</strong> button starts Rumor.
+If all is well you hear a metronome and you can start playing; you&#x27;ll see the notes appear.
+Clicking <strong>Record</strong> again or pressing Escape stops Rumor.
+If you already entered the key and time signature in your document, Frescobaldi will automatically use it,
+to interpret alterations correctly. Frescobaldi will also output pitches automatically in the language
+you use in the document.
+</p>
+
+<p>
+You can configure the shortest note value to use using the <i>Quantise</i> option.
+If you enable the <em>Step</em> checkbox, Rumor will directly output every note played, without a  duration.
+If you enable the <em>Mono</em> checkbox, Rumor will not output chords, but only single notes.
+</p>
+
+<p>
+Under the <em>Settings</em> button you can configure some more settings.
+A powerful feature of Rumor is that it can load special scripts that change the Rumor output.
+This is useful when you write e.g. music with complicated rhythms.
+You can configure which scripts to load, and even put your own Rumor Guile scripts in
+<code>~/.kde/share/apps/frescobaldi/rumor/</code>.
+More information about writing Rumor scripts is on the
+<a href="http://www.volny.cz/smilauer/rumor/">Rumor homepage</a>.
+</p>
+
+<h3><a name="quickinsert" id="quickinsert"></a>Quick Insert Panel</h3>
+
+<p>
+The Quick Insert Panel is available in the left dock.
+It currently has one panel to add articulations and other symbols to your music.
+It can also add those symbols to all notes or chords in a selected music fragment.
+</p>
+
+<h3>Other shortcuts</h3>
+
+<p><strong>Repeat last note or chord</strong> (<code>Ctrl+;</code>)
+repeats the last entered note or chord with all its suffixes (ties, articulations, etc.)
+</p>
+
+<p><strong>Insert pair of braces</strong> (<code>Ctrl+{</code>)
+inserts a pair of braces <code><b>{ }</b></code> with an empty,
+indented line in between and places the cursor there.
+</p>
+
+<address>
+Last modified: 7 nov 2009
+</address>
+
+</div>
+
+</body>
+</html>

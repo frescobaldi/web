@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Extra Tools - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras" class="selected">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Extra Tools</h2>
+
+<p>
+Some extra tools that Frescobaldi provides (besides LilyPond editing)
+are documented here. These tools are accessible via
+<em>LilyPond</em> » <em>Extra Tools</em>.
+</p>
+
+<h3 class="title" style="clear: both"><a name="blankpaper"></a>Create blank staff paper</h3>
+
+<p>
+With this tool you can create blank music staff paper and print it or save
+it to a file.
+Of course, LilyPond is used to create the staff paper.
+Above in the window you can choose which type of music paper you want to create.
+At the bottom of the window, you can choose what you want to do with
+your newly created staff paper, as soon as you click Ok.
+Write it to a file, open it in a PDF viewer, directly print it or copy the LilyPond
+source to the editor to customize it further.
+</p>
+
+<p>
+Five types of staff paper can be created:
+</p>
+
+<div class="variablelist"><dl><dt><span class="term"><span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guilabel">Single Staff</span></span></span></dt><dd><p>
+  Creates staff paper with (by default) 12 single staves per page.
+  You can select the clef you want to use. If you select the TAB clef, tablature
+  staves are printed (with 6 lines).
+  </p></dd><dt><span class="term"><span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guilabel">Piano Staff</span></span></span></dt><dd><p>
+  Creates piano staff paper with (by default) 6 systems per page.
+  You can check whether you want the default clefs to be printed or not.
+  </p></dd><dt><span class="term"><span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guilabel">Organ Staff</span></span></span></dt><dd><p>
+  Creates organ staff paper with (by default) 4 systems per page, consisting
+  of a braced piano staff and a pedal staff.
+  You can check whether you want the default clefs to be printed or not.
+  </p></dd><dt><span class="term"><span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guilabel">Choir Staff</span></span></span></dt><dd><p>
+  Creates a bracketed staff group with 2 or more staves.
+  First select the number of staves you want in the system.
+  Then select the number of systems you want in a page.
+  Finally, choose which clefs you want to add.
+  See "Whats This" (<span><strong class="keycap">Shift+F1</strong></span>)
+  on the clef entry for more information.
+  </p></dd><dt><span class="term"><span xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="guiitem"><span class="guilabel">Custom Staff</span></span></span></dt><dd><p>
+  This is the most advanced way to create blank staff paper.
+  You can click one of the three buttons on the left to add a brace, a bracket,
+  or a staff. You can arrange the staves or the staff groups by dragging them
+  with the mouse. Multiple groups may be nested.
+  For each staff you can select a clef and adjust the space you want to leave
+  above and below it.
+  The bracket staff group can be configured to print just a square bracket instead
+  of the usual with curved tips, and you can control whether you want barlines (if you
+  want them, see below) to be connected between staves in the group or not.
+  </p></dd></dl>
+</div>
+
+<p>
+If you click <em>Try</em> a preview will be shown.
+If you click <em>Details</em>, additional settings become visible
+to select the staffsize, the number of pages, page numbers and barlines you want to print.
+</p>
+
+<address>
+Last modified: 16 nov 2009
+</address>
+
+</div>
+
+</body>
+</html>

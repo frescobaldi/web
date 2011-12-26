@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Editing Features - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing" class="selected">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Editing Features</h2>
+
+<p>
+While editing, Frescobaldi provides many ways to change and manipulate already entered music.
+</p>
+
+<h3><a name="rhythm" id="rhythm"></a>Rhythm</h3>
+
+<p>
+In the <em>LilyPond</em> » <em>Rhythm</em> menu there are many options to manipulate the
+durations of a selected music fragment. You can double or halve the durations, add or remove dots,
+remove scaling (the <code>*n/m</code> suffix) or remove all durations. <em>Make implicit</em> removes
+durations that are equal to the previous note, and <em>Make explicit</em> adds the duration to every
+note or chord, even if it has the same duration as the previous one.
+</p>
+
+<p>
+You can also copy a rhythm from a selected piece of music. The rhythm is then copied to the clipboard.
+To "paste" the rhythm to other music you must then select the target music. <em>Paste Rhythm</em> will then
+apply the copied rhythm to the newly selected music. This is nice when you enter e.g. hymns that have
+multiple voices that share the same rhythm. You can also use <em>Apply Rhythm...</em> to manually enter some
+durations and apply them to a selected fragment of music.
+If there are more notes than durations, the durations will be repeated.
+</p>
+
+<h3>Pitch</h3>
+
+<p>
+The <em>LilyPond</em> » <em>Pitch</em> menu has several commands to manipulate pitches of already entered music:
+</p>
+
+<dl>
+<dt><em>Pitch Name Language</em></td>
+<dd>
+  <p>
+  This command is very powerful:
+  it translates pitch names in your document to a different LilyPond language.
+  This is useful when you want to edit a work started by someone else, but are not
+  accustomed to entering notes in e.g. dutch or italian names.
+  </p>
+
+  <p>
+  The pitch translation function is quite accurate: it almost 100% correctly parses LilyPond input and finds
+  all pitches, without altering e.g. markup, lyrics, strings or comments that also might contain words (like "do")
+  that are also pitch names.
+  It even warns you when quarter tones are used and the target languages does not have definitions
+  for them. But just to be sure: run LilyPond after translating the pitches and carefully examine the document.
+  If anything went wrong, press Ctrl+Z and try again.
+  </p>
+<dd>
+
+<dt><em>Convert Relative to Absolute</em></dt>
+<dd>
+  <p>
+  This command converts all notes in the document or selected fragment that are
+  inside a \relative { ... } section to absolute pitches. It honors octave checks
+  (see the LilyPond manual) but does not print warnings.
+  </p>
+</dd>
+
+<dt><em>Convert Absolute to Relative</em></dt>
+<dd>
+  <p>
+  This command converts all notes in the selected music expression(s) to relative
+  pitches, inserting a <code><b>\relative</b></code> command at the beginning of each selected music
+  expression. A music expression is a piece of music enclosed in
+  <code><b>&lt;&lt;&nbsp;...&nbsp;&gt;&gt;</b></code> or <code><b>{&nbsp;...&nbsp;}</b></code>.
+  If no music is selected, all toplevel expressions that contain notes are
+  made relative. Chordmode sections (music inside
+  <code><b>\chordmode</b></code> or <code><b>\chords</b></code>) are not made relative.
+  </p>
+</dd>
+
+<dt><em>Transpose...</em></dt>
+<dd>
+  <p>
+  This command transposes all music in the document or selected fragment. A dialog
+  is displayed where you can enter two pitches, the "from" and the "to" pitch.
+  Frescobaldi then computes the distance between the two pitches and transposes
+  the music over the same distance. Both absolute and relative music can be
+  transposed. Chordmode sections are transposed without changing the octave.
+  </p>
+</dd>
+</dl>
+
+<h3><a name="lyrics" id="lyrics"></a>Lyrics</h3>
+
+<p>
+Frescobaldi can automatically place hyphens ' -- ' inside texts to make those texts
+usable as lyrics. It can use hyphenation dictionaries of OpenOffice.org,
+Scribus, KOffice, etc.
+</p>
+
+<p>
+To use this feature you must first select the text you want to hyphenate. Then
+choose <em>LilyPond</em> » <em>Lyrics</em> » <em>Hyphenation</em>
+from the LilyPond menu or press Ctrl+L. In the dialog that appears, select the language.
+Click OK or press Enter to have the hyphenation take place.
+</p>
+
+<p>
+A small limitation is that word processor hyphenation dictionaries often don't
+want to break a word right after the first letter (e.g. <code><b>a&nbsp;--&nbsp;men</b></code>), because that
+does not look nice in word processor texts. So it might be possible that you
+have to add some hyphens after the first letter of such lyrics.
+</p>
+
+<p>
+There is also a command to remove hyphenation.
+This can be useful if you have a stanza of lyrics
+that you just want to display as a markup below the music.
+Under <em>Settings</em> » <em>Configure Frescobaldi</em> » <em>Paths</em>
+you can enter a <a href="configuring#settings-paths">list of directories</a> to search for hyphenation pattern files.
+</p>
+
+<h3><a name="cut-assign" id="cut-assign"></a>Cut and Assign</h3>
+
+<p>
+If you find that you want to use the same LilyPond commands or music fragment
+more than once in multiple places in your document, but have already entered
+them in some structure, there is a quick command to cut the fragment out and
+put it as a toplevel variable assignment in your LilyPond document.
+</p>
+
+<p>
+First select the exact text you want to store in a variable. Then choose
+<em>Edit</em> » <em>Cut and Assign</em> (<strong>Ctrl+Shift+C</strong>)
+and enter a LilyPond variable name. This identifier name may only contain letters.
+Then click <em>Ok</em>. The selected fragment will be cut from its original
+place and assigned to the specified variable. The assignment is placed just
+before the current section in your document. The fragment will be replaced
+with a reference to the variable.
+</p>
+
+<h3>Keyboard Shortcuts</h3>
+
+<p>
+Frescobaldi uses the KatePart text editing component of KDE. So, in addition to the
+shortcuts outlined below, you can also use the many keyboard shortcuts available in e.g.
+Kate and KWrite.
+</p>
+
+<table border="1" cellspacing="1" cellpadding="4">
+<tbody>
+<tr><td><strong class="keycap">Alt+Up/Down</strong></td><td> Move the cursor to the end of the next or previous blank line </td></tr>
+<tr><td><strong class="keycap">Alt+Shift+Up/Down</strong></td><td> Select text till the next or previous blank line </td></tr>
+<tr><td><strong class="keycap">Alt+Ctrl+Shift+Up/Down</strong></td><td> Move the selected block to the next or previous blank line </td></tr>
+<tr><td><strong class="keycap">Ctrl+D</strong></td><td> Comment out the current line or selected text </td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+D</strong></td><td> Uncomment the current line or selected text </td></tr>
+<tr><td><strong class="keycap">Ctrl+;</strong></td><td> Repeat the last entered note or chord with all added articulations, etc </td></tr>
+<tr><td><strong class="keycap">Ctrl+{</strong></td><td>
+Insert a pair of braces <code><b>{ }</b></code> with an empty, indented line in between and places the cursor there. If text is selected, it is placed between the braces.
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+.</strong></td><td>
+Replace the entered mnemonic with the corresponding snippet from the
+<a href="entering#expand" title="Quick Text Expansions">Expand Manager</a>,
+or, if no existing mnemonic was typed, show the Expand Manager dialog
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+Space</strong></td><td> Show the available <a href="entering#autocomplete" title="Context Sensitive Autocompletion">completions</a> </td></tr>
+<tr><td><strong class="keycap">Ctrl+'</strong></td><td>Insert a single typographical quote. Left or right is automatically determined. If text is selected, that text is put between left and right single quotes.</td></tr>
+<tr><td><strong class="keycap">Ctrl+&quot;</strong></td><td>Insert a double typographical quote. Left or right is automatically determined. If text is selected, that text is put between left and right double quotes.</td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+C</strong></td><td><a href="#cut-assign" title="Cut and Assign">Cut and assign</a></td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+V</strong></td><td>
+Insert a <strong class="userinput"><code>\version</code></strong> command with the default LilyPond version number.
+Which version number is used can be configured in the
+<a href="configuring" title="General Preferences">Settings dialog</a>.
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+R</strong></td><td>
+Wrap the selected music in a <code><b><span style='color: #644a9b'>\repeat volta 2</span> { ... }</b></code> construct.
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+N</strong></td><td> Show the <a href="entering#scorewiz" title="Score Setup Wizard">Score Wizard</a> </td></tr><tr><td><strong class="keycap">Ctrl+M</strong></td><td> Run LilyPond on the current document in preview mode </td></tr>
+<tr><td><strong class="keycap">Ctrl+L</strong></td><td>
+<a href="#lyrics" title="Lyrics">Hyphenate</a> the currently selected lyric text
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+E</strong></td><td>
+Email the generated output documents (PDF, MIDI, etc.) after a LilyPond run
+</td></tr>
+<tr><td><strong class="keycap">Ctrl+Shift+F</strong></td><td> Toggle Full-screen mode </td></tr></tbody></table>
+
+
+<address>
+Last modified: 19 dec 2009
+</address>
+
+</div>
+
+</body>
+</html>

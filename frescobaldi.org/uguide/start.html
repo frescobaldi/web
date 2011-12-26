@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>First steps - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start" class="selected">1. First steps</a>
+	  <a accesskey="2" href="running">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>First steps</h2>
+
+<p>
+After you installed Frescobaldi, run it from your KDE4 menu
+(under Audio or Utilities). You'll see an empty screen like this:
+</p>
+
+<p><a href="images/uguide1.png"><img border="0" title="Click to enlarge"
+alt="Frescobaldi screenshot"
+width="626" height="456" src="images/uguide1-small.png"
+></a></p>
+
+<p>
+Now write some LilyPond code, like this:
+</p>
+
+<pre><span style='color: #644a9b'><b>\relative c''</b></span><span style='color: #141312'> <b>{</b></span>
+<span style='color: #141312'>  </span><span style='color: #644a9b'><b>\time 7/4</b></span>
+<span style='color: #141312'>  c</span><span style='color: #0057ae'>2</span><span style='color: #141312'> bes</span><span style='color: #0057ae'>4</span><span style='color: #141312'> a</span><span style='color: #0057ae'>2</span><span style='color: #141312'> g a bes</span><span style='color: #0057ae'>4</span><span style='color: #141312'> a</span><span style='color: #ff80e0'><b>(</b></span><span style='color: #141312'> g</span><span style='color: #ff80e0'><b>)</b></span><span style='color: #141312'> f</span><span style='color: #0057ae'>2</span>
+<span style='color: #141312'><b>}</b></span>
+<span style='color: #007010'><b>\addlyrics </b></span><span style='color: #141312'><b>{</b></span>
+<span style='color: #007010'>  Join us now and share the soft <b>--</b> ware!</span>
+<span style='color: #141312'><b>}</b></span>
+</pre>
+
+<p>
+If you want, save the file by pressing Ctrl+S and enter a name
+(if you leave out the extension, Frescobaldi will add the .ly extension
+for you).
+</p>
+
+<p>
+Then click the LilyPond toolbar button or press Ctrl+M.
+If all is good, LilyPond starts now and processes your file.
+At the bottom of the screen you can follow LilyPond's progress.
+If LilyPond does not encounter any mistakes on your part, it will produce
+a PDF file that will be displayed at the right of the Frescobaldi window:
+</p>
+
+<p><a href="images/uguide2.png"><img border="0" title="Click to enlarge"
+alt="Frescobaldi screenshot"
+width="626" height="468" src="images/uguide2-small.png"
+></a></p>
+
+<p>
+You can zoom the PDF preview by dragging the middle mouse button
+or by using the mouse wheel with Ctrl pressed down.
+The PDF preview is an embedded Okular, KDE's default PDF viewer.
+</p>
+
+<p>
+Everytime you change the LilyPond document, you must press the button (or Ctrl+M)
+to update the PDF preview.
+</p>
+
+<p>
+If LilyPond produced PDF and/or MIDI files, you will see buttons below the LilyPond
+output log to quickly open those files in their default applications, to print the PDF directly,
+or to email the generated output to someone else.
+</p>
+
+<p>
+If LilyPond does not start at all, check if you have installed LilyPond correctly and that the
+<tt>lilypond</tt> command is in your system's PATH environment variable. If needed,
+provide the exact path to your LilyPond executable under
+<em>Settings</em> »
+<em>Configure Frescobaldi...</em> » <em>Paths</em>.
+</p>
+
+
+
+
+<address>
+Last modified: 7 nov 2009
+</address>
+
+</div>
+
+</body>
+</html>

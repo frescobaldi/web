@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Running LilyPond - User Guide - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor for KDE4" />
+	<meta name="keywords" content="lilypond, lilykde, kde4" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>User Guide</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="../"><u>H</u>ome</a>
+	<a accesskey="s" href="../screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="../download"><u>D</u>ownload</a>
+	<a accesskey="u" href="./"><u>U</u>ser Guide</a>
+	<ul>
+	  <a accesskey="1" href="start">1. First steps</a>
+	  <a accesskey="2" href="running" class="selected">2. Running LilyPond</a>
+	  <a accesskey="3" href="entering">3. Entering Scores</a>
+	  <a accesskey="4" href="editing">4. Editing Features</a>
+	  <a accesskey="5" href="lilydoc">5. The LilyPond Documentation Browser</a>
+	  <a accesskey="6" href="extras">6. Extra Tools</a>
+	  <a accesskey="7" href="configuring">7. Configuring</a>
+	</ul>
+	<a accesskey="v" href="../development">Development</a>
+	<a accesskey="l" href="../links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<h2>Running LilyPond</h2>
+
+<h3>Creating PDF output</h3>
+
+<p>
+There are currently two different ways you can run LilyPond on your document. 
+</p>
+
+<p>
+The default one (by pressing the toolbar button or Ctrl+M) is to output
+a PDF preview document. This document contains clickable notes and other objects.
+If you click on a note or other object, Frescobaldi will put your textcursor in 
+the correct place (and even open the document for you if needed).
+</p>
+
+<p>
+In the <em>LilyPond</em> menu, you can also find the option <em>Run LilyPond (publish)</em>.
+This option also runs LilyPond, but with clickable notes disabled. 
+The resulting PDF is much smaller and better suitable for distribution via e-mail or the Web.
+With large musical scores, disabling the clickable notes can make the PDF many times smaller.
+</p>
+
+<p>
+While LilyPond is running, you can follow its progress in the log view. 
+If LilyPond encounters errors, you can click on the messages to place the text cursor
+in the offending line and column. If there are many errors you want to correct 
+without waiting for LilyPond to be finished, you can click the LilyPond button again
+to abort the running LilyPond process.
+</p>
+
+<p>
+When you want to run LilyPond on your text document, it needs to be saved to disk first,
+so LilyPond can read it.
+(Currently, you can not run LilyPond on non-local LilyPond documents.)
+If your document has not been saved yet, Frescobaldi asks you to save it to a local file.
+If your document has been modified, Frescobaldi asks you to save it first.
+</p>
+
+<p>
+If you want Frescobaldi to always save your last modifications before running LilyPond,
+you can go to <em>Settings</em> » <em>Configure Frescobaldi...</em> and check the option
+<em>Save document when LilyPond is run</em>.
+</p>
+
+<p>
+After a succesful LilyPond run, you will see some buttons appear at the bottom of the Log view.
+</p>
+
+<p>
+If LilyPond created a PDF, a button will be shown to open the PDF in the default PDF viewer,
+and a button to (directly!) print the PDF by sending it to the <tt>lpr</tt> command.
+(You can configure a different print command in <em>Settings</em> » <em>Configure Frescobaldi...</em> »
+<em>Paths</em> » <em>Print command</em>.)
+</p>
+
+<h3>Creating MIDI output</h3>
+
+<p>
+If LilyPond created a MIDI file, a button will be shown to play the MIDI in the default MIDI player.
+If you want LilyPond to create a MIDI file, add a <strong><code>\midi&nbsp;{&nbsp;}</code></strong> line in your
+<strong><code>\score&nbsp;{&nbsp;}</code></strong> section, like this:
+</p>
+
+<pre><span style='color: #141312'><b>\score</b> <b>{</b></span>
+<span style='color: #141312'>  </span><span style='color: #644a9b'><b>\relative c''</b></span><span style='color: #141312'> <b>{</b></span>
+<span style='color: #141312'>    </span><span style='color: #644a9b'><b>\time 7/4</b></span>
+<span style='color: #141312'>    c</span><span style='color: #0057ae'>2</span><span style='color: #141312'> bes</span><span style='color: #0057ae'>4</span><span style='color: #141312'> a</span><span style='color: #0057ae'>2</span><span style='color: #141312'> g a bes</span><span style='color: #0057ae'>4</span><span style='color: #141312'> a</span><span style='color: #ff80e0'><b>(</b></span><span style='color: #141312'> g</span><span style='color: #ff80e0'><b>)</b></span><span style='color: #141312'> f</span><span style='color: #0057ae'>2</span>
+<span style='color: #141312'>  <b>}</b></span>
+<span style='color: #141312'>  </span><span style='color: #007010'><b>\addlyrics </b></span><span style='color: #141312'><b>{</b></span>
+<span style='color: #007010'>    Join us now and share the soft <b>--</b> ware!</span>
+<span style='color: #007010'>  </span><span style='color: #141312'><b>}</b></span>
+<span style='color: #141312'>  <b>\layout {</b> <b>}</b></span>
+<span style='color: #141312'>  <b>\midi {</b> <b>}</b></span>
+<span style='color: #141312'><b>}</b></span>
+</pre>
+
+<p>
+(Be sure to also add a
+<strong><code>\layout&nbsp;{&nbsp;}</code></strong> line if you add a
+<strong><code>\midi&nbsp;{&nbsp;}</code></strong> line, otherwise LilyPond will not generate a PDF.)
+</p>
+
+<p>
+Also an email button is shown, allowing you to easily send the source and output documents
+to someone else using your default mail client.
+</p>
+
+<h3>LilyPond files that include other files</h3>
+
+<p>
+When working on large music scores, it might be possible that you divide the musical score
+in different files, and include them from a "master" file. Such a master file,
+named e.g. NewSong.ly,
+might look like:
+</p>
+
+<pre><span style='color: #141312'><b>\version</b> </span><span style='color: #bf0303'>"2.12.0"</span>
+
+<span style='color: #141312'><b>\header {</b></span>
+<span style='color: #141312'>  </span><span style='color: #0057ae'>title</span><span style='color: #141312'> = </span><span style='color: #bf0303'>"New Song"</span>
+<span style='color: #141312'><b>}</b></span>
+
+<span style='color: #141312'><b>\include</b> </span><span style='color: #bf0303'>"LayoutSettings.ly"</span>
+
+<span style='color: #141312'><b>\include</b> </span><span style='color: #bf0303'>"SopranoPart.ly"</span>
+<span style='color: #141312'><b>\include</b> </span><span style='color: #bf0303'>"PianoPart.ly"</span>
+
+<span style='color: #141312'><b>\score</b> <b>{</b></span>
+<span style='color: #141312'>  <b>&lt;&lt;</b></span>
+<span style='color: #141312'>    <b>\new</b> </span><span style='color: #0057ae'><b>Staff</b></span><span style='color: #141312'> = </span><span style='color: #bf0303'>"soprano"</span><span style='color: #141312'> </span><span style='color: #644a9b'>\sopranoMusic</span>
+<span style='color: #141312'>    <b>\new</b> </span><span style='color: #0057ae'><b>Lyrics</b></span><span style='color: #141312'> </span><span style='color: #007010'><b>\lyricsto </b></span><span style='color: #bf0303'>"soprano"</span><span style='color: #141312'> </span><span style='color: #644a9b'>\sopranoText</span>
+<span style='color: #141312'>    <b>\new</b> </span><span style='color: #0057ae'><b>PianoStaff</b></span><span style='color: #141312'> <b>&lt;&lt;</b></span>
+<span style='color: #141312'>      <b>\new</b> </span><span style='color: #0057ae'><b>Staff</b></span><span style='color: #141312'> = </span><span style='color: #bf0303'>"right"</span><span style='color: #141312'> </span><span style='color: #644a9b'>\rightHandMusic</span>
+<span style='color: #141312'>      <b>\new</b> </span><span style='color: #0057ae'><b>Staff</b></span><span style='color: #141312'> = </span><span style='color: #bf0303'>"left"</span><span style='color: #141312'> </span><span style='color: #644a9b'>\leftHandMusic</span>
+<span style='color: #141312'>    <b>&gt;&gt;</b></span>
+<span style='color: #141312'>  <b>&gt;&gt;</b></span>
+<span style='color: #141312'><b>}</b></span>
+</pre>
+
+<p>
+The files SopranoPart.ly and PianoPart.ly just contain the music definitions and LayoutSettings.ly has some settings
+for font and page layout etc. Neither one of them has a <strong><code>\score&nbsp;{&nbsp;}</code></strong> section in it.
+So pressing Ctrl+M and running LilyPond while you are working on such an included document might not make much sense,
+as it would probably not generate a PDF output file (the document only contains music expressions that are assigned to
+variables).
+</p>
+
+<p>
+In such cases, you can tell Frescobaldi that another file is the "master" file for the current document.
+When you run LilyPond, Frescobaldi will run LilyPond on the master document rather than the current document.
+So in SopranoPart.ly and PianoPart.ly you add a special line that is just a LilyPond comment. But Frescobaldi will read
+the line and understand that you want LilyPond to be run on the master file. Here is an example how SopranoPart.ly
+would look like:
+</p>
+
+<pre><span style='color: #141312'><b>\version</b> </span><span style='color: #bf0303'>"2.12.0"</span>
+
+<span style='color: #888786'><i>% Soprano part</i></span>
+
+<span style='color: #644a9b'>sopranoMusic</span><span style='color: #141312'> = </span><span style='color: #644a9b'><b>\relative c'</b></span><span style='color: #141312'> <b>{</b></span>
+<span style='color: #141312'>  c d e f g f e d</span>
+<span style='color: #141312'><b>}</b></span>
+
+<span style='color: #644a9b'>sopranoText</span><span style='color: #141312'> = </span><span style='color: #007010'><b>\lyricmode </b></span><span style='color: #141312'><b>{</b></span>
+<span style='color: #007010'>  Boer er ligt een kip in't wa <b>--</b> ter</span>
+<span style='color: #141312'><b>}</b></span>
+
+<span style='color: #888786'><i>%%master: NewSong.ly</i></span>
+</pre>
+
+<p>
+The last line <tt>%%master: <i>&lt;filename&gt;</i></tt> directs Frescobaldi to compile NewSong.ly instead
+of the current document when LilyPond is started.
+</p>
+
+<p>
+There are two related special comments: <tt>%%master-preview:</tt> and <tt>%%master-publish:</tt>. Those will only compile
+the named file in either preview or publish mode. That can be useful if you include several movements or e.g. hymns
+in a master file, where every source file has it's own score section. If you e.g. use <tt>%%master-publish</tt>, running
+in preview mode will just show the current document, but running in publish mode will compile the master document
+so you get a view on the whole score or book.
+</p>
+
+<address>
+Last modified: 16 jan 2009
+</address>
+
+</div>
+
+</body>
+</html>
