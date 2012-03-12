@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Příručka k Frescobaldi - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor" />
+	<meta name="keywords" content="lilypond, music notation, ide" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>Příručka k Frescobaldi</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="/"><u>H</u>ome</a>
+	<a accesskey="s" href="screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="download"><u>D</u>ownload</a>
+	<a accesskey="u" href="uguide" class="selected"><u>U</u>ser Guide</a>
+	<a accesskey="v" href="development">De<u>v</u>elopment</a>
+	<a accesskey="l" href="links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<p>(<a href="uguide-1">Frescobaldi 1.x User Guide</a>)</p>
+
+<h2 id="help_contents"><a name="help_contents"></a>Příručka k Frescobaldi</h2>
+<p>
+Frescobaldi je lehký a mocný editor pro dokumenty v LilyPondu
+s listy s notami.
+Tato příručka je napsána Wilbert Berendsen a dokumentuje Frescobaldi verze 2.0.4.
+</p>
+<p>Přeloženo: Pavel Fric.</p><h3>Jak dostat nápovědu ve Frescobaldi</h3>
+
+<p>
+V mnohých dialozích můžete klepnout na tlačítko pro nápovědu nebo stiskněte klávesu F1.
+Mnoho položek uživatelského rozhraní má taktéž informace also have "Co je toto", kterou lze
+odhalit stiskem Shift+F1 nebo výběrem <em>Nápověda&#8594;Co je toto</em>.
+</p>
+<h3 id="help_toc"><a name="help_toc"></a>Obsah</h3>
+<ul><li><a href="#help_introduction">Úvod</a></li><li><a href="#help_starting">První kroky</a></li><li><a href="#help_scorewiz_help">Průvodce pro notový zápis</a></li><li><a href="#help_tools">Jiné nástroje</a></li><ul><li><a href="#help_quickinsert_help">Panelem pro rychlé vložení</a></li><li><a href="#help_snippet_help">Kousky</a></li><ul><li><a href="#help_snippet_edit_help">Editor kousku</a></li><ul><li><a href="#help_python_snippets_help">Kousky v Pythonu</a></li></ul>
+</ul>
+<li><a href="#help_pitch_help">Zacházení s výškou tónu</a></li><ul><li><a href="#help_transpose_help">Převést</a></li></ul>
+<li><a href="#help_rhythm_help">Zacházení s rytmem</a></li><li><a href="#help_lyrics_help">Slova písně</a></li></ul>
+<li><a href="#help_editor">Editor</a></li><ul><li><a href="#help_search_replace">Hledat a nahradit</a></li><li><a href="#help_document_variables">Proměnné pro dokument</a></li><li><a href="#help_sessions">Sessions</a></li></ul>
+<li><a href="#help_preferences_dialog">Nastavení</a></li><ul><li><a href="#help_preferences_general">Obecné volby</a></li><li><a href="#help_preferences_lilypond">Nastavení LilyPondu</a></li><li><a href="#help_preferences_midi">Nastavení MIDI</a></li><li><a href="#help_preferences_helpers">Pomocné programy</a></li><li><a href="#help_preferences_paths">Cesty</a></li><li><a href="#help_preferences_documentation">Dokumentace k LilyPondu</a></li><li><a href="#help_preferences_shortcuts">Klávesové zkratky</a></li><li><a href="#help_preferences_fontscolors">Písma a barvy</a></li><li><a href="#help_preferences_tools">Nástroje</a></li></ul>
+<li><a href="#help_about">O Frescobaldi</a></li><ul><li><a href="#help_credits">Zásluhy</a></li><li><a href="#help_contributing">Příspěvky</a></li><li><a href="#help_history">Historie Frescobaldi</a></li></ul>
+<li><a href="#help_toc">Obsah</a></li></ul>
+<h3 id="help_introduction"><a name="help_introduction"></a>Úvod</h3>
+<p>
+<a href="http://lilypond.org/">&#11008;LilyPond</a>
+je program s otevřeným zdrojovým kódem pro rytí not, který vytváří výtisky notových listů
+o velmi vysoké jakosti z celkem jednoduchých textových vstupních souborů.
+Tyto textové soubory je možné tvořit v jakémkoli textovém editoru, a LilyPond pak nahraje
+textový soubor a provede výstup v krásné rytině, ve výchozím nastavení je výstup ve formátu PDF.
+</p>
+
+<p>
+Frescobaldi je program navržený tak, aby dělal úpravy hudebních notových zápisů v LilyPondu
+rychlejší a snadnější. Nicméně se budete muset naučit jazyk pro zadávání LilyPond.
+Pokud čtete část <a href="#help_starting">První kroky</a> tohoto uživatelského průvodce, pochytíte
+některé základy LilyPondu.
+</p>
+
+<p>
+Potom v učení můžete pokračovat pomocí Příručky pro učení z
+<a href="http://lilypond.org/doc/">&#11008;výborné dokumentace na internetu pro LilyPond</a>.
+</p><h3 id="help_starting"><a name="help_starting"></a>První kroky</h3>
+<p>
+Výchozí obrazovka Frescobaldi ukazuje textový dokument nalevo a prázdný
+náhled na noty napravo.
+</p>
+
+<p>
+Nyní v textovém pohledu zadejte nějaký kód v LilyPondu, jako je tento:
+</p>
+
+<pre style="color: #000000; background: #fcfcfc; font-family: "monospace"; font-size: 10.0pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> c'' <span style="font-weight: 600;">{</span>
+  <span style="color: #0000c0; font-weight: 600;">\time</span> <span style="color: #808000;">7/4</span>
+  c<span style="color: #008080;">2</span> bes<span style="color: #008080;">4</span> a<span style="color: #008080;">2</span> g a bes<span style="color: #008080;">4</span> a<span style="color: #c000c0; font-weight: 600;">(</span> g<span style="color: #c000c0; font-weight: 600;">)</span> f<span style="color: #008080;">2</span>
+<span style="font-weight: 600;">}</span>
+<span style="color: #006000; font-weight: 600;">\addlyrics</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #006000;">Join</span> <span style="color: #006000;">us</span> <span style="color: #006000;">now</span> <span style="color: #006000;">and</span> <span style="color: #006000;">share</span> <span style="color: #006000;">the</span> <span style="color: #006000;">soft</span> <span style="color: #006000;">--</span> <span style="color: #006000;">ware!</span>
+<span style="font-weight: 600;">}</span></pre>
+
+<p>
+Potom klepněte na tlačítko na nástrojovém pruhu Lily nebo stiskněte Ctrl+M.
+Pokud je vše v pořádku, LilyPond se nyní spustí a váš soubor zpracuje.
+Ve spodní části obrazovky můžete sledovat postup LilyPondu.
+Pokud se na vaší straně LilyPond nesetká s nějakými chybami, vytvoří soubor PDF,
+který se zobrazí v náhledu na noty:
+</p>
+
+<p><img src="getting_started1.png"></p>
+
+<p>
+Náhled na noty má mnoho možností:
+<p>
+
+<ul>
+<li>
+Setrvání ukazovátka myši nad notami a jinými předměty je zvýrazní v textu;
+klepněte na předměty pro přesunutí ukazovátka textu na ně
+</li>
+
+<li>
+Ctrl-kolečko pro změnu zvětšení. Přibližování a oddalování se soustředí na ukazovátku myši
+</li>
+
+<li>
+Ctrl-klepnutí na nějaké prázdné místo pro ukázání zvětšovacího skla totiž lupy
+</li>
+
+<li>
+Přesunutí ukazovátka textu nebo výběr textu zvýrazní noty v náhledu;
+stiskněte Ctrl+J pro přímé zaměření a zvýraznění noty nebo jiného předmětu
+v náhledu.
+</li>
+
+<li>
+Shift-tažení výběru a pak stiskněte Ctrl+Shift+C nebo <em>Úpravy&#8594;Zkopírovat do obrázku...</em>
+pro zkopírování vybrané hudby jako rastrového obrázku do schránky, do souboru nebo
+jiné aplikace.
+</li>
+</ul>
+
+<p>
+Pokud je váš hudební notový zápis hotov, doporučuje se spustit LilyPond ještě jednou znovu
+s vypnutými klepnutelnými notami: nabídka <em>LilyPond&#8594;Vyrýt (vydat)</em>.
+Výsledkem budou mnohem menší dokumenty PDF.
+</p>
+
+<p>
+Pokud se LilyPond vůbec nespouští, prověřte, zda máte LilyPond nainstalován
+správně a že je příkaz pro lilypond v proměnné prostředí vaší systémové PATH
+. Je-li to potřeba, poskytněte přesnou cestu ke spustitelnému souboru pro LilyPond v
+<em>Úpravy&#8594;Nastavení&#8594;Nastavení LilyPondu</em>.
+</p>
+
+<p>
+Pokud se LilyPond ve vašem dokumentu setká s chybami, budou tyto zobrazeny v zápisu,
+a Frescobaldi ve vašem dokumentu označí řádky, v nichž byly chyby
+nalezeny. Klepnutí na chybu v zápise nebo stisknutí Ctrl+E okamžitě
+přemístí ukazovátko textu na místo působící potíže. Stisknutím Ctrl+E znovu
+dojde k přesunu na další chybovou hlášku a tak dále. Když je LilyPond
+spuštěn znovu, jsou značky pro chyby v řádcích odstraněny.
+Označení chyb v řádcích můžete odstranit ručně volbou
+<em>Pohled&#8594;Vymazat značky chyb</em>.
+</p>
+<h3 id="help_scorewiz_help"><a name="help_scorewiz_help"></a>Průvodce pro notový zápis</h3>
+<p>
+Průvodce nastavením notového zápisu (Ctrl+Shift+N) v <em>Nástroje&#8594;Nastavit nový notový zápis...</em> je navržen
+pro rychlé nastavení notového zápisu hudby v LilyPondu.
+</p>
+
+<p>
+Na první kartě, <em>Názvy a hlavičky</em>, můžete zadat údaje o
+názvu.
+</p>
+
+<p>
+Na druhé kartě, <em>Hlasy</em>, můžete svůj notový zápis poskládat z mnoha
+dostupných typů hlasů.
+Dvojité poklepání na typ hlasu pro jeho přidání do vašeho notového zápisu (nebo klepnout na Přidat).
+Vyberte hlas v seznamu notového zápisu pro změnu některých nastavení vybraného hlasu,
+přejete-li si.
+Mnohé hlasy, zvláště Sbor, mají velké možnosti pro nastavení notového zápisu způsobem,
+jakým to chcete.
+</p>
+
+<p>
+Na třetí kartě, <em>Nastavení notového zápisu</em>, lze nastavit celkové vlastnosti
+a nastavení notového zápisu.
+</p>
+
+<p>
+Klepněte na tlačítko Náhled, abyste dostali náhled na dodané příkladové noty.
+Klepněte na OK pro zkopírování vytvořeného zdrojového textu v LilyPondu do editoru.
+</p>
+
+<h3>Více kousků nebo přesuny</h3>
+
+<p>
+Zvláštní a mocná vlastnost karty <em>Hlasy</em> je skryta ve 
+skupině "Nádoby" v seznamu typů hlasů.
+</p>
+
+<p>
+Tato skupina obsahuje typy Notový zápis, Kniha a Část knihy, se kterými můžete
+nastavit dokument LilyPondu obsahující více notových zápisů nebo dokonce knihy.
+Můžete přidat položky Notový zápis, Část knihy nebo Kniha do pohledu na notový zápis.
+Lze je vnořovat: Notový zápis jde přidat do části knihy nebo knihy, ale nemůžete přidat
+knihu do části knihy nebo do notového zápisu.
+</p>
+
+<p>
+Potom můžete přidat hudební hlasy.
+Pokud chcete vytvořit více notových zápisů s přesně týmiž hlasy, stačí jen přidat
+hlasy na nejvyšší úroveň pohledu na notový zápis, a pak notové zápisy, bez
+přidání hudebních hlasů do notových zápisů.
+Notové zápisy pak budou používat hlasy na nejvyšší úrovni notového zápisu.
+</p>
+<h3 id="help_tools"><a name="help_tools"></a>Jiné nástroje</h3>
+<p>Zde jsou v seznamu uvedeny některé další důležité nástroje.</p>
+<h4 id="help_quickinsert_help"><a name="help_quickinsert_help"></a>Panelem pro rychlé vložení</h4>
+<p>
+S nástroji v panelu pro rychlé vložení můžete k nynější notě nebo vybraným notám přidat různé hudební prvky..
+</p>
+
+<p>
+Volič <em>Směr</em> udává, zda se artikulace, dynamika nebo legatové obloučky
+objeví v neutrální poloze (např. určené směrem nožičky), nebo nad
+nebo pod osnovou přivěšením znaku <code>-</code>, <code>^</code> nebo
+<code>_</code>.
+</p>
+
+<p>
+Klepněte na kartu pro výběr nástroje. Nástroji můžete projíždět pomocí Ctrl
+(nebo ⌘) a kolečkem myši.
+Všechna tlačítka v panelu pro rychlé vložení mají nastavitelné klávesové zkratky;
+změnit je můžete klepnutím pravým tlačítkem myši na tlačítko.
+</p>
+<h3>Artikulace</h3>
+
+<p>
+Tyto hudební symboly lze přidat k notě nebo pomlce nebo k vybranému rozsahu
+not.
+Pokud je přidáte do výběru, pomlky budou přeskočeny.
+Pokud není vybrán žádný text, ukazovátko se automaticky přesune k další
+výšce tónu, pomlce, vynechání nebo akordu.
+</p>
+
+<p>
+Pokud je zaškrtnuto <em>Povolit zkrácený zápis</em>, Frescobaldi použije krátké značky
+pro artikulace, pokud existují
+(např. <code>-.</code> místo <code>-\staccato</code>).
+</p>
+<h3>Dynamika</h3>
+
+<p>
+Dynamiku je také možné přidat k notě nebo pomlce.
+Pokud vyberete rozsah not, můžete přidat natahovače, které budou automaticky
+končit na poslední notě, pomlce nebo akordu ve výběru.
+Pokud potom klepnete na značku, tato nahradí ukončovatele.
+</p>
+<h3>Natahovače</h3>
+
+<p>
+Tento nástroj vám dovolí přidat arpeggio, glissanda a další natahovače jako jsou legatové obloučky,
+frázovací obloučky, ruční trámce nebo trylky.
+</p>
+
+<p>
+Arpeggia a glissanda se vztahují na nynější notu;
+potřebují, aby nebyly vybrány žádné noty.
+Legatové obloučky, trámce nebo trylky se vztahují na nynější notu a na další
+pokud nejsou vybrány žádné noty,
+nebo k první a poslední notě nebo akordu ve výběru.
+</p>
+<h3>Taktové čáry</h3>
+
+<p>
+Zde můžete vložit taktové čáry nebo různé dechové značky.
+</p>
+<h4 id="help_snippet_help"><a name="help_snippet_help"></a>Kousky</h4>
+<p>
+Se správcem kousků můžete skladovat často používáte kousky textu nazývané
+"kousky", a snadno je vložit do textového editoru.
+</p>
+
+<p>
+Správce kousků lze zapnout přes nabídku <em>Vložka&#8594;Kousky...</em> nebo
+stisknutím Ctrl+T.
+</p>
+
+<p>
+Kousky lze hledat procházením seznamu nebo napsáním několika znaků
+ve vstupu pro vyhledání.
+Kousky také mohou mít klávesovou zkratku, kterou jsou přímo použity.
+Některé kousky mají zvláštní pomůcku pro zapamatování (krátký název), kterou můžete napsat také
+do vstupu pro hledání pro výběr kousku. Stisk klávesy Enter pak použije
+kousek na textový editor a skryje správce kousků.
+</p>
+
+<p>
+Přidejte nové kousky pomocí Ins. Upravte vybraný kousek F2.
+Odstraňte vybrané kousky pomocí Ctrl+Del. Varování: nelze se vrátit zpět!
+</p>
+
+<p>
+Kousky lze také dát do nabídky (podívejte se na <a href="#help_snippet_edit_help">Editor kousku</a>).
+A na konec jsou tu kousky, které mohou zahrnovat nebo měnit vybraný text.
+Některé kousky to dělají pomocí zvláštních proměnných, zatímco jiné jsou malými
+skripty napsanými v Pythonu.
+</p>
+<h5 id="help_snippet_edit_help"><a name="help_snippet_edit_help"></a>Editor kousku</h5>
+<p>Zde můžete upravit text kousku.</p><p>Pokud začnete první řádek(y) s '<code>-*- </code>' (všimněte si mezery), zbytek toho řádku(ů)vymezí proměnné jako <code>name: value;</code> nebo jednoduše <code>name;</code>, což ovlivní chování kousku. Lze použít následující proměnné:</p><dl><dt><code>menu</code></dt><dd>Zařadit kousek do nabídky pro vložení, seskupeno podle (volitelné) hodnoty.</dd><dt><code>template</code></dt><dd>Zařadit kousek do nabídky <em>Soubor&#8594;Nový z předlohy</em>, seskupeno podle (volitelné) hodnoty. Když je vyvolán přes nabídku, kousek je vložen do nového dokumentu.</dd><dt><code>name</code></dt><dd>Pomůcka pro zapamatování k napsání pro výběr kousku.</dd><dt><code>indent: no;</code></dt><dd>Neodsazovat kousek po vložení automaticky.</dd><dt><code>icon</code></dt><dd>Ikona k ukázání v nabídce a v seznamu kousků.</dd><dt><code>symbol</code></dt><dd>Symbol k ukázání v nabídce a v seznamu kousků. Symboly jsou ikony, které používají výchozí barvu textu a lze je najít v 'frescobaldi_app/symbols'.</dd><dt><code>python</code></dt><dd>Spustit kousek jako pythonovský skript. Podívejte se na <a href="#help_python_snippets_help">Kousky v Pythonu</a>.</dd><dt><code>selection</code></dt><dd>Jedno z více následujících slov (oddělených mezerami nebo čárkami): <code>yes</code>: Vyžaduje, aby byl vybrán text.
+<code>strip</code>: Upraví výběr, aby nezahrnoval prázdná místa na začátku a na konci.
+<code>keep</code>: Vybere všechen vložený text.</dd></dl><p>Další řádky kousku vymezují text k vložení v editoru. Zde můžete vložit proměnné uvozené znakem $. Zdvojený $ bude nahrazen jedním. Jsou uznávány následující proměnné:</p><dl><dt><code>$ANCHOR</code></dt><dd>Vybere text odtud po místo dané pomocí proměnné <code>$CURSOR</code></dd><dt><code>$CURSOR</code></dt><dd>Přesune ukazovátko textu po vložení sem.</dd><dt><code>$DATE</code></dt><dd>Nynější datum ve formátu RRRR-MM-DD.</dd><dt><code>$DOCUMENT_NAME</code></dt><dd>Název nynějšího dokumentu.</dd><dt><code>$FILE_NAME</code></dt><dd>Úplný místní souborový název nynějšího dokumentu.</dd><dt><code>$FRESCOBALDI_VERSION</code></dt><dd>Verze Frescobaldi.</dd><dt><code>$LILYPOND_VERSION</code></dt><dd>Verze výchozího programu LilyPond.</dd><dt><code>$SELECTION</code></dt><dd>Vybraný text, je-li dostupný. Pokud není, ukazovátko textu je přesunuto sem.</dd><dt><code>$URL</code></dt><dd>Adresa (URL) nynějšího dokumentu.</dd></dl><h5 id="help_python_snippets_help"><a name="help_python_snippets_help"></a>Kousky v Pythonu</h5>
+<p>Kousky v Pythonu mohou číst a mají nastavit proměnnou <code>text</code>. Proměnná <code>text</code> obsahuje nyní vybraný text (což může být prázdný řetězec).</p>
+<p>Můžete nastavit <code>text</code> na řetězec nebo seznam řetězců.</p>
+<p>Další proměnné, na něž lze odkazovat:</p><dl><dt><code>state</code></dt><dd>Seznam řetězců popisující typ textu, na něm stojí ukazovátko.</dd><dt><code>cursor</code></dt><dd>Nynější QTextCursor dávající přístup k dokumentu. Nicméně neměňte dokument přes ukazovátko.</dd><dt><code>CURSOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, můžete tuto hodnotu použít pro určení místa, na něž bude ukazovátko textu umístěno po vložení kousku.</dd><dt><code>ANCHOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, lze tuto hodnotu použít společně s <code>CURSOR</code> pro výběr textu, když jsou vkládány části seznamu s řetězci.</dd><dt><code>main</code></dt><dd>When you define a function with this name, it is called without arguments, instead of inserting the text from the <code>text</code> variable. In this case you may alter the document through the <code>cursor</code>.</dd></dl><h4 id="help_pitch_help"><a name="help_pitch_help"></a>Zacházení s výškou tónu</h4>
+<p>
+Frescobaldi nabízí následující funkce pro zacházení s výškou tónu,
+všechny v nabídce <em>Nástroje&#8594;Výška tónu</em>:
+</p>
+
+<dl>
+
+<dt>Jazyk výšky tónu</dt>
+<dd>
+Toto překládá názvy výšek tónů v celém dokumentu nebo výběru.
+</dd>
+
+<dt>Převést absolutní noty na relativní noty</dt>
+<dd>
+Toto převede všechny části not <code>\relative</code> na názvy absolutních výšek tónů.
+Odstraňuje, ale ctí, zastavení oktáv.
+</dd>
+
+<dt>Převést poměrné (relativní) noty na naprosté (absolutní)</dt>
+<dd>
+Prověří všechny hudební výrazy na nejvyšší úrovni, změní je na režim
+<code>\relative</code>, jakmile výraz obsahuje výšku tónu.
+Pokud chcete udělat oddělené podřízené výrazy relativní, může být nezbytné vybrat
+noty od prvního výrazu, vynechaje otevřené závorky
+vyšší úrovně.
+</dd>
+
+</dl>
+<h5 id="help_transpose_help"><a name="help_transpose_help"></a>Převést</h5>
+<p>
+Při převádění not je potřeba dát dvě absolutní výšky tónů pro zadání
+vzdálenosti pro převod. Výšky tónů mohou zahrnovat značky oktáv.
+Výšky tónů musí být zadány v jazyce pro výšku tónů používaném v dokumentu.
+</p>
+
+<p>
+Noty pak budou převedeny od první výšky tónu po druhou,
+jak by to prostě udělal příkaz LilyPondu <code>\transpose</code>.
+</p>
+
+<p>
+Např. při převodu malé tercie nahoru, byste zadal:<br />
+<code>c es</code>
+</p>
+
+<p>
+Pro převod velké sekundy dolů můžete zadat:<br />
+<code>c bes,</code>
+</p>
+
+<p>
+nebo:<br />
+<code>d c</code>
+</p>
+
+<p>
+Také je možné použít funkce převodu na změnu kousku not
+z Cis na Des, nebo pro stanovení čtvrťových tónů, pokud jsou podporovány
+používaným jazykem názvu výšky tónu.
+</p>
+
+<p>
+Převáděcí funkce může převádět jak poměrné (relativní) tak naprosté (absolutní) noty,
+správně zacházet s předznamenáními, režimem akordů a zastaveními oktáv.
+</p>
+<h4 id="help_rhythm_help"><a name="help_rhythm_help"></a>Zacházení s rytmem</h4>
+<p>
+Rytmické funkce Frescobaldi mění doby trvání napsané po notách,
+akordech, pomlkách atd. Pomocí těchto funkcí, všech v nabídce <em>Nástroje&#8594;Rytmus</em>, je
+je možné zdvojnásobit nebo na polovinu zkrátit délku not, přidat nebo odstranit tečky
+a odstranit činitele změny velikosti.
+</p>
+
+<p>
+Také je možné změnit způsob, jakým je rytmus zadán: pro každou notu
+(přímý), nebo jen tehdy, když se doba trvání změní (nepřímý). Někteří uživatelé mohou dávat přednost
+volbě skrytý na řádek, která vždy stanovuje dobu trvání první
+noty, akordu nebo pomlky na řádku.
+</p>
+
+<p>
+Poslední tři příkazy nabídky mohou rytmus zadaný v dialogu kopírovat, vložit nebo
+použít.
+</p>
+
+<p>
+V dialogu "Použít rytmus" můžete zadat řady dob trvání, např.:
+</p>
+
+<p>
+<code>4. 8 4 16 16 8 2</code>
+</p>
+
+<p>
+který potom bude opakovaně použit na výběr not.
+</p>
+<h4 id="help_lyrics_help"><a name="help_lyrics_help"></a>Slova písně</h4>
+<p>
+Frescobaldi může spojovníky automaticky umístit '<code>&nbsp;--&nbsp;</code>' uvnitř textů,
+aby tyto texty udělal použitelnými jako slova písně.
+Může použít slovníky pro dělení slov používané programy OpenOffice.org, Scribus, atd.
+</p>
+
+<p>
+Pro použití této vlastnosti nejprve musíte vybrat text, ve kterém chcete provést dělení slov. Potom
+stiskněte Ctrl+L nebo vyberte <em>Nástroje&#8594;Slova písně</em>.
+V dialogu, který se objeví, vyberte jazyk.
+Klepněte na OK nebo stiskněte klávesu Enter, aby se dělení slov provedlo. 
+</p>
+
+<p>
+Malým omezením je, že slovníky s dělením slov pro textové procesory často nechtějí slovo
+zalamovat hned po prvním písmenu (např. '<code>a&nbsp;--&nbsp;men</code>'), protože to
+v textech v těchto editorech nevypadá hezky. Takže se může stát, že po prvním písmenu takového textu
+budete nějaké spojovníky muset přidat. 
+</p>
+
+<p>
+Na odstranění dělení slov je tu také příkaz. To může být užitečné, pokud máte
+sloku textu písně, kterou pouze chcete zobrazit jako zápis pod hudbou.
+Pod <em>Úpravy&#8594;Nastavení</em> můžete zadat seznam adresářů, ve kterých se mají hledat soubory
+s dělením slov.
+</p>
+<h3 id="help_editor"><a name="help_editor"></a>Editor</h3>
+<p>
+V této části se hovoří o vlastnostech editoru,
+např. jak ovládat automatické odsazování, jak používat hledat a nahradit,
+atd.
+</p>
+<h4 id="help_search_replace"><a name="help_search_replace"></a>Hledat a nahradit</h4>
+<p>
+V nabídce <em>Úpravy</em> lze nalézt příkazy Hledat (Ctrl+F)
+a Nahradit (Ctrl+H), které otevírají malé okno ve
+spodní části pohledu.
+It is possible to search for plain text or regular expressions.
+</p>
+
+<p>
+Regulární výrazy jsou pokročilé hledané texty, které obsahují znaky, které mohou
+odpovídat více znakům v dokumentu.
+Při nahrazování textu je také možné odkazovat na části hledaného textu
+uzavřené v závorkách.
+</p>
+
+<p>
+V režimu hledání s regulárním výrazem mají některé znaky zvláštní význam:
+</p>
+
+<dl compact="compact">
+<dt><code>*</code></dt>
+<dd>odpovídá předchozímu znaku nebo skupině nulakrát nebo vícekrát</dd>
+<dt><code>+</code></dt>
+<dd>odpovídá předchozímu znaku nebo skupině jedenkrát nebo vícekrát</dd>
+<dt><code>?</code></dt>
+<dd>odpovídá předchozímu znaku nebo skupině nulakrát nebo jedenkrát</dd>
+<dt><code>[ ]</code></dt>
+<dd>odpovídá jednomu z obsažených znaků</dd>
+<dt><code>( )</code></dt>
+<dd>skupina znaků. Toto také uloží odpovídající text ve skupině.
+Při nahrazování můžete použít znaky jako <code>\1</code>, <code>\2</code>
+atd. pro zapsání textu odpovídající skupiny v nahrazovacím textu.
+</dd>
+<dt><code>\\ \n \t \s \d \w</code></dt>
+<dd>odpovídá, v uvedeném pořadí: zpětné/obrácené lomítko, nový řádek, zarážka, znak pro jakékoli prázdné místo,
+číslice, obecný znak pro slovo jako.</dd>
+</dl>
+
+<p>
+Celou rozpravu o regulárních výrazech je možné najít v dokumentaci k Pythonu
+<a href="http://docs.python.org/library/re.html#regular-expression-syntax">&#11008;</a>.
+</p>
+<h4 id="help_document_variables"><a name="help_document_variables"></a>Proměnné pro dokument</h4>
+<p>Proměnné pro dokument jsou promměnnými, které ovlivňují chování Frescobaldi.
+Lze je zapsat  na prvních pěti nebo posledních pěti řádcích dokumentu.
+Pokud řádek obsahuje '<b><code>-*-</code></b>', Frescobaldi hledá zbytek
+řádků pro vymezení proměnných jako <code>name: value;</code>.
+</p>
+<p>Jsou uznávány následující proměnné:</p><dl><dt><code>mode</code>: <i>Režim</i><code>;</code></dt><dd>Vynutit režim, aby byl jedním z lilypond, html, texinfo, latex, docbook nebo scheme. Výchozí: automatické rozpoznání režimu.</dd>
+<dt><code>master</code>: <i>Souborový název</i><code>;</code></dt><dd>Sestaví jiný dokument LilyPond namísto nynějšího.</dd>
+<dt><code>coding</code>: <i>Kódování</i><code>;</code></dt><dd>Použít jiné kódování než výchozí UTF-8.</dd>
+<dt><code>version</code>: <i>Verze</i><code>;</code></dt><dd>Nastavit verzi LilyPondu, která se bude používat. Lze ji používat pro dokumenty, které nejsou v LilyPondu.</dd>
+<dt><code>tab-width</code>: <i>Číslo</i><code>;</code></dt><dd>Šířka znaku pro zarážku; ve výchozím nastavení je to 8.</dd>
+<dt><code>indent-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Zda používat pro odsazování zarážek; ve výchozím nastavení <code>no</code>.</dd>
+<dt><code>document-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Zda používat zarážky někde jinde v dokumentu; ve výchozím nastavení <code>yes</code>.</dd>
+<dt><code>indent-width</code>: <i>Číslo</i><code>;</code></dt><dd>Počet mezer, který používá každá úroveň odsazení; ve výchozím nastavení 2.</dd>
+</dl>
+<p>Proměnné pro dokument můžete dát do poznámek.</p><h4 id="help_sessions"><a name="help_sessions"></a>Sessions</h4>
+<p>A session is basically a list of open files. At any time you can choose <em>Sezení&#8594;Save</em> or <em>Sezení&#8594;New</em> and save the current list of open files to a named session.</p>
+<p>When you switch sessions, all current documents are closed first and then the documents of the other session are opened.</p>
+<p>Inside the session properties dialog, you can choose whether to always save the list of open documents to that session, or to only save on creation (or via <em>Sezení&#8594;Save</em>). This can be useful if you want to keep the list of documents in session the same, even if you open or close documents while working.</p>
+<p>You can also specify a default directory for the session.</p><p>Podívejte se také na: <a href="#help_preferences_general">Obecné volby</a></p>
+<h3 id="help_preferences_dialog"><a name="help_preferences_dialog"></a>Nastavení</h3>
+<p>In the Preferences Dialog (under <em>Úpravy&#8594;Nastavení</em>) you can configure many aspects of Frescobaldi and LilyPond.</p>
+<h4 id="help_preferences_general"><a name="help_preferences_general"></a>Obecné volby</h4>
+<p>Under <em>Obecné volby</em>, you can choose in which language Frescobaldi's user interface is translated, which user interface style you want to use, and whether you want to use the built-in Tango iconset or to use the system-wide configured icon set.</p>
+
+<p>Language and style take effect immediately, but the new iconset is visible after Frescobaldi has been restarted.</p>
+
+<p>Under <em>Sezení, které se má nahrát, je-li Frescobaldi spuštěn bez argumentů</em> you can configure which session to load if Frescobaldi is started without a filename. You can choose whether to start with one empty document, with the last used session, or with a specific session. See also <a href="#help_sessions">Sessions</a>.</p>
+
+<p>Under <em>Při ukládání dokumentů</em>, you can choose what to do when a document is saved, such as remembering the cursor position and marked lines, or leaving a backup copy of the document (with a ~ appended). Also, you can specify a default folder in which you keep your LilyPond documents.</p>
+<h4 id="help_preferences_lilypond"><a name="help_preferences_lilypond"></a>Nastavení LilyPondu</h4>
+<p>Here you can configure how LilyPond is run when you engrave your document.</p>
+
+<p>If you have multiple versions of LilyPond installed you can specify them here, and configure Frescobaldi to automatically choose the right one, based on the version number that is set in the document (<a href="#help_preferences_lilypond_autoversion">more info</a>).</p>
+
+<p>You can also configure how LilyPond is run. See the tooltips of the settings for more information.</p>
+
+<p>Finally, you can specify a list of paths where the LilyPond <code>\include</code> command looks for files.</p>
+<h4 id="help_preferences_midi"><a name="help_preferences_midi"></a>Nastavení MIDI</h4>
+<p>Here you can configure Frescobaldi's MIDI settings.</p>
+
+<p>You can specify the MIDI port name to play to. If there are no port names visible in the drop-down box, it may be necessary to connect a hardware MIDI synthesizer to your computer, or to start a software synthesizer program such as TiMidity or Fluidsynth.On Linux, the synthesizer should be available as an ALSA MIDI device.</p>
+
+<p>If you have a device with multiple ports, you can specify the first letters of the name, to have Frescobaldi automatically pick the first available one.</p>
+
+<p>And finally, when using a software synthesizer it is recommended to enable the option <em>Zavřít nepoužívaný výstup MIDI</em>.</p>
+
+<p>Je-li zaškrtnuto, Frescobaldi zavře přípojky pro výstupy MIDI, které se po jednu minutu nepoužívají.</p>
+<p>Toto může uvolnit systémové prostředky, které může používat softwarový syntetizátor MIDI, a tím ušetřit energie v baterii.</p>
+<p>Vedlejším účinkem je, že pokud pozastavíte soubor MIDI na delší dobu, nástroje jsou nastaveny znovu na výchozí klavír (nástroj 0). V tom případě přehrávání souboru od začátku nastaví nástroje znovu.</p>
+<h4 id="help_preferences_helpers"><a name="help_preferences_helpers"></a>Pomocné programy</h4>
+<p>In this page you can enter commands to open different file types. <code>$f</code> is replaced with the filename, <code>$u</code> with the URL. Leave a field empty to use the operating system default application.</p>
+
+<p>For the e-mail setting, the command should accept a <code>mailto:</code> url. For the command prompt, the command should open a console window. A <code>$f</code> value is replaced with the directory of the current document.</p>
+<h4 id="help_preferences_paths"><a name="help_preferences_paths"></a>Cesty</h4>
+<p>Here, directories can be added that contain <code>hyph_*.dic</code> files, where the <code>*</code> stands for different language codes.</p>
+
+<p>These hyphenation dictionaries are used by Frescobaldi to break lyrics text into syllabes.</p>
+<h4 id="help_preferences_documentation"><a name="help_preferences_documentation"></a>Dokumentace k LilyPondu</h4>
+<p>Zde můžete přidat místní cesty nebo adresy (URL) ukazující na dokumentaci k LilyPondu. Místní cesta by měla ukazovat na adresář, kde je buď adresář "Documentation", nebo celou cestu "share/doc/lilypond/html/offline-root".</p>
+<p>Pokud tyto nelze najít, dokumentace se hledá ve všech podadresářích zadané cesty, o jednu úroveň hlouběji. Tímto je možné dát více verzí dokumentace k LilyPondu do různých podadresářů a nechat Frescobaldi, aby je automaticky našel.</p><h4 id="help_preferences_shortcuts"><a name="help_preferences_shortcuts"></a>Klávesové zkratky</h4>
+<p>Here you can add keyboard shortcuts to all commands available. Also the <a href="#help_snippet_help">Kousky</a> or <a href="#help_quickinsert_help">Rychlé vložení</a> buttons that have keyboard shortcuts are listed here.</p>
+
+<p>To change a keyboard shortcut, highlight an action in the list and click the Edit button, or double-click an action. In the dialog that appears, you can enter up to four shortcuts for the action by clicking the button and typing the shortcut. </p>
+
+<p>You can define a new scheme by using the New button.</p>
+<h4 id="help_preferences_fontscolors"><a name="help_preferences_fontscolors"></a>Písma a barvy</h4>
+<p>Here you can set the editor font (a monospace font is recommended) and all colors.</p>
+
+<p>The first item lets you set the colors for the text editor backgroud, foreground, selection background, the current line, line markings, the paper color in the Music View, etcetera.</p>
+
+<p>The second item lets you set color and other attributes of the general highlighting styles, e.g. keyword, variable, value, comment, etcetera.</p>
+
+<p>The other items contain the types of text the syntax highlighter recognizes for every particular document type Frescobaldi supports. Some of these types inherit a general style. It is possible to set the attributes bold, italic, underline and the foreground, background and underline color.</p>
+
+<p>You can define a new scheme by using the New button.</p>
+<h4 id="help_preferences_tools"><a name="help_preferences_tools"></a>Nástroje</h4>
+<p>Here you can change the settings for various tools.</p>
+<h3 id="help_about"><a name="help_about"></a>O Frescobaldi</h3>
+<p>
+Frescobaldi je pojmenován po
+<a href="http://en.wikipedia.org/wiki/Girolamo_Frescobaldi">&#11008;Girolamu
+Frescobaldim (1583 &#8211; 1643)</a>, italském varhaníkovi a skladateli.
+</p>
+
+<p>
+Frescobaldiho stránky jsou na
+<a href="http://www.frescobaldi.org/">&#11008;www.frescobaldi.org</a>
+a je tu i poštovní seznam na
+<a href="mailto:frescobaldi@googlegroups.com">frescobaldi@googlegroups.com</a>
+(<a href="http://groups.google.com/group/frescobaldi">&#11008;more info</a>).
+</p>
+<h4 id="help_credits"><a name="help_credits"></a>Zásluhy</h4>
+<p>Hlavním autorem Frescobaldi je Wilbert Berendsen.</p>
+<p>Frescobaldi je napsán v <a href="http://www.python.org/">&#11008;Python</a> a používá sadu nástrojů <a href="http://qt.nokia.com/">&#11008;Qt4</a>.</p>
+<p>Pohled na noty je živen knihovnou <a href="http://poppler.freedesktop.org/">&#11008;Poppler</a> od Kristian Høgsberg, Albert Astals Cid a dalších.</p>
+<p>Většina ikon v balíku je vytvořena <a href="http://tango.freedesktop.org/">&#11008;Projekt pro pracovní plochu Tango</a>.</p>
+<p>Frescobaldi je přeložen do následujících jazyků:</p>
+<p>Braziliaans Portugees: Édio Mazera</p>
+<p>Duits: Henrik Evers, Georg Hennig, Markus W. Kropp</p>
+<p>Frans: Raphaël Doursenaud, Philippe Massart, Valentin Villenave, Yann Collette, David Bouriaud, Ryan Kavanagh</p>
+<p>Galicisch: Manuel A. Vázquez</p>
+<p>Italiaans: Gianluca D'Orazio</p>
+<p>Nederlands: Wilbert Berendsen</p>
+<p>Pools: Piotr Komorowski</p>
+<p>Russisch: Sergey Poltavski, Artem Zolochevskiy</p>
+<p>Spaans: Francisco Vila</p>
+<p>Tsjechisch: Pavel Fric</p>
+<p>Turks: Server ACİM</p><h4 id="help_contributing"><a name="help_contributing"></a>Příspěvky</h4>
+<p>
+Frescobaldi je <a href="http://www.gnu.org/philosophy/free-sw.html">&#11008;projekt svobodného
+programu</a> pro vytvoření uživatelsky přátelského editoru notového zápisu hudby v LilyPond.
+Cílem je udělat Frescobaldi dostupným ve všech hlavních operačních systémech.
+</p>
+
+<p>
+Frescobaldi je vyvíjen ve veřejném úložišti GitHub na <a href="http://github.com/wbsoft/frescobaldi">&#11008;github.com/wbsoft/frescobaldi</a>.
+Můžete procházet nebo stáhnout zdrojový kód a hlásit chyby a přání.
+</p>
+
+<p>
+Můžete přispět jednoduše používáním Frescobaldi a hlášením chyb a návrhů.
+Překlady jsou rovněž velmi vítány. Jak vytvořit nový překlad je popsáno
+v souboru README-translations ve zdrojových kódech Frescobaldi.
+Pokud chcete přidat nějakou vlastnost, naleznete informace o stavbě zdrojového kódu
+v souboru README-development.
+</p>
+<h4 id="help_history"><a name="help_history"></a>Historie Frescobaldi</h4>
+<p>
+Frescobaldi má své kořeny v LilyKDE, což byl přídavný modul pro editor pro prostředí KDE3 Kate.
+LilyKDE byl napsán v Pythonu a vydán o Vánocích v roce 2007.
+</p>
+
+<p>
+Když KDE vyvinulo verzi 4, nebylo hned možné dělat přídavné moduly pro Kate
+v Pythonu. A tak se LilyKDE stal samostatným programem, obalujícím část
+textového editoru Kate, a byl přejmenován na Frescobaldi. ořád používal část KDE Okular
+na zobrazení dokumentů PDF.
+Frescobaldi 0.7 bylo prvním veřejným vydáním, na Vánoce roku 2008.
+O Vánocích 2009 byla vydána verze 1.0.0 a na Vánoce 2010 verze 1.2.0.
+</p>
+
+<p>
+V té době padlo rozhodnutí o tom, že se odejde od knihoven KDE4 libraries a pouze se bude používat
+Python a Qt4, které jsou snadno dostupné na většině hlavních výpočetních platforem.
+Frescobaldi 2.0 je úplným přepisem od začátku. Datum jeho vydání
+je cíleno na Vánoce 2011.
+</p>
+
+
+<address>
+<a href="uguide.html">English</a>, <a href="uguide.nl.html">Nederlands</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a> | Last Modified: 12 mrt 2012
+</address>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl">
+<head>
+	<title>Frescobaldi handleiding - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is een LilyPond muziek-editor" />
+	<meta name="keywords" content="lilypond, music notation, ide" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>Frescobaldi handleiding</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="/"><u>H</u>ome</a>
+	<a accesskey="s" href="screenshots"><u>S</u>chermafbeeldingen</a>
+	<a accesskey="d" href="download"><u>D</u>ownloaden</a>
+	<a accesskey="u" href="uguide" class="selected">Gebr<u>u</u>ikershandleiding</a>
+	<a accesskey="o" href="development"><u>O</u>ntwikkeling</a>
+	<a accesskey="l" href="links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<p>(<a href="uguide-1">Frescobaldi 1.x User Guide</a>)</p>
+
+<h2 id="help_contents"><a name="help_contents"></a>Frescobaldi handleiding</h2>
+<p>
+Frescobaldi is een eenvoudige maar krachtige editor voor LilyPond
+bladmuziek documenten.
+Deze handleiding is geschreven door Wilbert Berendsen en documenteert Frescobaldi versie 2.0.4.
+</p>
+<p>Vertaald door Wilbert Berendsen.</p><h3>Hulp verkrijgen in Frescobaldi</h3>
+
+<p>
+In veel dialogen kunt u de Help-knop (F1) gebruiken.
+Veel items in de interface hebben ook "Wat is dit"-informatie die
+wordt weergegeven door op Shift+F1 te drukken of
+<em>Help&#8594;Wat is dit</em> te kiezen.
+</p>
+<h3 id="help_toc"><a name="help_toc"></a>Inhoudsopgave</h3>
+<ul><li><a href="#help_introduction">Inleiding</a></li><li><a href="#help_starting">Aan de slag</a></li><li><a href="#help_scorewiz_help">Partituur opzetten</a></li><li><a href="#help_tools">Ander gereedschap</a></li><ul><li><a href="#help_quickinsert_help">Het Quick Insert-paneel</a></li><li><a href="#help_snippet_help">Knipsels</a></li><ul><li><a href="#help_snippet_edit_help">Knipsel-editor</a></li><ul><li><a href="#help_python_snippets_help">Python knipsels</a></li></ul>
+</ul>
+<li><a href="#help_pitch_help">Toonhoogte bewerken</a></li><ul><li><a href="#help_transpose_help">Transponeren</a></li></ul>
+<li><a href="#help_rhythm_help">Ritme bewerken</a></li><li><a href="#help_lyrics_help">Liedteksten</a></li></ul>
+<li><a href="#help_editor">De editor</a></li><ul><li><a href="#help_search_replace">Zoeken en vervangen</a></li><li><a href="#help_document_variables">Document-variabelen</a></li><li><a href="#help_sessions">Sessies</a></li></ul>
+<li><a href="#help_preferences_dialog">Voorkeuren</a></li><ul><li><a href="#help_preferences_general">Algemene voorkeuren</a></li><li><a href="#help_preferences_lilypond">LilyPond-voorkeuren</a></li><li><a href="#help_preferences_midi">MIDI-instellingen</a></li><li><a href="#help_preferences_helpers">Hulpprogramma's</a></li><li><a href="#help_preferences_paths">Paden</a></li><li><a href="#help_preferences_documentation">LilyPond-documentatie</a></li><li><a href="#help_preferences_shortcuts">Sneltoetsen</a></li><li><a href="#help_preferences_fontscolors">Tekst & kleur</a></li><li><a href="#help_preferences_tools">Gereedschap</a></li></ul>
+<li><a href="#help_about">Over Frescobaldi</a></li><ul><li><a href="#help_credits">Dank aan</a></li><li><a href="#help_contributing">Meedoen</a></li><li><a href="#help_history">Geschiedenis van Frescobaldi</a></li></ul>
+<li><a href="#help_toc">Inhoudsopgave</a></li></ul>
+<h3 id="help_introduction"><a name="help_introduction"></a>Inleiding</h3>
+<p>
+<a href="http://lilypond.org/">&#11008;LilyPond</a>
+is een open-source muziekgravure-programma, dat bladmuziek van hoge kwaliteit produceert uit relatief eenvoudige tekstinvoerbestanden.
+Deze tekstbestanden kunnen met elke teksteditor worden aangemaakt, waarna LilyPond de bestanden leest en een fraaie gravure creëert, normaal gesproken in PDF-formaat.
+</p>
+
+<p>
+Frescobaldi is ontworpen om het bewerken van LilyPond muziekbestanden sneller en gemakkelijker te maken.
+Het blijft echter noodzakelijk de LilyPond invoertaal te leren doorgronden.
+Als u het gedeelte <a href="#help_starting">Aan de slag</a> leest in deze handleiding, zult u ook al wat LilyPond basiskennis opdoen.
+</p>
+
+<p>
+Daarna kunt u verder gaan met de Learning Manual van
+<a href="http://lilypond.org/doc/">&#11008;LilyPond's uitstekende online documentatie</a>.
+</p><h3 id="help_starting"><a name="help_starting"></a>Aan de slag</h3>
+<p>
+Het standaardscherm van Frescobaldi toont een tekstdocument aan de linkerzijde en de muziekweergave aan de rechterzijde.
+</p>
+
+<p>
+Voer in de tekstweergave wat LilyPond-code in, zoals dit:
+</p>
+
+<pre style="color: #000000; background: #fcfcfc; font-family: "monospace"; font-size: 10.0pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> c'' <span style="font-weight: 600;">{</span>
+  <span style="color: #0000c0; font-weight: 600;">\time</span> <span style="color: #808000;">7/4</span>
+  c<span style="color: #008080;">2</span> bes<span style="color: #008080;">4</span> a<span style="color: #008080;">2</span> g a bes<span style="color: #008080;">4</span> a<span style="color: #c000c0; font-weight: 600;">(</span> g<span style="color: #c000c0; font-weight: 600;">)</span> f<span style="color: #008080;">2</span>
+<span style="font-weight: 600;">}</span>
+<span style="color: #006000; font-weight: 600;">\addlyrics</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #006000;">Join</span> <span style="color: #006000;">us</span> <span style="color: #006000;">now</span> <span style="color: #006000;">and</span> <span style="color: #006000;">share</span> <span style="color: #006000;">the</span> <span style="color: #006000;">soft</span> <span style="color: #006000;">--</span> <span style="color: #006000;">ware!</span>
+<span style="font-weight: 600;">}</span></pre>
+
+<p>
+Klik dan op de lelie-knop in de werkbalk of druk op Ctrl+M.
+Als alles goed is start LilyPond nu en verwerkt uw bestand.
+Onderaan het scherm kunt u de voortgang van LilyPond volgen.
+Als u geen fouten gemaakt hebt zal er een PDF-bestand worden aangemaakt
+dat wordt weergegeven in de Muziekweergave:
+</p>
+
+<p><img src="getting_started1.png"></p>
+
+<p>
+De muziekweergave heeft veel mogelijkheden:
+<p>
+
+<ul>
+<li>
+Als u de muis over noten en andere objecten beweegt, lichten deze
+op in de tekst; klik op objecten om de tekstcursor ernaartoe te brengen
+</li>
+
+<li>
+U kunt in- en uitzoomen met het muiswiel terwijl u de control-toets vasthoudt. De muispijl bepaalt waarop ingezoomd wordt.
+</li>
+
+<li>
+Control-klik op een lege plek om een vergrootglas te tonen
+</li>
+
+<li>
+Als u de tekstcursor verplaatst of tekst selecteert lichten de noten in de muziekweergave op;
+druk op Ctrl+J om naar een noot of ander object in de muziekweergave toe te springen.
+</li>
+
+<li>
+U kunt met shift een selectie-rechthoek tekenen en dan drukken op Ctrl+Shift+C of <em>Bewerken&#8594;Naar afbeelding kopiëren...</em>
+om de geselecteerde muziek als een rasterafbeelding naar het klembord, een bestand of een andere toepassing te kopiëren.
+</li>
+</ul>
+
+<p>
+Als uw partituur voltooid is, wordt het aanbevolen om LilyPond nog een keer te starten
+met aanklikbare noten uitgeschakeld: menu <em>LilyPond&#8594;Graveren (publicatie)</em>.
+Dit resulteert in veel kleinere PDF-bestanden.</p>
+
+<p>
+Als LilyPond niet start, kijk of LilyPond correct geïnstalleerd is en dat het commando in de PATH omgevingsvariabele van uw besturingssysteem is ingesteld.
+Indien nodig kunt u het volledige pad naar LilyPond instellen onder
+<em>Bewerken&#8594;Voorkeuren&#8594;LilyPond-voorkeuren</em>.
+</p>
+
+<p>
+Als LilyPond fouten in uw document tegenkomt worden deze in de log weergegeven
+en Frescobaldi markeert de regels waar de fouten werden gevonden.
+Klik op de foutmeldingen of druk op Ctrl+E om meteen naar de fout te gaan.
+Als u nog eens op Ctrl+E drukt gaat u naar de volgende fout.
+Als u LilyPond opnieuw start worden de foutmarkeringen weer verwijderd.
+U kunt ook handmatig de foutmarkeringen verwijderen met de optie
+<em>Beeld&#8594;Foutmarkeringen verwijderen</em>.
+</p>
+<h3 id="help_scorewiz_help"><a name="help_scorewiz_help"></a>Partituur opzetten</h3>
+<p>
+De Score Wizard (Ctrl+Shift+N) in <em>Gereedschap&#8594;Nieuwe partituur maken...</em> is ontworpen om snel een LilyPond partituur op te zetten.
+</p>
+
+<p>
+In het eerste tabblad, <em>Titels en koppen</em>, kunt u informatie zoals titels invoeren.
+</p>
+
+<p>
+In het tweede tabblad, <em>Partijen</em>, kunt u uw partituur samenstellen uit vele beschikbare partijen. Dubbelklik een partij om deze aan uw partituur toe te voegen (of klik Toevoegen).
+Selecteer de partij in de partituurlijst om de partij naar wens in te stellen.
+Veel partijen, vooral Koor, hebben zeer krachtige instellingen om de partij op te zetten zoals u het wilt.
+</p>
+
+<p>
+In het derde tabblad, <em>Partituur-instellingen</em>, kunt u algemene eigenschappen en voorkeuren aangeven.
+</p>
+
+<p>
+Klik de knop Vooruitblik om een weergave te zien met wat voorbeeldmuziek ingevuld.
+Klip de knop OK om de aangemaakte LilyPond-partituur naar de editor te kopiëren.
+</p>
+
+<h3>Meerdelige werken</h3>
+
+<p>
+Een speciale en krachtige functie van het <em>Partijen</em> tabblad ligt verstopt in de "Containers" categorie in de partijlijst.
+</p>
+
+<p>
+Deze categorie bevat de Score, Book en Bookpart typen, waarmee meerdelige stukken kunnen worden samengesteld of zelfs boeken.
+U kunt Score, Bookpart of Book typen aan de partituur toevoegen. Deze kunnen ook genest worden: een Score kan in een Bookpart of Book, maar een Book kan niet in een Bookpart of Score.
+</p>
+
+<p>
+Daarna kunt u de muziekpartijen toevoegen.
+ALs u meerdere delen of stukken wilt met precies dezelfde partijen, dan kunt u volstaan met het toevoegen van de partijen bovenaan de partituur, en daarna de Scores, zonder partijen aan de Scores toe te voegen.
+Alle Scores zullen dan de partijen uit de partituur gebruiken.</p>
+<h3 id="help_tools"><a name="help_tools"></a>Ander gereedschap</h3>
+<p>Enkele andere belangrijke hulpmiddelen volgen hieronder.</p>
+<h4 id="help_quickinsert_help"><a name="help_quickinsert_help"></a>Het Quick Insert-paneel</h4>
+<p>
+Met de gereedschappen in het Quick Insert-paneel kunt u allerlei muzieksymbolen  aan de huidige noot of de geselecteerde muziek toevoegen.
+</p>
+
+<p>
+De <em>Richting</em> selectieknop bepaalt of articulaties, dynamische tekens of boogjes in een neutrale positie worden geplaatst (bijv. bepaald door stokrichting) of boven of onder de balk door een <code>-</code>, <code>^</code> of
+<code>_</code> teken ervoor te plaatsen.
+</p>
+
+<p>
+Klik op een tab om een categorie te selecteren. U kunt bladeren door alle tabs met Control (of ⌘) en het muiswiel.
+Alle knoppen in het Quick Insert-paneel hebben instelbare sneltoetsen; u kunt deze aanpassen door rechts te klikken op een knop.
+</p>
+<h3>Articulaties</h3>
+
+<p>
+Deze muzieksymbolen kunnen aan een noot, rust of een geselecteerd bereik worden toegevoegd.
+Als u ze aan een selectie toevoegt worden rusten overgeslagen.
+Als er geen tekst geselecteerd is springt de cursor vanzelf naar de volgende noot, rust of het volgende akkoord.
+</p>
+
+<p>
+Als <em>Korte notatie</em> is ingeschakeld zal Frescobaldi korte tekens gebruiken indien beschikbaar (bijvoorbeeld <code>-.</code> in plaats van <code>-\staccato</code>).
+</p>
+<h3>Dynamische tekens</h3>
+
+<p>
+Dynamische tekens kunnen ook aan noten of rusten worden toegevoegd.
+Als u een muziekbereik selecteert kunt in spanners toevoegen die automatisch afsluiten op de laatste noot, rust of het laatste akkoord.
+Als u daarna een teken aanklikt, vervangt dat de afsluiter.
+</p>
+<h3>Spanners</h3>
+
+<p>
+Hiermee kunt u arpeggio's, glissando's en andere spanners zoals bogen, fraseringsbogen, handmatige waardestrepen of trillers toevoegen.
+</p>
+
+<p>
+Arpeggio's en glissando's gelden alleen voor de huidige noot;
+er hoeft geen muziek te zijn geselecteerd.
+De bogen, waardestreep of de triller gelden voor de huidige noot en de volgende als er geen muziek geselecteerd is,
+of voor de eerste en de laatste noot of akkoord in de selectie.
+</p>
+<h3>Maatstrepen</h3>
+
+<p>
+Hiermee kunt u verschillende soorten maatstrepen en ademhalingstekens invoegen.
+</p>
+<h4 id="help_snippet_help"><a name="help_snippet_help"></a>Knipsels</h4>
+<p>
+Met de knipselmanager kunt u vaak gebruikte stukjes tekst, "knipsels" genaamd, opslaan en eenvoudig in de teksteditor plakken.
+</p>
+
+<p>
+De knipselmanager wordt geactiveerd via het menu <em>Invoegen&#8594;Knipsels...</em> of door op Ctrl+T te drukken.
+</p>
+
+<p>
+U kunt zoeken naar knipsels door door de lijst te bladeren of enige tekens in het zoekvak te typen.
+Knipsels kunnen ook een sneltoets hebben die ze direct toepast.
+Sommige knipsels hebben een speciale mnemonic (korte naam) die u kunt typen in het zoekvak om het knipsel te selecteren. Als u daarna op Enter drukt wordt het knipsel direct toegepast en de knipselmanager weer verborgen.
+</p>
+
+<p>
+Voeg nieuwe knipsels toe met Ins. Bewerk het huidige knipsel met F2. Verwijder geselecteerde knipsels met Ctrl+Del. Waarschuwing: deze actie kan niet ongedaan worden gemaakt!
+</p>
+
+<p>
+Knipsels kunnen ook worden weergegeven in het menu (zie <a href="#help_snippet_edit_help">Knipsel-editor</a>).
+Tenslotte zijn er ook knipsels die geselecteerde tekst kunnen meenemen of veranderen.
+Sommige knipsels doen dit door speciale variabelen te gebruiken,
+terwijl andere in feite kleine scripts zijn, geschreven in Python.
+</p>
+<h5 id="help_snippet_edit_help"><a name="help_snippet_edit_help"></a>Knipsel-editor</h5>
+<p>Hier kunt u de tekst van het knipsel bewerken.</p> <p>Als u de eerste regel(s) start met '<code>-*- </code>' (let op de spatie), definieert de rest van deze regels variabelen zoals <code>naam:waarde;</code> of eenvoudig <code>naam;</code>. Deze variabelen veranderen het gedrag van het knipsel. De volgende variabelen kunnen worden gebruikt:</p><dl><dt><code>menu</code></dt><dd>Plaats het knipsel in het menu Invoegen, gegroepeerd op de (optionele) waarde.</dd><dt><code>template</code></dt><dd>Plaats het knipsel in het menu <em>Bestand&#8594;Nieuw van sjabloon</em>, gegroepeerd op de (optionele) waarde. Wanneer het knipsel wordt toegepast via dat menu, wordt het in een nieuw, leeg document ingevoegd.</dd><dt><code>name</code></dt><dd>De mnemonic om het knipsel te selecteren.</dd><dt><code>indent: no;</code></dt><dd>De tekst niet automatisch inspringen na het knipsel te hebben toegepast.</dd><dt><code>icon</code></dt><dd>Het pictogram dat in de knipsellijst en het menu wordt afgebeeld.</dd><dt><code>symbol</code></dt><dd>Het symbool dat in de knipsellijst of het menu wordt afgebeeld. Symbolen zijn pictogrammen die de standaard tekstkleur gebruiken en te vinden zijn in 'frescobaldi_app/symbols'.</dd><dt><code>python</code></dt><dd>Het knipsel uitvoeren als een Python script. Zie <a href="#help_python_snippets_help">Python knipsels</a>.</dd><dt><code>selection</code></dt><dd>Een of meer van de volgende woorden (gescheiden door komma's of spaties): <code>yes</code>: Er moet tekst geselecteerd zijn.
+<code>strip</code>: Verandert de selectie zodat witruimte erbuiten valt.
+<code>keep</code>: Selecteert alle ingevoegde tekst.</dd></dl><p>De andere regels van het knipsel definiëren de tekst die moet worden ingevoegd. Hier kunt u ook variabelen gebruiken, voorafgegaan door een $. Een dubbele $ wordt vervangen door een enkele. De volgende variabelen worden herkend:</p><dl><dt><code>$ANCHOR</code></dt><dd>Selecteert tekst van hier tot aan de positie opgegeven met de <code>$CURSOR</code> variabele.</dd><dt><code>$CURSOR</code></dt><dd>Verplaatst de tekstcursor hier na invoegen.</dd><dt><code>$DATE</code></dt><dd>De huidige datum in JJJJ-MM-DD formaat.</dd><dt><code>$DOCUMENT_NAME</code></dt><dd>De naam van het huidige document.</dd><dt><code>$FILE_NAME</code></dt><dd>De volledige lokale bestandsnaam van het huidige document.</dd><dt><code>$FRESCOBALDI_VERSION</code></dt><dd>De versie van Frescobaldi.</dd><dt><code>$LILYPOND_VERSION</code></dt><dd>De versie van het standaard LilyPond programma.</dd><dt><code>$SELECTION</code></dt><dd>De geselecteerde tekst indien beschikbaar. Indien niet, wordt de tekstcursor hier geplaatst.</dd><dt><code>$URL</code></dt><dd>De URL van het huidige document.</dd></dl><h5 id="help_python_snippets_help"><a name="help_python_snippets_help"></a>Python knipsels</h5>
+<p>Python knipsels kunnen de variabele <code>text</code> uitlezen en veranderen. Deze variabele bevat de op dit moment geselecteerde tekst (kan een lege tekenreeks zijn).</p>
+<p>U kunt <code>text</code> instellen op een tekenreeks of een lijst van tekenreeksen.</p>
+<p>Andere variabelen die kunnen worden gebruikt:</p><dl><dt><code>state</code></dt><dd>Een lijst van namen die het type text omschrijven waar de cursor is.</dd><dt><code>cursor</code></dt><dd>De huidige QTextCursor, waarmee u toegang hebt tot het document. Verander het document echter niet via de cursor.</dd><dt><code>CURSOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken om de plaats aan te geven waar de tekstcursor zal worden neergezet na het invoegen van het knipsel.</dd><dt><code>ANCHOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken, samen met <code>CURSOR</code>, om het te selecteren bereik van tekst aan te geven na het invoegen.</dd><dt><code>main</code></dt><dd>Als u een functie definieert met deze naam, wordt hij (zonder argumenten) aangeroepen, in plaats van het invoegen van de tekst in de <code>text</code> variabele. In dit geval kunt u het document aanpassen via de <code>cursor</code>.</dd></dl><h4 id="help_pitch_help"><a name="help_pitch_help"></a>Toonhoogte bewerken</h4>
+<p>
+Frescobaldi biedt de volgende functies om toonhoogtes aan te passen,
+alle in het menu <em>Gereedschap&#8594;Toonhoogte</em>:
+</p>
+
+<dl>
+
+<dt>Taal voor nootnamen</dt>
+<dd>
+Verandert de taal voor nootnamen voor het hele document of een selectie.
+</dd>
+
+<dt>Relatieve muziek omzetten naar absoluut</dt>
+<dd>
+Zet alle <code>\relative</code> muziek om naar absolute toonhoogten.
+Houdt rekening met octave-checks maar verwijdert deze uiteraard ook.
+</dd>
+
+<dt>Absolute muziek omzetten naar relatief</dt>
+<dd>
+Verandert alle bovenste muziekexpressies naar <code>\relative</code> zodra er een noot in gevonden wordt.
+Als u aparte sub-expressies relatief wilt maken kan het nodig zijn om muziek te selecteren vanaf de eerste sub-expressie zodat bovenliggende accollades-openen niet worden gezien.
+</dd>
+
+</dl>
+<h5 id="help_transpose_help"><a name="help_transpose_help"></a>Transponeren</h5>
+<p>
+Voor het transponeren van muziek dient u twee absolute toonhoogten op te geven
+om het interval te bepalen waarover de muziek moet worden getransponeerd.
+De toonhoogtes mogen ook octaaftekens bevatten, en moeten worden ingevoerd in dezelfde
+taal als het document gebruikt.
+</p>
+
+<p>
+De muziek wordt dan getransponeerd van de eerste toonhoogte naar de tweede,
+precies als het <code>\transpose</code> LilyPond commando het zou doen.
+</p>
+
+<p>
+Waneer u bijvoorbeeld een kleine terts naar boven wilt transponeren voert u in:<br />
+<code>c es</code>
+</p>
+
+<p>
+Om een grote secunde naar beneden te transponeren kunt u invoeren:<br />
+<code>c bes,</code>
+</p>
+
+<p>
+of:<br />
+<code>d c</code>
+</p>
+
+<p>
+Het is ook mogelijk de transponeerfunctie te gebruiken om een stuk muziek bijvoorbeeld van cis naar des om te zetten of om kwarttonen te gebruiken als deze in de gebruikte taal voor nootnamen voorhanden zijn.
+</p>
+
+<p>
+De transponeerfunctie kan zowel relatieve als absolute muziek transponeren en handelt toonsoortaanduidingen, chordmode en octave-checks daarbij ook correct af.
+</p>
+<h4 id="help_rhythm_help"><a name="help_rhythm_help"></a>Ritme bewerken</h4>
+<p>
+De ritmefuncties in Frescobaldi passen de duur van noten, akkoorden, rusten, etc. aan. Met deze functies, alle in menu <em>Gereedschap&#8594;Ritme</em>, is het mogelijk om de lengte van noten te verdubbelen of halveren, stip toe te voegen of verwijderen of de schaling te verwijderen.
+</p>
+
+<p>
+Ook is het mogelijk de manier waarop het ritme wordt ingevoerd aan te passen: voor elke noot (expliciet), of alleen wanneer de tijdsduur verandert (impliciet). Sommige gebruikers geven misschien de voorkeur aan de optie "impliciet per regel", die altijd de tijdsduur aangeeft voor de eerste noot, rust of het eerste akkoord op een regel.
+</p>
+
+<p>
+De laatste drie menucommando's kunnen een ritme kopiëren of plakken, of een ritme toepassen dat in een dialoog wordt opgegeven.
+</p>
+
+<p>
+In de dialoog "Ritme toepassen" kunt u een aantal tijdsduren aangeven, bijvoorbeeld:
+</p>
+
+<p>
+<code>4. 8 4 16 16 8 2</code>
+</p>
+
+<p>
+Deze worden dan, steeds herhaald, toegepast op een geselecteerd bereik.
+</p>
+<h4 id="help_lyrics_help"><a name="help_lyrics_help"></a>Liedteksten</h4>
+<p>
+Frescobaldi kan automatisch afbreektekens '<code>&nbsp;--&nbsp;</code>' in teksten plaatsen
+om deze als liedteksten bruikbaar te maken.
+Hierbij worden afbreekbestanden gebruikt van OpenOffice, Scribus, etc.
+</p>
+
+<p>
+Om deze functie te gebruiken selecteert u eerst de tekst die u in syllabes
+wilt verdelen.
+Druk daarna op Ctrl+L of kies <em>Gereedschap&#8594;Liedteksten</em>.
+In die dialoog die daarop verschijnt kiest u de taal.
+Klik OK of druk op Enter om het afbreken te laten plaatsvinden.
+</p>
+
+<p>
+Een kleine beperking is dat afbreekbestanden van tekstverwerkers vaak niet
+willen afbreken direct na de eerste letter (bijvoorbeeld: '<code>a&nbsp;--&nbsp;men</code>'),
+omdat dat er in gewone teksten niet fraai uitziet.
+Het kan dus zijn dat u bij sommige woorden nog handmatig de afbreektekens moet toevoegen.
+</p>
+
+<p>
+Er is ook een commando om afbreektekens te verwijderen.
+Dit kan handig zijn als u een couplet liedteksten heeft dat u als gewone markup
+onder de muziek wilt weergeven.
+Onder <em>Bewerken&#8594;Voorkeuren</em> kunt u een lijst van directories opgeven waar Frescobaldi zal zoeken naar afbreekbestanden.
+</p>
+<h3 id="help_editor"><a name="help_editor"></a>De editor</h3>
+<p>
+Hier passeren de functies van de editor de revue,
+hoe bijvoorbeeld het automatisch inspringen in te stellen, zoeken en vervangen te gebruiken, etcetera.
+</p>
+<h4 id="help_search_replace"><a name="help_search_replace"></a>Zoeken en vervangen</h4>
+<p>
+In het menu <em>Bewerken</em> kunt u de commando's Zoeken (Ctrl+F)
+en Vervangen (Ctrl+H) vinden; deze openen een klein venster onderaan de tekstweergave.
+Er kan gezocht worden naar platte tekst of met behulp van reguliere expressies.
+</p>
+
+<p>
+Reguliere expressies zijn geavanceerde zoekteksten die tekens bevatten die met verschillende
+tekens in het document kunnen overeenkomen.
+Het is ook mogelijk om bij het vervangen van tekst stukken van de zoektekst opnieuw te gebruiken.
+</p>
+
+<p>
+In de reguliere expressies zoekmodus hebben sommige tekens een speciale betekenis:
+</p>
+
+<dl compact="compact">
+<dt><code>*</code></dt>
+<dd>voorafgaande groep of teken mag nul or meer keer achter elkaar voorkomen</dd>
+<dt><code>+</code></dt>
+<dd>voorafgaande groep of teken mag 1 of meer keer achter elkaar voorkomen</dd>
+<dt><code>?</code></dt>
+<dd>voorafgaande groep of teken mag 0 of 1 keer achter elkaar voorkomen</dd>
+<dt><code>[ ]</code></dt>
+<dd>komt overeen met 1 van de gegeven tekens</dd>
+<dt><code>( )</code></dt>
+<dd>groepeert tekens. De tekens worden ook bewaard en kunnen teruggeplaatst worden
+in de vervangtekst door tekens als <code>\1</code>, <code>\2</code>
+etcetera, te gebruiken.
+</dd>
+<dt><code>\\ \n \t \s \d \w</code></dt>
+<dd>komt repectievelijk overeen met een backslash, een newline, een tab, een witruimte-teken,
+een cijfer, een alfanumeriek teken.</dd>
+</dl>
+
+<p>
+Een uitvoerige behandeling van reguliere uitdrukkingen kan worden gevonden in de
+<a href="http://docs.python.org/library/re.html#regular-expression-syntax">&#11008;Python documentatie</a>.
+</p>
+<h4 id="help_document_variables"><a name="help_document_variables"></a>Document-variabelen</h4>
+<p>Document variabeles zijn variabelen die het gedrag van Frescobaldi beïnvloeden.
+Ze kunnen worden gezet in de eerste of laatste vijf regels van een document.
+Als een regel '<b><code>-*-</code></b>' bevat, probeert Frescobaldi in
+de rest van de regels variabele-definities te vinden in de vorm van <code>naam: waarde;</code>.
+</p>
+<p>De volgende variabelen worden herkend:</p><dl><dt><code>mode</code>: <i>modus</i><code>;</code></dt><dd>Forceert de modus, één van lilypond, html, texinfo, latex, docbook of scheme. Standaard automatische modus-herkenning.</dd>
+<dt><code>master</code>: <i>Bestandsnaam</i><code>;</code></dt><dd>Compileert een ander LilyPond document in plaats van het huidige.</dd>
+<dt><code>coding</code>: <i>tekenset</i><code>;</code></dt><dd>Een andere tekenset gebruiken dan standaard UTF-8.</dd>
+<dt><code>version</code>: <i>versie</i><code>;</code></dt><dd>De LilyPond-versie die u wilt gebruiken, kan worden gebruikt voor niet-LilyPond documenten.</dd>
+<dt><code>tab-width</code>: <i>nummer</i><code>;</code></dt><dd>De breedte van een tab-teken, standaard 8.</dd>
+<dt><code>indent-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Wel of geen tabs in het inspringen gebruiken, standaard <code>no</code>.</dd>
+<dt><code>document-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Wel of geen tabs elders in het document gebruiken, standaard <code>yes</code>.</dd>
+<dt><code>indent-width</code>: <i>nummer</i><code>;</code></dt><dd>Het aantal spaties voor elk inspring-niveau, standaard 2.</dd>
+</dl>
+<p>U kunt document-variabelen in commentaar plaatsen.</p><h4 id="help_sessions"><a name="help_sessions"></a>Sessies</h4>
+<p>Een sessie is in feite een lijst van geopende bestanden. Op elk moment kunt u <em>Sessie&#8594;Opslaan</em> of <em>Sessie&#8594;Nieuw</em> kiezen om de lijst van geopende documenten onder een bepaalde naam op te slaan.</p>
+<p>Als u van sessie wisselt worden eerst alle huidige documenten gesloten en daarna de documenten van de andere sessie geopend.</p>
+<p>In de sessie-eigenschappen dialoog kunt u kiezen of de lijst van geopende documenten altijd moet worden opgeslagen, of alleen wanneer u de sessie aanmaakt (of opslaat via <em>Sessie&#8594;Opslaan</em>). Dit kan handig zijn als u wilt dat de lijst van documenten in de sessie steeds hetzelfde blijft, ook al opent en sluit u soms documenten terwijl u werkt.</p>
+<p>U kunt ook een standaardmap voor de sessie opgeven.</p><p>Zie ook: <a href="#help_preferences_general">Algemene voorkeuren</a></p>
+<h3 id="help_preferences_dialog"><a name="help_preferences_dialog"></a>Voorkeuren</h3>
+<p>In de dialoog Voorkeuren (onder <em>Bewerken&#8594;Voorkeuren</em>) kunt u veel aspecten van Frescobaldi en LilyPond instellen.</p>
+<h4 id="help_preferences_general"><a name="help_preferences_general"></a>Algemene voorkeuren</h4>
+<p>Onder <em>Algemene voorkeuren</em>, kunt u instellen in welke taal Frescobaldi's gebruikersinterface is vertaald, welke grafische stijl u wilt gebruiken, en of u de ingebouwde Tango icoonset wilt gebruiken of de icoonset van het besturingssysteem.</p>
+
+<p>Taal en stijl veranderen direct, maar de nieuwe icooninstellingen worden pas na een herstart van Frescobaldi van kracht.</p>
+
+<p>Onder <em>Als Frescobaldi zonder argumenten wordt gestart,</em> kunt u instellen welke sessie wordt geladen als Frescobaldi wordt gestart zonder bestandsnaam. U kunt kiezen om altijd met één leeg document op te starten, met de laatstgebruikte sessie of met een specifieke sessie. Zie ook <a href="#help_sessions">Sessies</a>.</p>
+
+<p>Onder <em>Bij het opslaan van documenten</em>, kunt u kiezen wat er gedaan moet worden als een document wordt opgeslagen, zoals bijvoorbeeld de cursorpositie en gemarkeerde regels onthouden of een veiligheidskopie achterladen (met een ~ toegevoegd). Ook kunt u een standaardmap opgeven waar u uw documenten in bewaart.</p>
+<h4 id="help_preferences_lilypond"><a name="help_preferences_lilypond"></a>LilyPond-voorkeuren</h4>
+<p>Hier kunt u instellen hoe LilyPond gestart wordt als u uw document graveert.</p>
+
+<p>Als u verschillende versies van LilyPond geïnstalleerd hebt, kunt u deze hier opgeven, en Frescobaldi zo instellen dat automatisch de juiste versie wordt gekozen, gebaseerd op het versienummer dat het document opgeeft (<a href="#help_preferences_lilypond_autoversion">meer info</a>).</p>
+
+<p>U kunt ook instellen hoe LilyPond wordt gestart. Zie de knopinfo bij de instellingen voor meer informatie.</p>
+
+<p>Tenslotte kunt u een lijst van directories opgeven waar het LilyPond <code>\include</code>-commando bestanden moet zoeken.</p>
+<h4 id="help_preferences_midi"><a name="help_preferences_midi"></a>MIDI-instellingen</h4>
+<p>Hier kunt u Frescobaldi's MIDI instellingen aanpassen.</p>
+
+<p>U kunt instellen naar welke MIDI-poort moet worden afgespeeld.Als er geen poortnamen zichtbaar zijn in de uitklapknop kan het nodig zijn om een hardware MIDI synthesizer aan te sluiten, of een software-synthesizer te starten zoals TiMidity of Fluidsynth.Onder Linux moet de synthesizer beschikbaar zijn als een ALSA MIDI-device.</p>
+
+<p>Als u een synthesizer heeft met meerdere poorten kunt u hier de eerste letters opgeven, zodat Frescobaldi automatisch de eerst beschikbare gebruikt.</p>
+
+<p>Tenslotte, wanneer u een software-synthesizer gebruikt, is het aanbevolen de optie <em>Ongebruikte MIDI-uitvoer sluiten</em> te gebruiken.</p>
+
+<p>Indien ingeschakeld, zal Frescobaldi ongebruikte MIDI-uitgangen na een minuut sluiten.</p>
+<p>Dit kan helpen om systeembronnen vrij te maken die anders gebruikt zouden worden door een software MIDI-synthesizer, en zodoende batterij-vermogen te sparen.</p>
+<p>Een neveneffect is dat als u een MIDI-bestand langdurig pauzeert en dan verder afspeelt, de instrumenten teruggezet zijn naar de standaard piano (instrument 0). In dat geval kunt u het bestand vanaf het begin afspelen om de instrumenten weer correct te horen.</p>
+<h4 id="help_preferences_helpers"><a name="help_preferences_helpers"></a>Hulpprogramma's</h4>
+<p>In deze pagina kunt u commando's invoeren om verschillende typen bestanden te openen. <code>$f</code> wordt vervangen door de bestandsnaam, <code>$u</code> door de URL. Laat een veld leeg om de standaardinstelling van het besturingssysteem te gebruiken.</p>
+
+<p>Het e-mail commando moet een <code>mailto:</code>-url accepteren. Het commando-prompt commando moet een console-venster openen. De <code>$f</code>-waarde wordt vervangen door de directory van het huidige document.</p>
+<h4 id="help_preferences_paths"><a name="help_preferences_paths"></a>Paden</h4>
+<p>Hier kunnen directories worden toegevoegd die <code>hyph_*.dic</code> bestanden bevatten, waarbij de <code>*</code> staat voor verschillende taalcodes.</p>
+
+<p>Deze afbreekwoordenboeken worden door Frescobaldi gebruikt om liedteksten op te splitsen in syllaben.</p>
+<h4 id="help_preferences_documentation"><a name="help_preferences_documentation"></a>LilyPond-documentatie</h4>
+<p>Hier kunt u lokale bestandspaden of URLs voor LilyPond-documentatie toevoegen. Een lokaal pad moet naar een directorie wijzen waar de Documentation map is, of het hele "share/doc/lilypond/html/offline-root" pad.</p>
+<p>Als deze niet gevonden worden, wordt een niveau diep gezocht in submappen. Zodoende is het mogelijk om verschillende versies van de LilyPond-documentatie in verschillende submappen te plaatsen, en dat Frescobaldi ze automatisch vindt.</p><h4 id="help_preferences_shortcuts"><a name="help_preferences_shortcuts"></a>Sneltoetsen</h4>
+<p>Hier kunt u sneltoetsen voor alle beschikbare commando's instellen. Ook de <a href="#help_snippet_help">Knipsels</a> of <a href="#help_quickinsert_help">Quick Insert</a> knoppen die sneltoetsen hebben worden hier weergegeven.</p>
+
+<p>Om een sneltoets te veranderen, selecteer de actie in de lijst en klik de knop Bewerken, of dubbelklik de actie. In de dialoog die verschijnt kunt u maximaal vier verschillende sneltoetsen voor de actie instellen, door de knop in te drukken en de gewenste sneltoetscombinatie aan te slaan.</p>
+
+<p>U kunt een nieuw schema definiëren door op de knop Nieuw te klikken.</p>
+<h4 id="help_preferences_fontscolors"><a name="help_preferences_fontscolors"></a>Tekst & kleur</h4>
+<p>Hier kunt u het editor-lettertype instellen (een vaste-breedte-lettertype is aanbevolen) en alle kleuren.</p>
+
+<p>Het eerste item biedt instellingen voor de voorgrond, achtergrond, selectie, de huidige regel, markeringen, de papierkleur in de muziekweergave, enzovoort.</p>
+
+<p>Het tweede item biedt instellingen voor de kleur en andere attributen van de standaard accentueringsstijlen voor bijvoorbeeld een sleutelwoord, variable, waarde, commentaar, etc.</p>
+
+<p>De overige items bevatten de typen tekst die de syntaxis-accentueerder herkent voor de verschillende documenttypen die Frescobaldi ondersteunt. Sommige van deze stijlen erven de instellingen van een algemene stijl. Het is mogelijk om de attributen vet, cursief en onderstreept in te stellen, en ook de kleuren voor voorground, achtergrond en onderstreping.</p>
+
+<p>U kunt een nieuw schema definiëren door op de knop Nieuw te klikken.</p>
+<h4 id="help_preferences_tools"><a name="help_preferences_tools"></a>Gereedschap</h4>
+<p>Hier kunt u de instellingen van de diverse gereedschappen wijzigen.</p>
+<h3 id="help_about"><a name="help_about"></a>Over Frescobaldi</h3>
+<p>
+Frescobaldi is genoemd naar
+<a href="http://en.wikipedia.org/wiki/Girolamo_Frescobaldi">&#11008;Girolamo
+Frescobaldi (1583 &#8211; 1643)</a>, een Italiaanse organist en componist.
+</p>
+
+<p>
+Frescobaldi's homepage is te vinden op
+<a href="http://www.frescobaldi.org/">&#11008;www.frescobaldi.org</a>
+en er is een mailing-list op
+<a href="mailto:frescobaldi@googlegroups.com">frescobaldi@googlegroups.com</a>
+(<a href="http://groups.google.com/group/frescobaldi">&#11008;meer info</a>).
+</p>
+<h4 id="help_credits"><a name="help_credits"></a>Dank aan</h4>
+<p>Frescobaldi's hoofdauteur is Wilbert Berendsen.</p>
+<p>Frescobaldi is geschreven in <a href="http://www.python.org/">&#11008;Python</a> en gebruikt de <a href="http://qt.nokia.com/">&#11008;Qt4</a> toolkit.</p>
+<p>De muziekweergave is gebaseerd op de <a href="http://poppler.freedesktop.org/">&#11008;Poppler</a>-bibliotheek van Kristian Høgsberg, Albert Astals Cid en anderen.</p>
+<p>De meeste bijgeleverde pictogrammen zijn gemaakt door <a href="http://tango.freedesktop.org/">&#11008;Het Tango Desktop-project</a>.</p>
+<p>Frescobaldi is vertaald in de volgende talen:</p>
+<p>Braziliaans Portugees: Édio Mazera</p>
+<p>Duits: Henrik Evers, Georg Hennig, Markus W. Kropp</p>
+<p>Frans: Raphaël Doursenaud, Philippe Massart, Valentin Villenave, Yann Collette, David Bouriaud, Ryan Kavanagh</p>
+<p>Galicisch: Manuel A. Vázquez</p>
+<p>Italiaans: Gianluca D'Orazio</p>
+<p>Nederlands: Wilbert Berendsen</p>
+<p>Pools: Piotr Komorowski</p>
+<p>Russisch: Sergey Poltavski, Artem Zolochevskiy</p>
+<p>Spaans: Francisco Vila</p>
+<p>Tsjechisch: Pavel Fric</p>
+<p>Turks: Server ACİM</p><h4 id="help_contributing"><a name="help_contributing"></a>Meedoen</h4>
+<p>
+Frescobaldi is a <a href="http://www.gnu.org/philosophy/free-sw.html">&#11008;Vrije Software</a> project om een gebruikersvriendelijke editor te maken voor LilyPond-bladmuziek.
+Het doel is Frescobaldi beschikbaar te maken op alle belangrijke platforms.
+</p>
+
+<p>
+Frescobaldi wordt ontwikkeld in een publiek GitHub depot op <a href="http://github.com/wbsoft/frescobaldi">&#11008;github.com/wbsoft/frescobaldi</a>.
+Daar kunt u de broncode bekijken of verkrijgen en fouten en wensen doorgeven.
+</p>
+
+<p>
+U kunt meewerken aan Frescobaldi door het gewoon te gebruiken en fouten en suggesties door te geven.
+Vertalingen zijn ook welkom. Hoe u nieuwe vertalingen maakt is beschreven in het bestand README-translations in de brondistributie van Frescobaldi.
+Als u functionaliteit wilt toevoegen vindt u informatie in het bestand README-development.
+</p>
+<h4 id="help_history"><a name="help_history"></a>Geschiedenis van Frescobaldi</h4>
+<p>
+Frescobaldi stamt af van LilyKDE, dat een plugin was voor KDE3's editor Kate.
+LilyKDE was geschreven in Python en kwam uit met Kerst in 2007.
+</p>
+
+<p>
+Toen KDE versie 4 werd ontwikkeld was het niet meteen alweer mogelijk om Kate-plugins
+in Python te schrijven. Dus werd LilyKDE een zelfstandig programma dat de Kate-teksteditor module van KDE gebruikte,
+en kreeg daarbij de naam Frescobaldi. Nog steeds werd de Okular-part gebruikt om PDF-documenten weer te geven.
+Frescobaldi 0.7 was de eerste publieke release, met Kerst 2008.
+Met Kerst 2009 werd versie 1.0.0 vrijgegeven en met Kerst 2010 versie 1.2.0.
+</p>
+
+<p>
+Op dat moment werd besloten om niet meer gebruik te maken van de KDE4-bibliotheken en enkel Python en Qt4 te gebruiken, die eenvoudig beschikbaar waren op alle belangrijke besturingssystemen.
+Frescobaldi 2.0 is compleet van scratch herschreven. De releasedatum is gesteld op Kerst 2011.
+</p>
+
+
+<address>
+<a href="uguide.html">English</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a>, <a href="uguide.cs.html">Český</a> | Last Modified: 12 mrt 2012
+</address>
+
+</div>
+
+</body>
+</html>

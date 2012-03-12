@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Manuel de Frescobaldi - Frescobaldi Project</title>
+	<link rel="stylesheet" type="text/css" href="/style/1/style.css" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+	<meta name="author" content="Wilbert Berendsen" />
+	<meta name="description" content="Frescobaldi is a LilyPond sheet music editor" />
+	<meta name="keywords" content="lilypond, music notation, ide" />
+</head>
+
+<body>
+
+<div id="header">
+<h1>Manuel de Frescobaldi</h1>
+</div>
+
+<div id="sidebar">
+	<a accesskey="h" href="/"><u>H</u>ome</a>
+	<a accesskey="s" href="screenshots"><u>S</u>creenshots</a>
+	<a accesskey="d" href="download"><u>D</u>ownload</a>
+	<a accesskey="u" href="uguide" class="selected"><u>U</u>ser Guide</a>
+	<a accesskey="v" href="development">De<u>v</u>elopment</a>
+	<a accesskey="l" href="links"><u>L</u>inks</a>
+</div>
+
+<div id="maincontents">
+
+<p>(<a href="uguide-1">Frescobaldi 1.x User Guide</a>)</p>
+
+<h2 id="help_contents"><a name="help_contents"></a>Manuel de Frescobaldi</h2>
+<p>
+Frescobaldi est un éditeur léger et puissant pour les
+ partitions musicales LilyPond.
+Ce manuel est écrit par Wilbert Berendsen et documente Frescobaldi version 2.0.4.
+</p>
+<p>Traduit par Valentin Villenave, David Bouriaud, Ryan Kavanagh, Raphaël Doursenaud et Philippe Massart.</p><h3>Comment obtenir de l'aide dans Frescobaldi</h3>
+
+<p>
+Dans la plupart des fenêtres de dialogue, vous pouvez cliquer sur
+un bouton Aide ou appuyer la touche F1.
+La plupart des éléments d'interface ont aussi une information « Qu'est-ce que c'est ? »
+qui peut être affichée en appuyant Shift+F1 ou en sélectionnant <em>Aide&#8594;Qu'est-ce que c'est ?</em>.
+</p>
+<h3 id="help_toc"><a name="help_toc"></a>Table des matières</h3>
+<ul><li><a href="#help_introduction">Introduction</a></li><li><a href="#help_starting">Démarrage</a></li><li><a href="#help_scorewiz_help">L'assistant de partition</a></li><li><a href="#help_tools">Autres outils</a></li><ul><li><a href="#help_quickinsert_help">Le panneau d'insertion rapide</a></li><li><a href="#help_snippet_help">Fragments</a></li><ul><li><a href="#help_snippet_edit_help">Éditeur de fragments</a></li><ul><li><a href="#help_python_snippets_help">Fragments Python</a></li></ul>
+</ul>
+<li><a href="#help_pitch_help">Manipulation des hauteurs</a></li><ul><li><a href="#help_transpose_help">Transposer</a></li></ul>
+<li><a href="#help_rhythm_help">Manipulation rythmique</a></li><li><a href="#help_lyrics_help">Paroles</a></li></ul>
+<li><a href="#help_editor">L'éditeur</a></li><ul><li><a href="#help_search_replace">Recherche et remplacer</a></li><li><a href="#help_document_variables">Variables de document</a></li><li><a href="#help_sessions">Sessions</a></li></ul>
+<li><a href="#help_preferences_dialog">Préférences</a></li><ul><li><a href="#help_preferences_general">Préférences générales</a></li><li><a href="#help_preferences_lilypond">Préférences de LilyPond</a></li><li><a href="#help_preferences_midi">Réglages MIDI</a></li><li><a href="#help_preferences_helpers">Applications auxiliaires</a></li><li><a href="#help_preferences_paths">Emplacements</a></li><li><a href="#help_preferences_documentation">Documentation LilyPond</a></li><li><a href="#help_preferences_shortcuts">Raccourcis clavier</a></li><li><a href="#help_preferences_fontscolors">Polices et couleurs</a></li><li><a href="#help_preferences_tools">Outils</a></li></ul>
+<li><a href="#help_about">À propos de Frescobaldi</a></li><ul><li><a href="#help_credits">Crédits</a></li><li><a href="#help_contributing">Contribuer</a></li><li><a href="#help_history">Histoire de Frescobaldi</a></li></ul>
+<li><a href="#help_toc">Table des matières</a></li></ul>
+<h3 id="help_introduction"><a name="help_introduction"></a>Introduction</h3>
+<p>
+<a href="http://lilypond.org/">&#11008;LilyPond</a>
+est un logiciel libre de gravure musicale qui produit des partitions de très haute qualité
+à partir de fichiers textes d'entrés relativement simples.
+Ces fichiers textes peuvent être créés avec n'importe quel éditeur de texte.
+LilyPond charge alors le fichier texte et sort une magnifique gravure, par défaut au format PDF.
+</p>
+
+<p>
+Frescobaldi est un application conçue pour rendre l'édition de partitions musicales LilyPond
+plus facile et plus rapide. Vous devez cependant apprendre d'abord le langage de saisie de LilyPond.
+Si vous lisez la section <a href="#help_starting">Démarrage</a> de ce Guide de l'Utilisateur, vous verrez aussi
+certaines bases de LilyPond.
+</p>
+
+<p>
+Vous pourrez alors continuer à apprendre en vous servant du Manuel d'Initiation de 
+<a href="http://lilypond.org/doc/">&#11008;l'excellente documentation en ligne de LilyPond</a>.
+</p><h3 id="help_starting"><a name="help_starting"></a>Démarrage</h3>
+<p>
+L'écran par défaut de Frescobaldi montre un document texte sur la gauche et un
+aperçu musical vide sur la droite.
+</p>
+
+<p>
+Maintenant, dans l'éditeur de texte, saisissez un peu de code LilyPond, comme ceci : 
+</p>
+
+<pre style="color: #000000; background: #fcfcfc; font-family: "monospace"; font-size: 10.0pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> c'' <span style="font-weight: 600;">{</span>
+  <span style="color: #0000c0; font-weight: 600;">\time</span> <span style="color: #808000;">7/4</span>
+  c<span style="color: #008080;">2</span> bes<span style="color: #008080;">4</span> a<span style="color: #008080;">2</span> g a bes<span style="color: #008080;">4</span> a<span style="color: #c000c0; font-weight: 600;">(</span> g<span style="color: #c000c0; font-weight: 600;">)</span> f<span style="color: #008080;">2</span>
+<span style="font-weight: 600;">}</span>
+<span style="color: #006000; font-weight: 600;">\addlyrics</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #006000;">Join</span> <span style="color: #006000;">us</span> <span style="color: #006000;">now</span> <span style="color: #006000;">and</span> <span style="color: #006000;">share</span> <span style="color: #006000;">the</span> <span style="color: #006000;">soft</span> <span style="color: #006000;">--</span> <span style="color: #006000;">ware!</span>
+<span style="font-weight: 600;">}</span></pre>
+
+<p>
+Cliquez ensuite le bouton LilyPond ou appuyez Ctrl+M.
+Si tout se déroule normalement, LilyPond démarre et compile votre fichier.
+Au bas de l'écran, vous pouvez suivre la progression de LilyPond.
+Si LilyPond ne rencontre aucune erreur de votre part, il produira un fichier
+PDF qui sera affiché dans l'aperçu : 
+</p>
+h
+<p><img src="getting_started1.png"></p>
+
+<p>
+L'aperçu offre de nombreuses possibilités : 
+<p>
+
+<ul>
+<li>
+Survoler des notes ou autres objets les surlignera dans le texte ; 
+cliquez des objets pour déplacer le curseur de texte vers leur emplacement.
+</li>
+
+<li>
+Ctrl-molette change le zoom. Le zooming centrera la vue sur le pointeur de la souris.
+</li>
+
+<li>
+Ctrl-clic à un endroit vide fait apparaître une loupe.
+</li>
+
+<li>
+Déplacer le curseur de texte ou sélectionner du texte surligne les notes dans l'aperçu ; 
+appuyez Ctrl+J pour center explicitement et surligner une note ou un autre objet
+dans l'aperçu.
+</li>
+
+<li>
+Maj-glissez une sélection et appuyez Ctrl+Shift+C ou <em>Édition&#8594;Copier vers une image...</em>
+pour copier la musique sélectionnée comme image vers le presse-papiers, un fichier ou
+une autre application.
+</li>
+</ul>
+
+<p>
+Si votre partition est terminée, il est recommandé de lancer LilyPond une fois de plus
+en désactivant les notes cliquables : menu <em>LilyPond&#8594;Graver (publication)</em>.
+Les fichiers PDF seront plus petits.
+</p>
+
+<p>
+Si LilyPond ne démarre pas du tout, vérifiez que vous avez correctement installé LilyPond
+et que la commande lilypond se trouve bien dans la variable PATH de votre système.
+Si nécessaire, précisez l'emplacement exact de votre exécutable LilyPond dans
+<em>Édition&#8594;Préférences&#8594;Préférences de LilyPond</em>.
+</p>
+
+<p>
+Si LilyPond rencontre des erreurs dans votre document, elles seront affichées dans le journal,
+et Frescobaldi marquera les lignes de votre document où se trouvent les erreurs.
+Cliquer sur une erreur dans le journal ou appuyer Ctrl+E immédiatement
+place le curseur de texte à l'emplacement fautif. En appuyant à nouveau Ctrl+E,
+ le curseur se déplacera à l'erreur suivante, et ainsi de suite. Et relançant LilyPond,
+les marques d'erreurs seront supprimées.
+Vous pouvez supprimer ces marques d'erreurs manuellement en utilisant l'option
+<em>Affichage&#8594;Effacer tous les repère d'erreur</em>.
+</p>
+<h3 id="help_scorewiz_help"><a name="help_scorewiz_help"></a>L'assistant de partition</h3>
+<p>
+L'assistant de réglages de partition (Ctrl+Shift+N) dans <em>Outils&#8594;Nouvelle partition...</em> est conçu
+pour configurer rapidement une partition LilyPond.
+</p>
+
+<p>
+Dans le premier onglet, <em>Titres et en-têtes</em>, vous pouvez saisir les informations
+de titrage.
+</p>
+
+<p>
+Dans le second onglet, <em>Parties</em>, vous pouvez composer votre partition en
+choisissant parmi les types de parties disponibles.
+Double-cliquez un type de partie pour l'ajouter à la partition (ou cliquez Ajouter).
+Sélectionnez la partie dans la liste pour modifier certains réglages pour la partie sélectionnée
+si nécessaire.
+De nombreuses parties, particulièrement dans les chœurs, disposent de nombreuses options pour régler la partition de façon
+personnalisée.
+</p>
+
+<p>
+Dans le troisième onglet, <em>Réglages de partition</em>, les propriétés globales de la partition
+et les préférences peuvent être définies.
+</p>
+
+<p>
+Cliquez sur le bouton Aperçu pour obtenir un aperçu avec quelques exemples musicaux.
+Cliquez Ok pour copier le code LilyPond généré dans l'éditeur de texte.
+</p>
+
+<h3>Pièces multiples ou mouvements</h3>
+
+<p>
+Une fonction spéciale et puissante de l'onglet <em>Parties</em> est caché dans la catégorie
+« Contenants » de la liste des types de parties.
+</p>
+
+<p>
+Cette catégorie contient les types Score, Book et Bookpart, avec lesquels vous
+pouvez configurer un document LilyPond contenant plusieurs partitions ou livres.
+Vous pouvez ajouter des entrées Score, Bookpart ou Book dans l'éditeur de partition.
+Elles peuvent être imbriquées : un Score peut être ajouté à un Bookpart ou Book mais vous ne pouvez pas
+ajouter un Book à un Bookpart ou un Score.
+</p>
+
+<p>
+Ensuite, vous pouvez ajouter les parties musicales.
+Si vous voulez créer plusieurs partitions avec les mêmes parties, vous pouvez simplement
+ajouter les parties en début de vue de partition, et ensuite les partitions, sans
+ajouter les parties musicales dans les partitions.
+Les partitions utiliseront alors les parties en début de partition.
+</p>
+<h3 id="help_tools"><a name="help_tools"></a>Autres outils</h3>
+<p>D'autres outils importants sont listés ici.</p>
+<h4 id="help_quickinsert_help"><a name="help_quickinsert_help"></a>Le panneau d'insertion rapide</h4>
+<p>
+Avec les outils du panneau d'insertion rapide, vous pouvez ajouter divers éléments musicaux à la note actuelle ou à la musique sélectionnée.
+</p>
+
+<p>
+Le sélecteur de <em>Direction</em> définit si les articulations, dynamiques ou liaisons
+apparaissent en position neutre (p. ex. déterminée par la direction de la hampe de note),
+au-dessus ou en-dessous de la portée en insérant un caractère <code>-</code>, <code>^</code> ou
+<code>_</code>.
+</p>
+
+<p>
+Cliquez sur l'onglet pour choisir un outil. Vous pouvez voyager d'un outil à l'autre avec la touche Ctrl
+(ou ⌘) et la molette de la souris.
+Tous les boutons du panneau d'insertion rapide ont un raccourci clavier configurable;
+vous pouvez le modifier par un clic-droit sur un bouton.
+</p>
+<h3>Articulations</h3>
+
+<p>
+Ces symboles musicaux peuvent être ajoutés à une note, un silence ou une sélection
+musicale.
+Si vous les appliquez à une sélection, les silences ne seront pas pris en compte.
+Si aucun texte n'est sélectionné, le curseur ira automatiquement au prochain son,
+silence, espace ou accord.
+</p>
+
+<p>
+Si <em>Autoriser les raccourcis</em> est coché, Frescobaldi utilisera les signes abrégés
+pour les articulations s'ils existent
+(p. ex. <code>-.</code> au lieu de <code>-\staccato</code>).
+</p>
+<h3>Nuances</h3>
+
+<p>
+Les nuances peuvent être ajoutées à une note ou un silence.
+Si vous sélectionnez une région musicale, vous pouvez ajouter une indication continue qui s'arrêtera automatiquement
+à la derrière note, silence ou accord de la sélection.
+Si vous choisissez ensuite un signe, il remplacera la terminaison.
+</p>
+<h3>Indications étendues</h3>
+
+<p>
+Cet outil permet d'ajouter des arpeggios, glissandos et d'autres indications étendues,
+telles que des liaisons, liaisons de phrasé, ligatures manuelles ou trilles.
+</p>
+
+<p>
+Les arpeggios et glissandos s'appliquent à la note courante;
+aucune musique ne peut être sélectionnée.
+Les liaisons, ligatures ou trilles s'appliquent à la note courante et à la suivante
+si aucune musique n'est sélectionnée,
+ou à la première et dernière note ou accord de la sélection.
+</p>
+<h3>Barres de mesures</h3>
+
+<p>
+Vous pouvez insérer des barres de mesures ou divers signes de respirations.
+</p>
+<h4 id="help_snippet_help"><a name="help_snippet_help"></a>Fragments</h4>
+<p>
+Le gestionnaire de fragmens vous permet de conserver des fragments de texte
+fréquemment utilisés et de les coller facilement dans l'éditeur de texte.
+</p>
+
+<p>
+Le gestionnaire de fragments peut être activé via le menu <em>Insérer&#8594;Fragments...</em> ou
+par le raccourci Ctrl+T.
+</p>
+
+<p>
+Les fragments sont recherchables en navigant dans la liste ou en saisissant quelques caractères
+dans le champ de recherche.
+Les fragments peuvent également être appliqués par un raccourci clavier.
+Certains fragments ont un nom spécifique que vous pouvez saiser dans le champ de recherche.
+Il suffit ensuite de valider avec Entrée pour
+appliquer le fragment dans l'éditeur de texte et de masquer le gestionnaire de fragments.
+</p>
+
+<p>
+Ajoutez de nouveaux fragments avec Ins. Éditez le fragment sélectionné avec F2.
+Supprimer les fragments sélectionnés avec Ctrl+Del. Attention : impossible d'annuler !
+</p>
+
+<p>
+Les fragments peuvent également être placés dans le menu (voir <a href="#help_snippet_edit_help">Éditeur de fragments</a>).
+Il y a aussi des fragments pouvant inclure ou modifier du texte sélectionné.
+Certains fragments utilisent pour cela des variables spéciales, d'autres sont de 
+ petits scripts écrits en Python.
+</p>
+<h5 id="help_snippet_edit_help"><a name="help_snippet_edit_help"></a>Éditeur de fragments</h5>
+<p>Vous pouvez ici éditer le texte du fragment.</p><p>Si vous commencez la (les) première(s) ligne(s) avec '<code>-*- </code>' (notez les espaces), le rappel de cette ligne définit des variables comme <code>name: value;</code> ou simplement <code>name;</code>, ce qui influence le comportement du fragment. Les variables suivantes peuvent être utilisées : </p><dl><dt><code>menu</code></dt><dd>Placer le fragment dans le menu Insérer groupé par la valeur (optionnelle).</dd><dt><code>template</code></dt><dd>Place le fragment dans le menu <em>Fichier&#8594;Nouveau d'après un modèle</em>, groupé par valeur (optionnelle). Quand il est utilisé via le menu, le fragment est inséré dans un nouveau document.</dd><dt><code>name</code></dt><dd>Mnémonique à saisir pour sélectionner le fragment.</dd><dt><code>indent: no;</code></dt><dd>Ne pas indenter automatiquement le fragment après insertion.</dd><dt><code>icon</code></dt><dd>Le symbole à afficher dans le menu et la liste de fragments.</dd><dt><code>symbol</code></dt><dd>Le symbole à afficher dans le menu et la liste de fragments. Les symboles sont des icônes qui utilisent la couleur de texte par défaut et se trouvent dans le dossier 'frescobaldi_app/symbols'.</dd><dt><code>python</code></dt><dd>Exécuter le fragment comme un script Python. Voir <a href="#help_python_snippets_help">Fragments Python</a>.</dd><dt><code>selection</code></dt><dd>Un ou plusieurs des mots suivants (séparés par des espaces ou des virgules) : <code>yes</code>: Nécessite du texte pour être sélectionné.
+<code>strip</code>: Ajuste la sélection afin de ne pas inclure les espaces de début et de fin.
+<code>keep</code>: Sélectionne tout le texte inséré.</dd></dl><p>Les autres lignes du fragment définissent le texte à insérer dans l'éditeur. Ici, vous pouvez insérer des variables précédées d'un caractère $. Un double $ sera remplacé par un simple. Les variables suivantes sont reconnues : </p><dl><dt><code>$ANCHOR</code></dt><dd>Sélectionne le texte d'ici jusqu'à la position donnée par la variable <code>$CURSOR</code></dd><dt><code>$CURSOR</code></dt><dd>Déplace le curseur de texte après l'insertion.</dd><dt><code>$DATE</code></dt><dd>La date du jour au format AAAA-MM-JJ.</dd><dt><code>$DOCUMENT_NAME</code></dt><dd>Le nom du document courant.</dd><dt><code>$FILE_NAME</code></dt><dd>Le nom local complet du document courant.</dd><dt><code>$FRESCOBALDI_VERSION</code></dt><dd>La version de Frescobaldi.</dd><dt><code>$LILYPOND_VERSION</code></dt><dd>La version du programme LilyPond par défaut.</dd><dt><code>$SELECTION</code></dt><dd>Le texte sélectionné si disponible. Sinon, le curseur de texte est déplacé ici.</dd><dt><code>$URL</code></dt><dd>L'URL du document courant.</dd></dl><h5 id="help_python_snippets_help"><a name="help_python_snippets_help"></a>Fragments Python</h5>
+<p>Les fragments Python peuvent lire et définir la variable <code>text</code>. La variable <code>text</code> contient le texte actuellement sélectionné (qui peut être une chaîne vide).</p>
+<p>Vous pouvez définir <code>text</code> comme chaîne ou liste de chaînes.</p>
+<p>Autres variables qui peuvent être référencées :</p><dl><dt><code>state</code></dt><dd>Une liste de chaînes de caractères décrivant le type de texte sur lequel le curseur se trouve.</dd><dt><code>cursor</code></dt><dd>Le QTextCursor courant donne accès au document. Cependant, ne changez pas le document au moyen du curseur.</dd><dt><code>CURSOR</code></dt><dd>En définissant <code>text</code> comme une liste plutôt qu'une chaîne, vous pouvez utiliser cette valeur pour spécifier la place que le curseur de texte occupera après l'insertion du fragment.</dd><dt><code>ANCHOR</code></dt><dd>En définissant <code>text</code> comme une liste plutôt qu'une chaîne, cette valeur peut être utilisée conjointement au <code>CURSOR</code> pour sélectionner du texte lors de l'insertion des morceaux de chaînes de la liste.</dd><dt><code>main</code></dt><dd>When you define a function with this name, it is called without arguments, instead of inserting the text from the <code>text</code> variable. In this case you may alter the document through the <code>cursor</code>.</dd></dl><h4 id="help_pitch_help"><a name="help_pitch_help"></a>Manipulation des hauteurs</h4>
+<p>
+Frescobaldi propose des fonctions de manipulation des hauteurs,
+toutes situées dans le menu <em>Outils&#8594;Hauteur</em> : 
+</p>
+
+<dl>
+
+<dt>Langue des hauteurs</dt>
+<dd>
+Cette fonction traduit les hauteurs dans tout le document ou une sélection.
+</dd>
+
+<dt>Convertir musique relative vers absolue</dt>
+<dd>
+Cette fonction convertit toute musique <code>\relative</code> en hauteurs absolues.
+Cela enlève, mais respecte, les vérifications d'octave.
+</dd>
+
+<dt>Convertir musique absolue vers relative</dt>
+<dd>
+Vérifie toutes les expressions musicales haut niveau, en le changeant en mode
+<code>\relative</code> dès qu'une expression contient une hauteur.
+Si vous désirez rendre des sous-expressions séparées relatives, il peut s'avérer nécessaire de
+sélectionner la musique de la première expression, en laissant en dehors les accolades
+du niveau supérieur.
+</dd>
+
+</dl>
+<h5 id="help_transpose_help"><a name="help_transpose_help"></a>Transposer</h5>
+<p>
+En transposant de la musique, deux hauteurs absolues doivent être spécifiées pour
+définir l'intervalle de transposition. Des hauteurs peuvent inclure des marques d'octaviation.
+Les hauteurs doivent être saisies dans la langue de hauteurs utilisée dans le document.
+</p>
+
+<p>
+La musique sera ensuite transposée depuis la première hauteur vers la deuxième,
+comme la commande LilyPond <code>\transpose</code> le ferait.
+</p>
+
+<p>
+P. ex. pour transposer d'une tierce mineure vers le haut, il faudrait saisir :<br />
+<code>do mib</code>
+</p>
+
+<p>
+Pour transposer d'une seconde majeure vers le bas, vous pouvez saisir :<br />
+<code>do sib,</code>
+</p>
+
+<p>
+ou <br />
+<code>re do</code>
+</p>
+
+<p>
+Il est également possible d'utiliser la fonction de transposition pour changer une pièce de musique
+de do dièse vers ré bémol, ou de définir des quarts de tons si cela est accepté dans
+la langue utilisée pour les hauteurs de notes.
+</p>
+
+<p>
+La fonction de transposition peut transposer des musiques en modes relatif ou absolu, 
+en gérant correctement les armures, modes d'accords et vérifications d'octave.
+</p>
+<h4 id="help_rhythm_help"><a name="help_rhythm_help"></a>Manipulation rythmique</h4>
+<p>
+Les fonctions de rythme de Frescobaldi modifient les durées écrites après les notes,
+accords, silences, etc. En utilisant ces fonctions, toutes présentes dans le menu <em>Outils&#8594;Rythme</em>,
+il est possible de doubler ou diviser par deux la longueur des notes, d'ajouter ou supprimer les points
+et de supprimer des facteurs d'échelle.
+</p>
+
+<p>
+Il est également possible de changer la façon dont le rythme est spécifié : pour chaque note
+(explicite), ou seulement quand les durées changent (implicite). Certaines personnes prefèrent
+l'option implicite par ligne, qui spécifie toujours la durée pour la première
+note, le premier accord ou silence d'une ligne.
+</p>
+
+<p>
+Les trois dernières commandes permettent de copier, coller ou appliquer un rythme qui est saisi
+dans un dialogue.
+</p>
+
+<p>
+Dans le dialogue « Appliquer un rythme » vous pouvez saisir une série de durées, p. ex. :
+</p>
+
+<p>
+<code>4. 8 4 16 16 8 2</code>
+</p>
+
+<p>
+qui sera alors, de façon répétitive, appliquée à une sélection de notes.
+</p>
+<h4 id="help_lyrics_help"><a name="help_lyrics_help"></a>Paroles</h4>
+<p>
+Frescobaldi peut placer automatiquement des césures « <code>&nbsp;--&nbsp;</code> » dans un texte pour le rendre
+utilisable comme paroles.
+Frescobaldi peut utiliser les dictionnaires de césure d'OpenOffice.org, Scribus, etc.
+</p>
+
+<p>
+Pour utiliser cette fonction, vous devez d'abord sélectionner le texte à traiter. Ensuite
+appuyez Ctrl+L ou choisissez <em>Outils&#8594;Paroles</em>.
+Dans la fenêtre de dialogue qui apparaît, sélectionnez la langue.
+Appuyez Ok ou appuyez Entrée pour effecter la césure. 
+</p>
+
+<p>
+Une petite limitation est que les dictionnaires de césure d'un traitement de texte couperont
+rarement un mot juste après la première lettre (p. ex. « <code>a&nbsp;--&nbsp;men</code> »), parce que ce
+n'est pas beau dans un texte traité avec ce type de logiciel. Ainsi, il est possible que
+vous deviez ajouter quelques césures après la première lettre dans les paroles. 
+</p>
+
+<p>
+Il existe également une commande pour supprimer la césure. Cela peut s'avérer utile si vous avez une
+strophe de paroles que vous désirez seulement afficher sous la musique.
+Sous le menu <em>Édition&#8594;Préférences</em>, vous pouvez saisir la liste des dossiers où rechercher
+les fichiers de césure.
+</p>
+<h3 id="help_editor"><a name="help_editor"></a>L'éditeur</h3>
+<p>
+Dans cette partie sont présentées les fonctionnalités de l'éditeur,
+parmi lesquelles le contrôle de l'indentation automatique, l'utilisation de la recherche
+et remplacement etc.
+</p>
+<h4 id="help_search_replace"><a name="help_search_replace"></a>Recherche et remplacer</h4>
+<p>
+Dans le menu <em>Édition</em> se trouvent les commandes Rechercher (Ctrl+F)
+et Remplacer (Ctrl+H), ouvrant une petite fenêtre dans le bas de
+l'éditeur.
+Il est possible de rechercher du texte ou des expressions rationnelles.
+</p>
+
+<p>
+Les expressions rationnelles sont des textes de recherche avancés contenant des caractères qui peuvent
+correspondre à plusieurs caractères dans le document.
+En remplaçant le texte, il est également possible de faire référence à des parties du texte recherché écrites
+entre parenthèses.
+</p>
+
+<p>
+Dans le mode de recherche en expression rationelle, certains caractères ont une signification particulière :
+</p>
+
+<dl compact="compact">
+<dt><code>*</code></dt>
+<dd>correspond au précédent caractère ou groupe, aucune ou plusieurs fois</dd>
+<dt><code>+</code></dt>
+<dd>correspond au précédent caractère ou groupe, une ou plusieurs fois</dd>
+<dt><code>?</code></dt>
+<dd>correspond au précédent caractère ou groupe, aucune ou une fois</dd>
+<dt><code>[ ]</code></dt>
+<dd>correspond à un des caractères contenus</dd>
+<dt><code>( )</code></dt>
+<dd>groupe caractères. Ceci enregistre également les textes correspondants dans le groupe.
+En remplaçant, vous pouvez utiliser des caractères comme <code>\1</code>, <code>\2</code>
+etc., pour écrire le texte du groupe de texte de remplacement correspondant.</dd>
+<dt><code>\\ \n \t \s \d \w</code></dt>
+<dd>correspondent respectivement à un antislash, une nouvelle ligne, une tabulation,
+un caractère d'espace, un nombre, un caractère textuel générique.</dd>
+</dl>
+
+<p>
+Des informations plus complètes concernant les expressions rationnelles se trouvent dans
+<a href="http://docs.python.org/library/re.html#regular-expression-syntax">&#11008;la documentation
+Python</a>.
+</p>
+<h4 id="help_document_variables"><a name="help_document_variables"></a>Variables de document</h4>
+<p>Les variables de document sont des variables qui influencent le comportement de Frescobaldi.
+Elles peuvent être écrites dans les cinq premières ou derrières lignes d'un document.
+Si une ligne contient « <b><code>-*-</code></b> », Frescobaldi recherche le reste des
+lignes de définitions de variable comme <code>name: value;</code>.
+</p>
+<p>Les variables suivantes sont reconnues :</p><dl><dt><code>mode</code>: <i>mode</i><code>;</code></dt><dd>Force un mode parmi les suivants : lilypond, html, texinfo, LaTeX, docbook ou scheme. Par défaut : reconnaissance automatique du mode.</dd>
+<dt><code>master</code>: <i>Nom de fichier</i><code>;</code></dt><dd>Compile un autre document LilyPond au lieu du document en cours.</dd>
+<dt><code>coding</code>: <i>encodage</i><code>;</code></dt><dd>Utiliser un autre encodage que l'encodage par défaut UTF-8.</dd>
+<dt><code>version</code>: <i>version</i><code>;</code></dt><dd>Définit la version de LilyPond à utiliser ; elle peut être utilisée pour des documents non-LilyPond.</dd>
+<dt><code>tab-width</code>: <i>Nombre</i><code>;</code></dt><dd>La largeur d'une tabulation, par défaut 8 espaces.</dd>
+<dt><code>indent-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Utilisation de tabulations pour l'indentation. Par défaut : <code>no</code>.</dd>
+<dt><code>document-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Utilisation de tabulations n'importe où dans le document. Par défaut : <code>yes</code>.</dd>
+<dt><code>indent-width</code>: <i>Nombre</i><code>;</code></dt><dd>Nombre d'espaces utilisé par chaque niveau d'indentation. Par défaut : 2.</dd>
+</dl>
+<p>Vous pouvez placer des variables de document dans les commentaires.</p><h4 id="help_sessions"><a name="help_sessions"></a>Sessions</h4>
+<p>Une session est une liste de fichiers ouverts. À n'importe quel moment vous pouvez choisir <em>Session&#8594;Enregistrer</em> ou <em>Session&#8594;&Nouveau</em> et enregistrer la liste de fichiers ouverts vers une session.</p>
+<p>Quand vous changez de session, tous les documents en cours sont d'abord fermés puis les documents de l'autre session sont ouverts.</p>
+<p>Dans le dialogue des propriétés de session, vous pouvez choisir de toujours enregistrer la liste des documents ouverts dans cette session, ou d'enregistrer uniquement à la création (ou via <em>Session&#8594;Enregistrer</em>). Ceci peut être utile si vous désirez garder une liste identique de fichiers dans une session, même si vous ouvrez ou fermez des documents en cours de travail.</p>
+<p>Vous pouvez également définir un dossier par défaut pour la session.</p><p>Voir aussi : <a href="#help_preferences_general">Préférences générales</a></p>
+<h3 id="help_preferences_dialog"><a name="help_preferences_dialog"></a>Préférences</h3>
+<p>Dans le dialogue Préférences (sous <em>Édition&#8594;Préférences</em>) vous pouvez configurer de nombreux aspects de Frescobaldi et LilyPond.</p>
+<h4 id="help_preferences_general"><a name="help_preferences_general"></a>Préférences générales</h4>
+<p>Sous <em>Préférences générales</em>, vous pouvez choisir dans quelle langue l'interface utilisateur de Frescobaldi est traduite, quel style d'interface vous désirez utiliser, et si vous préférez utiliser les icones Tango incluses ou les par défaut pour votre système.</p>
+
+<p>Le choix de langage et de style s'effectue immédiatement, mais le changement d'icones n'est effectif qu'après redémarrage de Frescobaldi.</p>
+
+<p>Sous <em>Session à charger si Frescobaldi est lancé sans arguments</em> vous pouvez définir quelle session est chargée si Frescobaldi est lancé sans nom de fichier. Vous pouvez choisir de démarrer avec un document vide, avec la dernière session utilisée, ou avec une session définie. Voir aussi <a href="#help_sessions">Sessions</a>.</p>
+
+<p>Sous <em>Lors de l'enregistrement de documents</em>, vous pouvez choisir que faire lorsqu'un document est enregistrée, comme se souvenir de la position du curseur, des lignes repérées, ou laisser une copie de sauvegarde du document (avec une extension ~). Vous pouvez également définir un dossier par défaut dans lequel vous rangez vos documents LilyPond.</p>
+<h4 id="help_preferences_lilypond"><a name="help_preferences_lilypond"></a>Préférences de LilyPond</h4>
+<p>Ici vous pouvez configurer la manière dont LilyPond est lancé lorsque vous compilez votre document.</p>
+
+<p>Si vous avez plusieurs versions de LilyPond installés, vous les pouvez spécifier ici, et configurer Frescobaldi pour automatiquement choisir la bonne, en fonction du numéro de version défini dans le document (<a href="#help_preferences_lilypond_autoversion">Plus d'informations</a>).</p>
+
+<p>Vous pouvez également configurer la façon dont sera lancée Frescobaldi. Utilisez les info-bulles des réglages pour plus d'informations.</p>
+
+<p>Enfin, vous pouvez définir une liste de chemins d'accès où la commande LilyPond <code>\include</code> cherchera des fichiers.</p>
+<h4 id="help_preferences_midi"><a name="help_preferences_midi"></a>Réglages MIDI</h4>
+<p>Ici, vous pouvez configurer les réglages MIDI de Frescobaldi.</p>
+
+<p>Vous pouvez définir le nom du port MIDI vers lequel jouer.S'il n'y a aucun nom de port visible dans le menu déroulant, il peut être nécessaire de connecter un synthétiseur MIDI matériel à votre ordinateur, ou de démarrer un synthétiseur logiciel tel que TiMidity ou Fluidsynth.Sous Linux, le synthétiseur devrait être disponible en tant que périphérique ALSA MIDI.</p>
+
+<p>Si vous avez un périphérique avec plusieurs ports, vous pouvez spécifier les premières lettres du nom, pour que Frescobaldi choisisse automatiquement le premier disponible.</p>
+
+<p>Et finalement, lorsque vous utilisez un synthétiseur logiciel, il est recommandé d'activer l'option <em>Fermer les sorties MIDI non utilisées</em>.</p>
+
+<p>Si coché, Frescobaldi fermera les ports de sortie MIDI inutilisés depuis une minute.</p>
+<p>Cela permet de libérer des ressources système qu'un synthétiseur logiciel MIDI pour utiliser, économisant ainsi de l'énergie.</p>
+<p>Une conséquence est que si vous interrompez un fichier MIDI pendant un certain temps, les instruments sont réinitialisés au piano par défaut (instrument 0). Dans ce cas, rejouer le fichier depuis le début redéfinit correctement les instruments.</p>
+<h4 id="help_preferences_helpers"><a name="help_preferences_helpers"></a>Applications auxiliaires</h4>
+<p>Vous pouvez saisir ci-dessous les commandes pour ouvrir divers types de fichiers. <code>$f</code> est remplacé par le nom du fichier, <code>$u</code> par l'URL. Laissez un champ vide pour utiliser l'application défaut du système d'exploitation.</p>
+
+<p>Pour les réglages d'email, la commande doit acception une adresse <code>mailto:</code>. Pour la ligne de commande, la commande doit ouvrir une fenêtre de console. Une valeur <code>$f</code> sera remplacée par le dossier du document en cours.</p>
+<h4 id="help_preferences_paths"><a name="help_preferences_paths"></a>Emplacements</h4>
+<p>Ici, il est possible d'ajouter des dossiers qui contiennent des fichiers <code>hyph_*.dic</code> où le caractère <code>*</code> sert pour les codes de différentes langues.</p>
+
+<p>Les dictionnaires de césure sont utilisés par Frescobaldi pour séparer les textes des paroles en syllabes.</p>
+<h4 id="help_preferences_documentation"><a name="help_preferences_documentation"></a>Documentation LilyPond</h4>
+<p>Vous pouvez ici ajouter les emplacements locaux ou URLs pointant vers la documentation de LilyPond. Un emplacement local doit pointer vers le dossier où se trouve soit le dossier « Documentation », soit l'emplacement complet « share/doc/lilypond/html/offline-root ».</p>
+<p>Si ceux-ci ne sont pas trouvés, la documentation est cherchée dans tous les sous-dossiers de l'emplacement donné, un niveau plus loin. Il est alors possible de placer plusieurs versions de la documentation de LilyPond dans differents sous-dossiers et demander à Frescobaldi de les trouver.</p><h4 id="help_preferences_shortcuts"><a name="help_preferences_shortcuts"></a>Raccourcis clavier</h4>
+<p>Ici, vous pouvez ajouter des raccourcis clavier pour toutes les commandes disponibles. Les <a href="#help_snippet_help">Fragments</a> d'<a href="#help_quickinsert_help">Insertion rapide</a> qui ont un raccourci clavier sont listés ici.</p>
+
+<p>Pour modifier un raccourci clavier, sélectionnez une action dans la liste et cliquez le bouton Éditer, ou double-cliquez sur l'action. Dans la boîte de dialogue qui apparaît, vous pouvez entrer jusqu'à quatre raccourci pour cette action en cliquant le bouton et en entrant le raccourci.</p>
+
+<p>Vous pouvez définir un nouveau profil en utilisant le bouton Nouveau.</p>
+<h4 id="help_preferences_fontscolors"><a name="help_preferences_fontscolors"></a>Polices et couleurs</h4>
+<p>Ici, vous pouvez définir la police de l'éditeur (une police à largeur fixe est recommandée) et toutes les couleurs.</p>
+
+<p>Le premier élément vous permet de définir les couleurs pour l'arrière-plan, l'avant-plan, l'arrière-plan de sélection, la ligne courante, les lignes repérées, la couleur de papier de l'aperçu, etc.</p>
+
+<p>Le deuxième élément vous permet de définir la couleur et d'autres attributs des styles généraux de colorisation syntaxique, p. ex. mot-clé, variable, valeur, commentaire, etc.</p>
+
+<p>Les autres éléments contiennent les types de texte que la colorisation syntaxique de Frescobaldi reconnaît pour un type de document particulier. Certains de ces types héritent d'un style général. Il est possible de définir des attributs tels que gras, italique, souligné ainsi que la couleur d'avant-plan, d'arrière-plan et de soulignement.</p>
+
+<p>Vous pouvez définir un nouveau profil en utilisant le bouton Nouveau.</p>
+<h4 id="help_preferences_tools"><a name="help_preferences_tools"></a>Outils</h4>
+<p>Vous pouvez modifier les réglages pour différents outils.</p>
+<h3 id="help_about"><a name="help_about"></a>À propos de Frescobaldi</h3>
+<p>
+Frescobaldi est nommé en honneur de
+<a href="http://en.wikipedia.org/wiki/Girolamo_Frescobaldi">&#11008;Girolamo
+Frescobaldi (1583 &#8211; 1643)</a>, un compositeur et organiste Italien.
+</p>
+
+<p>
+La page d'accueil de Frescobaldi est
+<a href="http://www.frescobaldi.org/">&#11008;www.frescobaldi.org</a>
+et une liste de diffusion est disponible sur
+<a href="mailto:frescobaldi@googlegroups.com">frescobaldi@googlegroups.com</a>
+(<a href="http://groups.google.com/group/frescobaldi">&#11008;plus d'infos</a>).
+</p>
+<h4 id="help_credits"><a name="help_credits"></a>Crédits</h4>
+<p>L'auteur principal de Frescobaldi est Wilbert Berendsen.</p>
+<p>Frescobaldi est écrit en <a href="http://www.python.org/">&#11008;Python</a> et utilise le toolkit <a href="http://qt.nokia.com/">&#11008;Qt4</a>.</p>
+<p>L'aperçu est généré par la bibliothèque <a href="http://poppler.freedesktop.org/">&#11008;Poppler</a> de Kristian Høgsberg, Albert Astals Cid et d'autres.</p>
+<p>La plupart des icônes embarquées sont créées par <a href="http://tango.freedesktop.org/">&#11008;Le Projet de Bureau Tango</a>.</p>
+<p>Frescobaldi est traduit dans les langues suivantes :</p>
+<p>Braziliaans Portugees: Édio Mazera</p>
+<p>Duits: Henrik Evers, Georg Hennig, Markus W. Kropp</p>
+<p>Frans: Raphaël Doursenaud, Philippe Massart, Valentin Villenave, Yann Collette, David Bouriaud, Ryan Kavanagh</p>
+<p>Galicisch: Manuel A. Vázquez</p>
+<p>Italiaans: Gianluca D'Orazio</p>
+<p>Nederlands: Wilbert Berendsen</p>
+<p>Pools: Piotr Komorowski</p>
+<p>Russisch: Sergey Poltavski, Artem Zolochevskiy</p>
+<p>Spaans: Francisco Vila</p>
+<p>Tsjechisch: Pavel Fric</p>
+<p>Turks: Server ACİM</p><h4 id="help_contributing"><a name="help_contributing"></a>Contribuer</h4>
+<p>
+Frescobaldi est un <a href="http://www.gnu.org/philosophy/free-sw.html">&#11008;Logiciel
+Libre</a> visant à développer un éditeur de partitions LilyPond facile d'accès.
+Le but est de rendre Frescobaldi accessible sur les principales plate-formes.
+</p>
+
+<p>
+Frescobaldi est développé sur un dépôt public GitHub : <a href="http://github.com/wbsoft/frescobaldi">&#11008;github.com/wbsoft/frescobaldi</a>.
+Vous pouvez parcourir le code source et rendre compte de bogues et de vos remarques et souhaits.
+</p>
+
+<p>
+Vous pouvez contribuer simplement en utilisant Frescobaldi et en rendant compte de bogues et suggestions.
+Les traductions sont bienvenues. La création de nouvelles traductions est expliquée
+dans le fichier README-translations dans la source de Frescobaldi.
+Si vous désirez ajouter des fonctionnalités, vous trouverez les informations concernant la structure
+du code source dans le fichier README-development.
+</p>
+<h4 id="help_history"><a name="help_history"></a>Histoire de Frescobaldi</h4>
+<p>
+Frescobaldi puise ses racines dans LilyKDE, qui était un module externe pour Kate, l'éditeur de KDE3.
+LilyKDE était écrit en Python et a été publié à Noël 2007.
+</p>
+
+<p>
+Lorsque KDE a développé la version 4, il n'était pas possible de développer directement
+des modules externes pour Kate en Python. LilyKDE est alors devenu une application indépendante, incluant
+la partie éditeur de texte de Kate, et a été renommé Frescobaldi. Frescobaldi utilisait encore Okular,
+partie de KDE, pour afficher les fichiers PDF.
+Frescobaldi 0.7 fut publié à Noël 2008.
+À Noël 2009, la version 1.0.0 fut publiée, et à Noël 2010 la version 1.2.0.
+</p>
+
+<p>
+À ce moment, il fut décidé d'abandonner les librairies KDE4 et de n'utiliser que
+Python et Qt4 qui sont disponibles sur les platformes informatiques les plus courantes.
+Frescobaldi 2.0 est une ré-écriture complète. Sa publication est
+prévue pour Noël 2011.
+</p>
+
+
+<address>
+<a href="uguide.html">English</a>, <a href="uguide.nl.html">Nederlands</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.it.html">Italiano</a>, <a href="uguide.cs.html">Český</a> | Last Modified: 12 mrt 2012
+</address>
+
+</div>
+
+</body>
+</html>
