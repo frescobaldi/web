@@ -33,9 +33,10 @@
 <p>
 Frescobaldi is een eenvoudige maar krachtige editor voor LilyPond
 bladmuziek documenten.
-Deze handleiding is geschreven door Wilbert Berendsen en documenteert Frescobaldi versie 2.0.4.
+Deze handleiding is geschreven door Wilbert Berendsen en documenteert Frescobaldi versie 2.0.5.
 </p>
-<p>Vertaald door Wilbert Berendsen.</p><h3>Hulp verkrijgen in Frescobaldi</h3>
+<p>Vertaald door Wilbert Berendsen.</p>
+<h3>Hulp verkrijgen in Frescobaldi</h3>
 
 <p>
 In veel dialogen kunt u de Help-knop (F1) gebruiken.
@@ -44,14 +45,54 @@ wordt weergegeven door op Shift+F1 te drukken of
 <em>Help&#8594;Wat is dit</em> te kiezen.
 </p>
 <h3 id="help_toc"><a name="help_toc"></a>Inhoudsopgave</h3>
-<ul><li><a href="#help_introduction">Inleiding</a></li><li><a href="#help_starting">Aan de slag</a></li><li><a href="#help_scorewiz_help">Partituur opzetten</a></li><li><a href="#help_tools">Ander gereedschap</a></li><ul><li><a href="#help_quickinsert_help">Het Quick Insert-paneel</a></li><li><a href="#help_snippet_help">Knipsels</a></li><ul><li><a href="#help_snippet_edit_help">Knipsel-editor</a></li><ul><li><a href="#help_python_snippets_help">Python knipsels</a></li></ul>
+<ul><li><a href="#help_introduction">Inleiding</a></li>
+<li><a href="#help_starting">Aan de slag</a></li>
+<li><a href="#help_scorewiz_help">Partituur opzetten</a></li>
+<li><a href="#help_music_view">De muziekweergave</a></li>
+<li><a href="#help_tools">Ander gereedschap</a></li>
+<ul><li><a href="#help_quickinsert_help">Het Quick Insert-paneel</a></li>
+<li><a href="#help_snippet_help">Knipsels</a></li>
+<ul><li><a href="#help_snippet_edit_help">Knipsel-editor</a></li>
+<ul><li><a href="#help_python_snippets_help">Python knipsels</a></li>
 </ul>
-<li><a href="#help_pitch_help">Toonhoogte bewerken</a></li><ul><li><a href="#help_transpose_help">Transponeren</a></li></ul>
-<li><a href="#help_rhythm_help">Ritme bewerken</a></li><li><a href="#help_lyrics_help">Liedteksten</a></li></ul>
-<li><a href="#help_editor">De editor</a></li><ul><li><a href="#help_search_replace">Zoeken en vervangen</a></li><li><a href="#help_document_variables">Document-variabelen</a></li><li><a href="#help_sessions">Sessies</a></li></ul>
-<li><a href="#help_preferences_dialog">Voorkeuren</a></li><ul><li><a href="#help_preferences_general">Algemene voorkeuren</a></li><li><a href="#help_preferences_lilypond">LilyPond-voorkeuren</a></li><li><a href="#help_preferences_midi">MIDI-instellingen</a></li><li><a href="#help_preferences_helpers">Hulpprogramma's</a></li><li><a href="#help_preferences_paths">Paden</a></li><li><a href="#help_preferences_documentation">LilyPond-documentatie</a></li><li><a href="#help_preferences_shortcuts">Sneltoetsen</a></li><li><a href="#help_preferences_fontscolors">Tekst & kleur</a></li><li><a href="#help_preferences_tools">Gereedschap</a></li></ul>
-<li><a href="#help_about">Over Frescobaldi</a></li><ul><li><a href="#help_credits">Dank aan</a></li><li><a href="#help_contributing">Meedoen</a></li><li><a href="#help_history">Geschiedenis van Frescobaldi</a></li></ul>
-<li><a href="#help_toc">Inhoudsopgave</a></li></ul>
+<li><a href="#help_snippet_maintaining_library">Een knipselbibliotheek bijhouden</a></li>
+<li><a href="#help_snippet_import_export_help">Knipsels importeren en exporteren</a></li>
+</ul>
+<li><a href="#help_pitch_help">Toonhoogte bewerken</a></li>
+<ul><li><a href="#help_transpose_help">Transponeren</a></li>
+</ul>
+<li><a href="#help_rhythm_help">Ritme bewerken</a></li>
+<li><a href="#help_lyrics_help">Liedteksten</a></li>
+</ul>
+<li><a href="#help_editor">De editor</a></li>
+<ul><li><a href="#help_search_replace">Zoeken en vervangen</a></li>
+<li><a href="#help_document_variables">Document-variabelen</a></li>
+<ul><li><a href="#help_docvar_output">De "<code>output</code>" document-variabele</a></li>
+</ul>
+<li><a href="#help_sessions">Sessies</a></li>
+</ul>
+<li><a href="#help_preferences_dialog">Voorkeuren</a></li>
+<ul><li><a href="#help_preferences_general">Algemene voorkeuren</a></li>
+<li><a href="#help_preferences_lilypond">LilyPond-voorkeuren</a></li>
+<li><a href="#help_preferences_midi">MIDI-instellingen</a></li>
+<li><a href="#help_preferences_helpers">Hulpprogramma's</a></li>
+<li><a href="#help_preferences_paths">Paden</a></li>
+<li><a href="#help_preferences_documentation">LilyPond-documentatie</a></li>
+<li><a href="#help_preferences_shortcuts">Sneltoetsen</a></li>
+<li><a href="#help_preferences_fontscolors">Tekst & kleur</a></li>
+<li><a href="#help_preferences_tools">Gereedschap</a></li>
+</ul>
+<li><a href="#help_troubleshooting">Problemen oplossen</a></li>
+<ul><li><a href="#help_ts_no_music_visible">Na het graveren van een partituur toont de weergave geen muziek</a></li>
+<li><a href="#help_ts_midi_generate">Een MIDI-bestand aanmaken, hoe?</a></li>
+</ul>
+<li><a href="#help_about">Over Frescobaldi</a></li>
+<ul><li><a href="#help_credits">Dank aan</a></li>
+<li><a href="#help_contributing">Meedoen</a></li>
+<li><a href="#help_history">Geschiedenis van Frescobaldi</a></li>
+</ul>
+<li><a href="#help_toc">Inhoudsopgave</a></li>
+</ul>
 <h3 id="help_introduction"><a name="help_introduction"></a>Inleiding</h3>
 <p>
 <a href="http://lilypond.org/">&#11008;LilyPond</a>
@@ -77,12 +118,12 @@ Het standaardscherm van Frescobaldi toont een tekstdocument aan de linkerzijde e
 Voer in de tekstweergave wat LilyPond-code in, zoals dit:
 </p>
 
-<pre style="color: #141312; background: #ffffff; font-family: &quot;monospace&quot;; font-size: 9.5pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> <span style="font-weight: 400;">c</span>'' <span style="font-weight: 600;">{</span>
+<pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> c'' <span style="font-weight: 600;">{</span>
   <span style="color: #0000c0; font-weight: 600;">\time</span> <span style="color: #808000;">7/4</span>
-  <span style="font-weight: 400;">c</span><span style="color: #008080; font-weight: 400;">2</span> <span style="font-weight: 400;">bes</span><span style="color: #008080; font-weight: 400;">4</span> <span style="font-weight: 400;">a</span><span style="color: #008080; font-weight: 400;">2</span> <span style="font-weight: 400;">g</span> <span style="font-weight: 400;">a</span> <span style="font-weight: 400;">bes</span><span style="color: #008080; font-weight: 400;">4</span> <span style="font-weight: 400;">a</span><span style="color: #ff00ff; font-weight: 600;">(</span> <span style="font-weight: 400;">g</span><span style="color: #ff00ff; font-weight: 600;">)</span> <span style="font-weight: 400;">f</span><span style="color: #008080; font-weight: 400;">2</span>
+  c<span style="color: #008080;">2</span> bes<span style="color: #008080;">4</span> a<span style="color: #008080;">2</span> g a bes<span style="color: #008080;">4</span> a<span style="color: #c000c0; font-weight: 600;">(</span> g<span style="color: #c000c0; font-weight: 600;">)</span> f<span style="color: #008080;">2</span>
 <span style="font-weight: 600;">}</span>
 <span style="color: #006000; font-weight: 600;">\addlyrics</span> <span style="font-weight: 600;">{</span>
-  <span style="color: #006000; font-weight: 400;">Join</span> <span style="color: #006000; font-weight: 400;">us</span> <span style="color: #006000; font-weight: 400;">now</span> <span style="color: #006000; font-weight: 400;">and</span> <span style="color: #006000; font-weight: 400;">share</span> <span style="color: #006000; font-weight: 400;">the</span> <span style="color: #006000; font-weight: 400;">soft</span> <span style="color: #006000; font-weight: 400;">--</span> <span style="color: #006000; font-weight: 400;">ware!</span>
+  <span style="color: #006000;">Join</span> <span style="color: #006000;">us</span> <span style="color: #006000;">now</span> <span style="color: #006000;">and</span> <span style="color: #006000;">share</span> <span style="color: #006000;">the</span> <span style="color: #006000;">soft</span> <span style="color: #006000;">--</span> <span style="color: #006000;">ware!</span>
 <span style="font-weight: 600;">}</span></pre>
 
 <p>
@@ -183,6 +224,22 @@ U kunt Score, Bookpart of Book typen aan de partituur toevoegen. Deze kunnen ook
 Daarna kunt u de muziekpartijen toevoegen.
 ALs u meerdere delen of stukken wilt met precies dezelfde partijen, dan kunt u volstaan met het toevoegen van de partijen bovenaan de partituur, en daarna de Scores, zonder partijen aan de Scores toe te voegen.
 Alle Scores zullen dan de partijen uit de partituur gebruiken.</p>
+<h3 id="help_music_view"><a name="help_music_view"></a>De muziekweergave</h3>
+<p>De muziekweergave toont het PDF-document aangemaakt door LilyPond.</p>
+<p>Als LilyPond gestart was in vooruitblik-modus (d.w.z. met Point &amp; Click ingeschakeld), bevat het PDF-document aanklikbare koppelingen voor elk muziekobject, die wijzen naar de definitie van het object in het brondocument.</p>
+<p>De muziekweergave gebruikt deze informatie om slimme, twee-weg integratie met het brondocument te bieden:</p>
+<ul><li>Verplaats de muispijl over muziekobjecten om deze in te tekst te markeren</li>
+<li>Klik op een object om de tekstcursor erheen te verplaatsen</li>
+<li>Shift-klik een object om de definitie in een klein venster te bewerken (zie <a href="#help_help_musicview_editinplace">Op de plaats bewerken</a>)</li>
+<li>Verplaats de tekstcursor om de objecten in de muziekweergave te markeren, of druk op Ctrl+J om de weergave te schuiven zodat het object in beeld komt.</li>
+</ul>
+<p>U kunt ook de weergave instellen:</p>
+<ul><li>Gebruik de control (of command) toets met het muiswiel om in of uit te zoomen</li>
+<li>Toon een vergrootglas door control of command ingedrukt te houden en met de linkerknop te klikken</li>
+<li>Stel de achtergrondkleur in onder <em>Bewerken&#8594;Voorkeuren&#8594;Tekst & kleur&#8594;Basiskleuren&#8594;Vooruitblik achtergrond</em></li>
+</ul>
+<p>U kunt muziek direct uit de PDF-weergave naar een rasterafbeelding kopiëren: Houd Shift ingedrukt en speel een rechthoekige selectie (of gebruik de rechter muisknop) en druk dan op Ctrl+Shift+C of selecteer <em>Bewerken&#8594;Naar afbeelding kopiëren...</em> om de geselecteerde muziek naar het klembord, een bestand of een andere applicatie te slepen.</p>
+<p>Zie ook: <a href="#help_help_musicview_editinplace">Op de plaats bewerken</a>, <a href="#help_ts_no_music_visible">Na het graveren van een partituur toont de weergave geen muziek</a></p>
 <h3 id="help_tools"><a name="help_tools"></a>Ander gereedschap</h3>
 <p>Enkele andere belangrijke hulpmiddelen volgen hieronder.</p>
 <h4 id="help_quickinsert_help"><a name="help_quickinsert_help"></a>Het Quick Insert-paneel</h4>
@@ -265,7 +322,16 @@ terwijl andere in feite kleine scripts zijn, geschreven in Python.
 <code>keep</code>: Selecteert alle ingevoegde tekst.</dd></dl><p>De andere regels van het knipsel definiëren de tekst die moet worden ingevoegd. Hier kunt u ook variabelen gebruiken, voorafgegaan door een $. Een dubbele $ wordt vervangen door een enkele. De volgende variabelen worden herkend:</p><dl><dt><code>$ANCHOR</code></dt><dd>Selecteert tekst van hier tot aan de positie opgegeven met de <code>$CURSOR</code> variabele.</dd><dt><code>$CURSOR</code></dt><dd>Verplaatst de tekstcursor hier na invoegen.</dd><dt><code>$DATE</code></dt><dd>De huidige datum in JJJJ-MM-DD formaat.</dd><dt><code>$DOCUMENT_NAME</code></dt><dd>De naam van het huidige document.</dd><dt><code>$FILE_NAME</code></dt><dd>De volledige lokale bestandsnaam van het huidige document.</dd><dt><code>$FRESCOBALDI_VERSION</code></dt><dd>De versie van Frescobaldi.</dd><dt><code>$LILYPOND_VERSION</code></dt><dd>De versie van het standaard LilyPond programma.</dd><dt><code>$SELECTION</code></dt><dd>De geselecteerde tekst indien beschikbaar. Indien niet, wordt de tekstcursor hier geplaatst.</dd><dt><code>$URL</code></dt><dd>De URL van het huidige document.</dd></dl><h5 id="help_python_snippets_help"><a name="help_python_snippets_help"></a>Python knipsels</h5>
 <p>Python knipsels kunnen de variabele <code>text</code> uitlezen en veranderen. Deze variabele bevat de op dit moment geselecteerde tekst (kan een lege tekenreeks zijn).</p>
 <p>U kunt <code>text</code> instellen op een tekenreeks of een lijst van tekenreeksen.</p>
-<p>Andere variabelen die kunnen worden gebruikt:</p><dl><dt><code>state</code></dt><dd>Een lijst van namen die het type text omschrijven waar de cursor is.</dd><dt><code>cursor</code></dt><dd>De huidige QTextCursor, waarmee u toegang hebt tot het document. Verander het document echter niet via de cursor.</dd><dt><code>CURSOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken om de plaats aan te geven waar de tekstcursor zal worden neergezet na het invoegen van het knipsel.</dd><dt><code>ANCHOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken, samen met <code>CURSOR</code>, om het te selecteren bereik van tekst aan te geven na het invoegen.</dd><dt><code>main</code></dt><dd>Als u een functie definieert met deze naam, wordt hij (zonder argumenten) aangeroepen, in plaats van het invoegen van de tekst in de <code>text</code> variabele. In dit geval kunt u het document aanpassen via de <code>cursor</code>.</dd></dl><h4 id="help_pitch_help"><a name="help_pitch_help"></a>Toonhoogte bewerken</h4>
+<p>Andere variabelen die kunnen worden gebruikt:</p><dl><dt><code>state</code></dt><dd>Een lijst van namen die het type text omschrijven waar de cursor is.</dd><dt><code>cursor</code></dt><dd>De huidige QTextCursor, waarmee u toegang hebt tot het document. Verander het document echter niet via de cursor.</dd><dt><code>CURSOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken om de plaats aan te geven waar de tekstcursor zal worden neergezet na het invoegen van het knipsel.</dd><dt><code>ANCHOR</code></dt><dd>Als u <code>text</code> instelt op een lijst in plaats van een tekenreeks, kunt u deze waarde gebruiken, samen met <code>CURSOR</code>, om het te selecteren bereik van tekst aan te geven na het invoegen.</dd><dt><code>main</code></dt><dd>Als u een functie definieert met deze naam, wordt hij (zonder argumenten) aangeroepen, in plaats van het invoegen van de tekst in de <code>text</code> variabele. In dit geval kunt u het document aanpassen via de <code>cursor</code>.</dd></dl><h5 id="help_snippet_maintaining_library"><a name="help_snippet_maintaining_library"></a>Een knipselbibliotheek bijhouden</h5>
+<p>Om een bepaalde groep knipsels als een bibliotheek bij te houden kunt u natuurlijk de namen met een speciaal woord laten beginnen. Maar het is handiger om hiervoor een knipselvariable te gebruiken.</p>
+<p>Het wordt aanbevolen om de "<code>set</code>" variabele te gebruiken en deze in te stellen op de naam van de bibliotheek waar het knipsel bij moet behoren.</p>
+<p>Dan kunt u in de knipselmanager eenvoudig alle bij elkaar horende knipsels selecteren door <code>:set naam</code> in te toetsen, waarbij "naam" staat voor de naam die u wilt gebruiken. En dan kunt u bijvoorbeeld de knipsels exporteren naar een XML-bestand om deze met anderen te delen.</p>
+<h5 id="help_snippet_import_export_help"><a name="help_snippet_import_export_help"></a>Knipsels importeren en exporteren</h5>
+<p>Knipsels kunnen worden geïmporteerd van en geëxporteerd naar XML-bestanden.</p>
+<p>Om knipsels te exporteren, selecteer ze in the knipselmanager of filter de knipsels via de zoekbalk en selecteer er geen een, zodat alle zichtbare knipsels worden geëxporteerd. Exporteer de knipzels door <em>Menu&#8594;Exporteren...</em> te kiezen, en dan een bestandsnaam in te voeren, bij voorkeur eindigend in <code>.xml</code>.</p>
+<p>Om knipsels te importeren, selecteer <em>Menu&#8594;Importeren...</em> en kies het bestand dat u wilt importeren. U kunt ook bestanden naar de knipselmanager slepen. Een dialoog wordt dan weergegeven waar u de knipsels kunt selecteren die u uit het bestand wilt importeren.</p>
+<p>Het XML-formaat van de knipselbibliotheken is eenvoudig en gedocumenteerd in het XML-bestand.</p>
+<h4 id="help_pitch_help"><a name="help_pitch_help"></a>Toonhoogte bewerken</h4>
 <p>
 Frescobaldi biedt de volgende functies om toonhoogtes aan te passen,
 alle in het menu <em>Gereedschap&#8594;Toonhoogte</em>:
@@ -429,8 +495,10 @@ Ze kunnen worden gezet in de eerste of laatste vijf regels van een document.
 Als een regel '<b><code>-*-</code></b>' bevat, probeert Frescobaldi in
 de rest van de regels variabele-definities te vinden in de vorm van <code>naam: waarde;</code>.
 </p>
-<p>De volgende variabelen worden herkend:</p><dl><dt><code>mode</code>: <i>modus</i><code>;</code></dt><dd>Forceert de modus, één van lilypond, html, texinfo, latex, docbook of scheme. Standaard automatische modus-herkenning.</dd>
+<p>De volgende variabelen worden herkend:</p>
+<dl><dt><code>mode</code>: <i>modus</i><code>;</code></dt><dd>Forceert de modus, één van lilypond, html, texinfo, latex, docbook of scheme. Standaard automatische modus-herkenning.</dd>
 <dt><code>master</code>: <i>Bestandsnaam</i><code>;</code></dt><dd>Compileert een ander LilyPond document in plaats van het huidige.</dd>
+<dt><code>output</code>: <i>naam</i><code>;</code></dt><dd>Zoekt naar uitvoerdocumenten (PDF, MIDI, etc) die met de opgegeven naam (of lijst van namen met komma's ertussen) beginnen. <a href="#help_docvar_output">Meer informatie.</a></dd>
 <dt><code>coding</code>: <i>tekenset</i><code>;</code></dt><dd>Een andere tekenset gebruiken dan standaard UTF-8.</dd>
 <dt><code>version</code>: <i>versie</i><code>;</code></dt><dd>De LilyPond-versie die u wilt gebruiken, kan worden gebruikt voor niet-LilyPond documenten.</dd>
 <dt><code>tab-width</code>: <i>nummer</i><code>;</code></dt><dd>De breedte van een tab-teken, standaard 8.</dd>
@@ -438,69 +506,97 @@ de rest van de regels variabele-definities te vinden in de vorm van <code>naam: 
 <dt><code>document-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Wel of geen tabs elders in het document gebruiken, standaard <code>yes</code>.</dd>
 <dt><code>indent-width</code>: <i>nummer</i><code>;</code></dt><dd>Het aantal spaties voor elk inspring-niveau, standaard 2.</dd>
 </dl>
-<p>U kunt document-variabelen in commentaar plaatsen.</p><h4 id="help_sessions"><a name="help_sessions"></a>Sessies</h4>
+<p>U kunt document-variabelen in commentaar plaatsen.</p>
+<h5 id="help_docvar_output"><a name="help_docvar_output"></a>De "<code>output</code>" document-variabele</h5>
+<p>Als u deze variabele instelt worden de bestandsnamen voor de uitvoerdocumenten niet automatisch bepaald, maar zal Frescobaldi uitvoerdocumenten (PDF, MIDI, etc) met de opgegeven basisnaam, or met komma's gescheiden lijst van namen proberen te vinden.</p>
+<p>Als een naam eindigt met een directory-scheidingsteken, zullen uitvoerbestanden in de opgegeven directory worden weergegeven.</p>
+<p>Alle namen zijn relatief ten opzichte van de bestandsnaam van het document.</p>
+<p>Bijvoorbeeld:</p>
+<p><pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="font-weight: 600;">\version</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">2.14.2</span><span style="color: #c00000;">"</span>
+<span style="color: #808080; font-style: italic;">% -*- output: pdfs/;</span>
+<span style="font-weight: 600;">\book</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #0000c0; font-weight: 600;">\bookOutputName</span> <span style="color: #a04900;">#</span><span style="color: #a04900;">(</span><span style="color: #a04900;">string-append</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">pdfs/</span><span style="color: #c00000;">"</span> <span style="color: #a04900;">some-variable</span><span style="color: #a04900;">)</span>
+  <span style="font-weight: 600;">\score</span> <span style="font-weight: 600;">{</span>
+    <span style="color: #0000c0; font-weight: 600;">\relative</span> c' <span style="font-weight: 600;">{</span>
+      c d e f g
+    <span style="font-weight: 600;">}</span>
+  <span style="font-weight: 600;">}</span>
+<span style="font-weight: 600;">}</span></pre></p>
+<p>U kunt deze variabele instellen als het automatisch bepalen door Frescobaldi te lang duurt (omdat het hele document en alle ge-include documenten worden doorzocht naar LilyPond commando's die de output-naam opgeven, zoals <code>\bookOutputName</code>, etc); of als het automatisch bepalen niet lukt doordat gecompliceerde LilyPond code wordt gebruikt.</p>
+<h4 id="help_sessions"><a name="help_sessions"></a>Sessies</h4>
 <p>Een sessie is in feite een lijst van geopende bestanden. Op elk moment kunt u <em>Sessie&#8594;Opslaan</em> of <em>Sessie&#8594;Nieuw</em> kiezen om de lijst van geopende documenten onder een bepaalde naam op te slaan.</p>
 <p>Als u van sessie wisselt worden eerst alle huidige documenten gesloten en daarna de documenten van de andere sessie geopend.</p>
 <p>In de sessie-eigenschappen dialoog kunt u kiezen of de lijst van geopende documenten altijd moet worden opgeslagen, of alleen wanneer u de sessie aanmaakt (of opslaat via <em>Sessie&#8594;Opslaan</em>). Dit kan handig zijn als u wilt dat de lijst van documenten in de sessie steeds hetzelfde blijft, ook al opent en sluit u soms documenten terwijl u werkt.</p>
-<p>U kunt ook een standaardmap voor de sessie opgeven.</p><p>Zie ook: <a href="#help_preferences_general">Algemene voorkeuren</a></p>
+<p>U kunt ook een standaardmap voor de sessie opgeven.</p>
+<p>Zie ook: <a href="#help_preferences_general">Algemene voorkeuren</a></p>
 <h3 id="help_preferences_dialog"><a name="help_preferences_dialog"></a>Voorkeuren</h3>
 <p>In de dialoog Voorkeuren (onder <em>Bewerken&#8594;Voorkeuren</em>) kunt u veel aspecten van Frescobaldi en LilyPond instellen.</p>
 <h4 id="help_preferences_general"><a name="help_preferences_general"></a>Algemene voorkeuren</h4>
 <p>Onder <em>Algemene voorkeuren</em>, kunt u instellen in welke taal Frescobaldi's gebruikersinterface is vertaald, welke grafische stijl u wilt gebruiken, en of u de ingebouwde Tango icoonset wilt gebruiken of de icoonset van het besturingssysteem.</p>
-
 <p>Taal en stijl veranderen direct, maar de nieuwe icooninstellingen worden pas na een herstart van Frescobaldi van kracht.</p>
-
 <p>Onder <em>Als Frescobaldi zonder argumenten wordt gestart,</em> kunt u instellen welke sessie wordt geladen als Frescobaldi wordt gestart zonder bestandsnaam. U kunt kiezen om altijd met één leeg document op te starten, met de laatstgebruikte sessie of met een specifieke sessie. Zie ook <a href="#help_sessions">Sessies</a>.</p>
-
 <p>Onder <em>Bij het opslaan van documenten</em>, kunt u kiezen wat er gedaan moet worden als een document wordt opgeslagen, zoals bijvoorbeeld de cursorpositie en gemarkeerde regels onthouden of een veiligheidskopie achterladen (met een ~ toegevoegd). Ook kunt u een standaardmap opgeven waar u uw documenten in bewaart.</p>
 <h4 id="help_preferences_lilypond"><a name="help_preferences_lilypond"></a>LilyPond-voorkeuren</h4>
 <p>Hier kunt u instellen hoe LilyPond gestart wordt als u uw document graveert.</p>
-
 <p>Als u verschillende versies van LilyPond geïnstalleerd hebt, kunt u deze hier opgeven, en Frescobaldi zo instellen dat automatisch de juiste versie wordt gekozen, gebaseerd op het versienummer dat het document opgeeft (<a href="#help_preferences_lilypond_autoversion">meer info</a>).</p>
-
 <p>U kunt ook instellen hoe LilyPond wordt gestart. Zie de knopinfo bij de instellingen voor meer informatie.</p>
-
 <p>Tenslotte kunt u een lijst van directories opgeven waar het LilyPond <code>\include</code>-commando bestanden moet zoeken.</p>
 <h4 id="help_preferences_midi"><a name="help_preferences_midi"></a>MIDI-instellingen</h4>
 <p>Hier kunt u Frescobaldi's MIDI instellingen aanpassen.</p>
-
-<p>U kunt instellen naar welke MIDI-poort moet worden afgespeeld.Als er geen poortnamen zichtbaar zijn in de uitklapknop kan het nodig zijn om een hardware MIDI synthesizer aan te sluiten, of een software-synthesizer te starten zoals TiMidity of Fluidsynth.Onder Linux moet de synthesizer beschikbaar zijn als een ALSA MIDI-device.</p>
-
+<p>U kunt instellen naar welke MIDI-poort moet worden afgespeeld. Als er geen poortnamen zichtbaar zijn in de uitklapknop kan het nodig zijn om een hardware MIDI synthesizer aan te sluiten, of een software-synthesizer te starten zoals TiMidity of Fluidsynth. Onder Linux moet de synthesizer beschikbaar zijn als een ALSA MIDI-device.</p>
 <p>Als u een synthesizer heeft met meerdere poorten kunt u hier de eerste letters opgeven, zodat Frescobaldi automatisch de eerst beschikbare gebruikt.</p>
-
 <p>Tenslotte, wanneer u een software-synthesizer gebruikt, is het aanbevolen de optie <em>Ongebruikte MIDI-uitvoer sluiten</em> te gebruiken.</p>
-
 <p>Indien ingeschakeld, zal Frescobaldi ongebruikte MIDI-uitgangen na een minuut sluiten.</p>
 <p>Dit kan helpen om systeembronnen vrij te maken die anders gebruikt zouden worden door een software MIDI-synthesizer, en zodoende batterij-vermogen te sparen.</p>
 <p>Een neveneffect is dat als u een MIDI-bestand langdurig pauzeert en dan verder afspeelt, de instrumenten teruggezet zijn naar de standaard piano (instrument 0). In dat geval kunt u het bestand vanaf het begin afspelen om de instrumenten weer correct te horen.</p>
 <h4 id="help_preferences_helpers"><a name="help_preferences_helpers"></a>Hulpprogramma's</h4>
 <p>In deze pagina kunt u commando's invoeren om verschillende typen bestanden te openen. <code>$f</code> wordt vervangen door de bestandsnaam, <code>$u</code> door de URL. Laat een veld leeg om de standaardinstelling van het besturingssysteem te gebruiken.</p>
-
 <p>Het e-mail commando moet een <code>mailto:</code>-url accepteren. Het commando-prompt commando moet een console-venster openen. De <code>$f</code>-waarde wordt vervangen door de directory van het huidige document.</p>
 <h4 id="help_preferences_paths"><a name="help_preferences_paths"></a>Paden</h4>
 <p>Hier kunnen directories worden toegevoegd die <code>hyph_*.dic</code> bestanden bevatten, waarbij de <code>*</code> staat voor verschillende taalcodes.</p>
-
 <p>Deze afbreekwoordenboeken worden door Frescobaldi gebruikt om liedteksten op te splitsen in syllaben.</p>
 <h4 id="help_preferences_documentation"><a name="help_preferences_documentation"></a>LilyPond-documentatie</h4>
 <p>Hier kunt u lokale bestandspaden of URLs voor LilyPond-documentatie toevoegen. Een lokaal pad moet naar een directorie wijzen waar de Documentation map is, of het hele "share/doc/lilypond/html/offline-root" pad.</p>
 <p>Als deze niet gevonden worden, wordt een niveau diep gezocht in submappen. Zodoende is het mogelijk om verschillende versies van de LilyPond-documentatie in verschillende submappen te plaatsen, en dat Frescobaldi ze automatisch vindt.</p><h4 id="help_preferences_shortcuts"><a name="help_preferences_shortcuts"></a>Sneltoetsen</h4>
 <p>Hier kunt u sneltoetsen voor alle beschikbare commando's instellen. Ook de <a href="#help_snippet_help">Knipsels</a> of <a href="#help_quickinsert_help">Quick Insert</a> knoppen die sneltoetsen hebben worden hier weergegeven.</p>
-
 <p>Om een sneltoets te veranderen, selecteer de actie in de lijst en klik de knop Bewerken, of dubbelklik de actie. In de dialoog die verschijnt kunt u maximaal vier verschillende sneltoetsen voor de actie instellen, door de knop in te drukken en de gewenste sneltoetscombinatie aan te slaan.</p>
-
 <p>U kunt een nieuw schema definiëren door op de knop Nieuw te klikken.</p>
 <h4 id="help_preferences_fontscolors"><a name="help_preferences_fontscolors"></a>Tekst & kleur</h4>
 <p>Hier kunt u het editor-lettertype instellen (een vaste-breedte-lettertype is aanbevolen) en alle kleuren.</p>
-
 <p>Het eerste item biedt instellingen voor de voorgrond, achtergrond, selectie, de huidige regel, markeringen, de papierkleur in de muziekweergave, enzovoort.</p>
-
 <p>Het tweede item biedt instellingen voor de kleur en andere attributen van de standaard accentueringsstijlen voor bijvoorbeeld een sleutelwoord, variable, waarde, commentaar, etc.</p>
-
 <p>De overige items bevatten de typen tekst die de syntaxis-accentueerder herkent voor de verschillende documenttypen die Frescobaldi ondersteunt. Sommige van deze stijlen erven de instellingen van een algemene stijl. Het is mogelijk om de attributen vet, cursief en onderstreept in te stellen, en ook de kleuren voor voorground, achtergrond en onderstreping.</p>
-
 <p>U kunt een nieuw schema definiëren door op de knop Nieuw te klikken.</p>
 <h4 id="help_preferences_tools"><a name="help_preferences_tools"></a>Gereedschap</h4>
 <p>Hier kunt u de instellingen van de diverse gereedschappen wijzigen.</p>
+<h3 id="help_troubleshooting"><a name="help_troubleshooting"></a>Problemen oplossen</h3>
+<p>Soms gaat iets anders dan u verwacht; deze sectie kan dan misschien uitkomst bieden.</p>
+<h4 id="help_ts_no_music_visible"><a name="help_ts_no_music_visible"></a>Na het graveren van een partituur toont de weergave geen muziek</h4>
+<ol><li><p>Heeft het <code>\score</code> blok een layout-sectie?</p>
+<p>Als een <code>\score</code> blok een <code>\midi</code>-sectie heeft maar geen <code>\layout</code>-sectie, wordt geen PDF uitvoer aangemaakt.</p>
+</li>
+<li><p>Gebruikt u een gecompliceerde manier om de uitvoer-bestandsnaam op te geven?</p>
+<p>Frescobaldi is in staat om de uitvoer-bestandsnamen te bepalen door naar de bestandsnaam van het document te kijken en de diverse LilyPond-commando's die de uitvoerbestandsnaam of -achtervoegsel opgeven. Zelfs <code>\include</code>-bestanden worden doorzocht naar commando's als <code>\bookOutputName</code> of <code>\bookOutputSuffix</code>.</p>
+<p>Maar als u meer gecompliceerde Scheme code gebruikt voor het opgeven van bestandsnamen, kan het zijn dat Frescobaldi niet in staat is de uitvoer-bestandsnamen correct te bepalen.</p>
+<p>In dat geval kunt u deze basis-namen opgeven via de <a href="#help_docvar_output"><code>output</code></a> document-variabele.</p>
+</li>
+</ol>
+<p>Zie ook: <a href="#help_document_variables">Document-variabelen</a></p>
+<h4 id="help_ts_midi_generate"><a name="help_ts_midi_generate"></a>Een MIDI-bestand aanmaken, hoe?</h4>
+<p>Normaal maakt LilyPond alleen een PDF-bestand aan van de muziek. Om een MIDI-bestand aan te maken dient u de muziek in een <code>\score</code> blok te zetten en daar een <code>\midi</code> blok aan toe te voegen.</p>
+<p>Bijvoorbeeld:</p>
+<p><pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="font-weight: 600;">\version</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">2.14.2</span><span style="color: #c00000;">"</span>
+
+music = <span style="color: #0000c0; font-weight: 600;">\relative</span> c' <span style="font-weight: 600;">{</span>
+  c<span style="color: #008080;">4</span> d e f g<span style="color: #008080;">2</span>
+<span style="font-weight: 600;">}</span>
+
+<span style="font-weight: 600;">\score</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #0000ff;">\music</span>
+  <span style="font-weight: 600;">\layout</span> <span style="font-weight: 600;">{</span><span style="font-weight: 600;">}</span>
+  <span style="font-weight: 600;">\midi</span> <span style="font-weight: 600;">{</span><span style="font-weight: 600;">}</span>
+<span style="font-weight: 600;">}</span></pre></p>
+<p>Als u het <code>\layout</code>-blok weglaat zal geen PDF-bestand worden aangemaakt, enkel een MIDI-bestand.</p>
 <h3 id="help_about"><a name="help_about"></a>Over Frescobaldi</h3>
 <p>
 Frescobaldi is genoemd naar
@@ -531,7 +627,8 @@ en er is een mailing-list op
 <p>Russisch: Sergey Poltavski, Artem Zolochevskiy</p>
 <p>Spaans: Francisco Vila</p>
 <p>Tsjechisch: Pavel Fric</p>
-<p>Turks: Server ACİM</p><h4 id="help_contributing"><a name="help_contributing"></a>Meedoen</h4>
+<p>Turks: Server ACİM</p>
+<h4 id="help_contributing"><a name="help_contributing"></a>Meedoen</h4>
 <p>
 Frescobaldi is a <a href="http://www.gnu.org/philosophy/free-sw.html">&#11008;Vrije Software</a> project om een gebruikersvriendelijke editor te maken voor LilyPond-bladmuziek.
 Het doel is Frescobaldi beschikbaar te maken op alle belangrijke platforms.
@@ -567,8 +664,27 @@ Frescobaldi 2.0 is compleet van scratch herschreven. De releasedatum is gesteld 
 </p>
 
 
+<hr />
+
+<h3 id="help_preferences_lilypond_autoversion"><a name="help_preferences_lilypond_autoversion"></a>Kies LilyPond-versie op basis van document</h3>
+<p>Als deze optie is ingeschakeld, wordt gezocht naar een LilyPond <code>\version</code> commando of een <code>version</code> document variabele.</p>
+<p>Het LilyPond versie-commando ziet er aldus uit:</p>
+<pre>\version "2.14.0"</pre>
+<p>De document variabele ziet er zo uit:</p>
+<pre>-*- version: 2.14.0;</pre>
+<p>ergens (in een commentaarsectie) in de eerste of laatste 5 regels van het document.
+Op deze wijze kan de LilyPond-versie ook worden aangegeven in niet-LilyPond documenten zoals HTML, LaTeX, etc.</p>
+<p>Als het document een versie aangeeft, wordt de oudst bruikbare LilyPond-versie gekozen.
+Zo niet, wordt de als standaard ingestelde versie gekozen.</p>
+<p>Zie ook: <a href="#help_document_variables">Document-variabelen</a></p>
+<h3 id="help_help_musicview_editinplace"><a name="help_help_musicview_editinplace"></a>Op de plaats bewerken</h3>
+<p>In deze dialoog kunt u een regel uit het tekstdocument bewerken.</p>
+<p>Klik OK of druk op Ctrl+Return om de aangepaste tekst in het document te plaatsen.</p>
+<p>U kunt het "Op de plaats bewerken" venster openen door met Shift op een object te klikken in de muziekweergave of door rechts te klikken op het object en <em>Op de plaats bewerken</em> te selecteren.</p>
+
+
 <address>
-<a href="uguide.html">English</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a>, <a href="uguide.cs.html">Český</a> | Last Modified: 13 mrt 2012
+<a href="uguide.html">English</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a>, <a href="uguide.cs.html">Český</a> | Last Modified: 01 mei 2012
 </address>
 
 </div>
