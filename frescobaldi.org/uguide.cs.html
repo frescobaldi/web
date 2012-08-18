@@ -33,9 +33,10 @@
 <p>
 Frescobaldi je lehký a mocný editor pro dokumenty v LilyPondu
 s listy s notami.
-Tato příručka je napsána Wilbert Berendsen a dokumentuje Frescobaldi verze 2.0.4.
+Tato příručka je napsána Wilbert Berendsen a dokumentuje Frescobaldi verze 2.0.5.
 </p>
-<p>Přeloženo: Pavel Fric.</p><h3>Jak dostat nápovědu ve Frescobaldi</h3>
+<p>Přeloženo: Pavel Fric.</p>
+<h3>Jak dostat nápovědu ve Frescobaldi</h3>
 
 <p>
 V mnohých dialozích můžete klepnout na tlačítko pro nápovědu nebo stiskněte klávesu F1.
@@ -43,14 +44,54 @@ Mnoho položek uživatelského rozhraní má taktéž informace also have "Co je
 odhalit stiskem Shift+F1 nebo výběrem <em>Nápověda&#8594;Co je toto</em>.
 </p>
 <h3 id="help_toc"><a name="help_toc"></a>Obsah</h3>
-<ul><li><a href="#help_introduction">Úvod</a></li><li><a href="#help_starting">První kroky</a></li><li><a href="#help_scorewiz_help">Průvodce pro notový zápis</a></li><li><a href="#help_tools">Jiné nástroje</a></li><ul><li><a href="#help_quickinsert_help">Panelem pro rychlé vložení</a></li><li><a href="#help_snippet_help">Kousky</a></li><ul><li><a href="#help_snippet_edit_help">Editor kousku</a></li><ul><li><a href="#help_python_snippets_help">Kousky v Pythonu</a></li></ul>
+<ul><li><a href="#help_introduction">Úvod</a></li>
+<li><a href="#help_starting">První kroky</a></li>
+<li><a href="#help_scorewiz_help">Průvodce pro notový zápis</a></li>
+<li><a href="#help_music_view">The Music View</a></li>
+<li><a href="#help_tools">Jiné nástroje</a></li>
+<ul><li><a href="#help_quickinsert_help">Panelem pro rychlé vložení</a></li>
+<li><a href="#help_snippet_help">Kousky</a></li>
+<ul><li><a href="#help_snippet_edit_help">Editor kousku</a></li>
+<ul><li><a href="#help_python_snippets_help">Kousky v Pythonu</a></li>
 </ul>
-<li><a href="#help_pitch_help">Zacházení s výškou tónu</a></li><ul><li><a href="#help_transpose_help">Převést</a></li></ul>
-<li><a href="#help_rhythm_help">Zacházení s rytmem</a></li><li><a href="#help_lyrics_help">Slova písně</a></li></ul>
-<li><a href="#help_editor">Editor</a></li><ul><li><a href="#help_search_replace">Hledat a nahradit</a></li><li><a href="#help_document_variables">Proměnné pro dokument</a></li><li><a href="#help_sessions">Sessions</a></li></ul>
-<li><a href="#help_preferences_dialog">Nastavení</a></li><ul><li><a href="#help_preferences_general">Obecné volby</a></li><li><a href="#help_preferences_lilypond">Nastavení LilyPondu</a></li><li><a href="#help_preferences_midi">Nastavení MIDI</a></li><li><a href="#help_preferences_helpers">Pomocné programy</a></li><li><a href="#help_preferences_paths">Cesty</a></li><li><a href="#help_preferences_documentation">Dokumentace k LilyPondu</a></li><li><a href="#help_preferences_shortcuts">Klávesové zkratky</a></li><li><a href="#help_preferences_fontscolors">Písma a barvy</a></li><li><a href="#help_preferences_tools">Nástroje</a></li></ul>
-<li><a href="#help_about">O Frescobaldi</a></li><ul><li><a href="#help_credits">Zásluhy</a></li><li><a href="#help_contributing">Příspěvky</a></li><li><a href="#help_history">Historie Frescobaldi</a></li></ul>
-<li><a href="#help_toc">Obsah</a></li></ul>
+<li><a href="#help_snippet_maintaining_library">Maintaining a library of snippets</a></li>
+<li><a href="#help_snippet_import_export_help">Importing and exporting snippets</a></li>
+</ul>
+<li><a href="#help_pitch_help">Zacházení s výškou tónu</a></li>
+<ul><li><a href="#help_transpose_help">Převést</a></li>
+</ul>
+<li><a href="#help_rhythm_help">Zacházení s rytmem</a></li>
+<li><a href="#help_lyrics_help">Slova písně</a></li>
+</ul>
+<li><a href="#help_editor">Editor</a></li>
+<ul><li><a href="#help_search_replace">Hledat a nahradit</a></li>
+<li><a href="#help_document_variables">Proměnné pro dokument</a></li>
+<ul><li><a href="#help_docvar_output">The "<code>output</code>" document variable</a></li>
+</ul>
+<li><a href="#help_sessions">Sessions</a></li>
+</ul>
+<li><a href="#help_preferences_dialog">Nastavení</a></li>
+<ul><li><a href="#help_preferences_general">Obecné volby</a></li>
+<li><a href="#help_preferences_lilypond">Nastavení LilyPondu</a></li>
+<li><a href="#help_preferences_midi">Nastavení MIDI</a></li>
+<li><a href="#help_preferences_helpers">Pomocné programy</a></li>
+<li><a href="#help_preferences_paths">Cesty</a></li>
+<li><a href="#help_preferences_documentation">Dokumentace k LilyPondu</a></li>
+<li><a href="#help_preferences_shortcuts">Klávesové zkratky</a></li>
+<li><a href="#help_preferences_fontscolors">Písma a barvy</a></li>
+<li><a href="#help_preferences_tools">Nástroje</a></li>
+</ul>
+<li><a href="#help_troubleshooting">Troubleshooting</a></li>
+<ul><li><a href="#help_ts_no_music_visible">After engraving a score, the Music View does not show the music</a></li>
+<li><a href="#help_ts_midi_generate">How to generate a MIDI file?</a></li>
+</ul>
+<li><a href="#help_about">O Frescobaldi</a></li>
+<ul><li><a href="#help_credits">Zásluhy</a></li>
+<li><a href="#help_contributing">Příspěvky</a></li>
+<li><a href="#help_history">Historie Frescobaldi</a></li>
+</ul>
+<li><a href="#help_toc">Obsah</a></li>
+</ul>
 <h3 id="help_introduction"><a name="help_introduction"></a>Úvod</h3>
 <p>
 <a href="http://lilypond.org/">&#11008;LilyPond</a>
@@ -80,12 +121,12 @@ náhled na noty napravo.
 Nyní v textovém pohledu zadejte nějaký kód v LilyPondu, jako je tento:
 </p>
 
-<pre style="color: #141312; background: #ffffff; font-family: &quot;monospace&quot;; font-size: 9.5pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> <span style="font-weight: 400;">c</span>'' <span style="font-weight: 600;">{</span>
+<pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="color: #0000c0; font-weight: 600;">\relative</span> c'' <span style="font-weight: 600;">{</span>
   <span style="color: #0000c0; font-weight: 600;">\time</span> <span style="color: #808000;">7/4</span>
-  <span style="font-weight: 400;">c</span><span style="color: #008080; font-weight: 400;">2</span> <span style="font-weight: 400;">bes</span><span style="color: #008080; font-weight: 400;">4</span> <span style="font-weight: 400;">a</span><span style="color: #008080; font-weight: 400;">2</span> <span style="font-weight: 400;">g</span> <span style="font-weight: 400;">a</span> <span style="font-weight: 400;">bes</span><span style="color: #008080; font-weight: 400;">4</span> <span style="font-weight: 400;">a</span><span style="color: #ff00ff; font-weight: 600;">(</span> <span style="font-weight: 400;">g</span><span style="color: #ff00ff; font-weight: 600;">)</span> <span style="font-weight: 400;">f</span><span style="color: #008080; font-weight: 400;">2</span>
+  c<span style="color: #008080;">2</span> bes<span style="color: #008080;">4</span> a<span style="color: #008080;">2</span> g a bes<span style="color: #008080;">4</span> a<span style="color: #c000c0; font-weight: 600;">(</span> g<span style="color: #c000c0; font-weight: 600;">)</span> f<span style="color: #008080;">2</span>
 <span style="font-weight: 600;">}</span>
 <span style="color: #006000; font-weight: 600;">\addlyrics</span> <span style="font-weight: 600;">{</span>
-  <span style="color: #006000; font-weight: 400;">Join</span> <span style="color: #006000; font-weight: 400;">us</span> <span style="color: #006000; font-weight: 400;">now</span> <span style="color: #006000; font-weight: 400;">and</span> <span style="color: #006000; font-weight: 400;">share</span> <span style="color: #006000; font-weight: 400;">the</span> <span style="color: #006000; font-weight: 400;">soft</span> <span style="color: #006000; font-weight: 400;">--</span> <span style="color: #006000; font-weight: 400;">ware!</span>
+  <span style="color: #006000;">Join</span> <span style="color: #006000;">us</span> <span style="color: #006000;">now</span> <span style="color: #006000;">and</span> <span style="color: #006000;">share</span> <span style="color: #006000;">the</span> <span style="color: #006000;">soft</span> <span style="color: #006000;">--</span> <span style="color: #006000;">ware!</span>
 <span style="font-weight: 600;">}</span></pre>
 
 <p>
@@ -205,6 +246,22 @@ hlasy na nejvyšší úroveň pohledu na notový zápis, a pak notové zápisy, 
 přidání hudebních hlasů do notových zápisů.
 Notové zápisy pak budou používat hlasy na nejvyšší úrovni notového zápisu.
 </p>
+<h3 id="help_music_view"><a name="help_music_view"></a>The Music View</h3>
+<p>The Music View displays the PDF document created by LilyPond.</p>
+<p>When LilyPond was run in preview mode (i.e. with Point &amp; Click turned on), the PDF contains a clickable link for every music object, pointing to its definition in the text document.</p>
+<p>The Music View uses this information to provide smart, two-way integration with the text document:</p>
+<ul><li>Move the mouse pointer over music objects to highlight them in the text</li>
+<li>Click an object to move the text cursor to that object</li>
+<li>Shift-click an object to edit its text in a small window (see <a href="#help_help_musicview_editinplace">Edit in Place</a>)</li>
+<li>Move the text cursor to highlight them in the music view, press Ctrl+J to scroll them into view.</li>
+</ul>
+<p>You can also adjust the view:</p>
+<ul><li>Use the Control (or Command) key with the mouse wheel to zoom in and out</li>
+<li>Hold Control or Command and left-click to display a magnifier glass</li>
+<li>Configure the background color under <em>Úpravy&#8594;Nastavení&#8594;Písma a barvy&#8594;Základní barvy&#8594;Pozadí náhledu</em></li>
+</ul>
+<p>You can copy music right from the PDF view to a raster image: Hold Shift and drag a rectangular selection (or use the right mouse button) and then press Ctrl+Shift+C or select <em>Úpravy&#8594;Zkopírovat do obrázku...</em> to copy the selected music as a raster image to the clipboard, a file or another application.</p>
+<p>Podívejte se také na: <a href="#help_help_musicview_editinplace">Edit in Place</a>, <a href="#help_ts_no_music_visible">After engraving a score, the Music View does not show the music</a></p>
 <h3 id="help_tools"><a name="help_tools"></a>Jiné nástroje</h3>
 <p>Zde jsou v seznamu uvedeny některé další důležité nástroje.</p>
 <h4 id="help_quickinsert_help"><a name="help_quickinsert_help"></a>Panelem pro rychlé vložení</h4>
@@ -304,7 +361,16 @@ skripty napsanými v Pythonu.
 <code>keep</code>: Vybere všechen vložený text.</dd></dl><p>Další řádky kousku vymezují text k vložení v editoru. Zde můžete vložit proměnné uvozené znakem $. Zdvojený $ bude nahrazen jedním. Jsou uznávány následující proměnné:</p><dl><dt><code>$ANCHOR</code></dt><dd>Vybere text odtud po místo dané pomocí proměnné <code>$CURSOR</code></dd><dt><code>$CURSOR</code></dt><dd>Přesune ukazovátko textu po vložení sem.</dd><dt><code>$DATE</code></dt><dd>Nynější datum ve formátu RRRR-MM-DD.</dd><dt><code>$DOCUMENT_NAME</code></dt><dd>Název nynějšího dokumentu.</dd><dt><code>$FILE_NAME</code></dt><dd>Úplný místní souborový název nynějšího dokumentu.</dd><dt><code>$FRESCOBALDI_VERSION</code></dt><dd>Verze Frescobaldi.</dd><dt><code>$LILYPOND_VERSION</code></dt><dd>Verze výchozího programu LilyPond.</dd><dt><code>$SELECTION</code></dt><dd>Vybraný text, je-li dostupný. Pokud není, ukazovátko textu je přesunuto sem.</dd><dt><code>$URL</code></dt><dd>Adresa (URL) nynějšího dokumentu.</dd></dl><h5 id="help_python_snippets_help"><a name="help_python_snippets_help"></a>Kousky v Pythonu</h5>
 <p>Kousky v Pythonu mohou číst a mají nastavit proměnnou <code>text</code>. Proměnná <code>text</code> obsahuje nyní vybraný text (což může být prázdný řetězec).</p>
 <p>Můžete nastavit <code>text</code> na řetězec nebo seznam řetězců.</p>
-<p>Další proměnné, na něž lze odkazovat:</p><dl><dt><code>state</code></dt><dd>Seznam řetězců popisující typ textu, na něm stojí ukazovátko.</dd><dt><code>cursor</code></dt><dd>Nynější QTextCursor dávající přístup k dokumentu. Nicméně neměňte dokument přes ukazovátko.</dd><dt><code>CURSOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, můžete tuto hodnotu použít pro určení místa, na něž bude ukazovátko textu umístěno po vložení kousku.</dd><dt><code>ANCHOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, lze tuto hodnotu použít společně s <code>CURSOR</code> pro výběr textu, když jsou vkládány části seznamu s řetězci.</dd><dt><code>main</code></dt><dd>When you define a function with this name, it is called without arguments, instead of inserting the text from the <code>text</code> variable. In this case you may alter the document through the <code>cursor</code>.</dd></dl><h4 id="help_pitch_help"><a name="help_pitch_help"></a>Zacházení s výškou tónu</h4>
+<p>Další proměnné, na něž lze odkazovat:</p><dl><dt><code>state</code></dt><dd>Seznam řetězců popisující typ textu, na něm stojí ukazovátko.</dd><dt><code>cursor</code></dt><dd>Nynější QTextCursor dávající přístup k dokumentu. Nicméně neměňte dokument přes ukazovátko.</dd><dt><code>CURSOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, můžete tuto hodnotu použít pro určení místa, na něž bude ukazovátko textu umístěno po vložení kousku.</dd><dt><code>ANCHOR</code></dt><dd>Při nastavení <code>text</code> na seznam namísto na řetězec, lze tuto hodnotu použít společně s <code>CURSOR</code> pro výběr textu, když jsou vkládány části seznamu s řetězci.</dd><dt><code>main</code></dt><dd>When you define a function with this name, it is called without arguments, instead of inserting the text from the <code>text</code> variable. In this case you may alter the document through the <code>cursor</code>.</dd></dl><h5 id="help_snippet_maintaining_library"><a name="help_snippet_maintaining_library"></a>Maintaining a library of snippets</h5>
+<p>To keep a certain group of snippets manageable as a snippet library, you can of course prefix the snippet titles with some sort of special name. But a smarter way is to use a snippet variable.</p>
+<p>It is suggested to use the "<code>set</code>" variable, and set it to the name of the library you want the snippet to belong to.</p>
+<p>Then in the snippet manager, you can easily select all the snippets belonging to the library by entering <code>:set name</code> in the snippet search bar, where "name" is the name you want to use. And then e.g. export the snippets to an XML file for sharing the snippets with others.</p>
+<h5 id="help_snippet_import_export_help"><a name="help_snippet_import_export_help"></a>Importing and exporting snippets</h5>
+<p>Snippets can be imported from and exported to XML files.</p>
+<p>To export snippets, either select them in the snippet manager, or filter the snippets using the search bar and select none, so that all the snippets visible in the snippet manager are exported. Export the snippets by selecting <em>Nabídka&#8594;Vyvést...</em>, and then choose a file name, preferably ending in <code>.xml</code>.</p>
+<p>To import snippets, select <em>Nabídka&#8594;Zavést...</em> and choose the file you want to import. You may also drop an XML file on the snippet manager. A dialog will be displayed where you can select which snippets you want to import.</p>
+<p>The XML format of the snippet library files is simple and documented inside the XML file.</p>
+<h4 id="help_pitch_help"><a name="help_pitch_help"></a>Zacházení s výškou tónu</h4>
 <p>
 Frescobaldi nabízí následující funkce pro zacházení s výškou tónu,
 všechny v nabídce <em>Nástroje&#8594;Výška tónu</em>:
@@ -482,8 +548,10 @@ Lze je zapsat  na prvních pěti nebo posledních pěti řádcích dokumentu.
 Pokud řádek obsahuje '<b><code>-*-</code></b>', Frescobaldi hledá zbytek
 řádků pro vymezení proměnných jako <code>name: value;</code>.
 </p>
-<p>Jsou uznávány následující proměnné:</p><dl><dt><code>mode</code>: <i>Režim</i><code>;</code></dt><dd>Vynutit režim, aby byl jedním z lilypond, html, texinfo, latex, docbook nebo scheme. Výchozí: automatické rozpoznání režimu.</dd>
+<p>Jsou uznávány následující proměnné:</p>
+<dl><dt><code>mode</code>: <i>Režim</i><code>;</code></dt><dd>Vynutit režim, aby byl jedním z lilypond, html, texinfo, latex, docbook nebo scheme. Výchozí: automatické rozpoznání režimu.</dd>
 <dt><code>master</code>: <i>Souborový název</i><code>;</code></dt><dd>Sestaví jiný dokument LilyPond namísto nynějšího.</dd>
+<dt><code>output</code>: <i>name</i><code>;</code></dt><dd>Looks for output documents (PDF, MIDI, etc.) starting with the specified name or comma-separated list of names. <a href="#help_docvar_output">More information.</a></dd>
 <dt><code>coding</code>: <i>Kódování</i><code>;</code></dt><dd>Použít jiné kódování než výchozí UTF-8.</dd>
 <dt><code>version</code>: <i>Verze</i><code>;</code></dt><dd>Nastavit verzi LilyPondu, která se bude používat. Lze ji používat pro dokumenty, které nejsou v LilyPondu.</dd>
 <dt><code>tab-width</code>: <i>Číslo</i><code>;</code></dt><dd>Šířka znaku pro zarážku; ve výchozím nastavení je to 8.</dd>
@@ -491,69 +559,97 @@ Pokud řádek obsahuje '<b><code>-*-</code></b>', Frescobaldi hledá zbytek
 <dt><code>document-tabs</code>: <i>yes/no</i><code>;</code></dt><dd>Zda používat zarážky někde jinde v dokumentu; ve výchozím nastavení <code>yes</code>.</dd>
 <dt><code>indent-width</code>: <i>Číslo</i><code>;</code></dt><dd>Počet mezer, který používá každá úroveň odsazení; ve výchozím nastavení 2.</dd>
 </dl>
-<p>Proměnné pro dokument můžete dát do poznámek.</p><h4 id="help_sessions"><a name="help_sessions"></a>Sessions</h4>
+<p>Proměnné pro dokument můžete dát do poznámek.</p>
+<h5 id="help_docvar_output"><a name="help_docvar_output"></a>The "<code>output</code>" document variable</h5>
+<p>Setting this variable suppresses the automatic output file name determination and makes Frescobaldi look for output documents (PDF, MIDI, etc.) with the specified basename, or comma-separated list of names.</p>
+<p>If a name ends with a directory separator, output files are looked for in the specified directory. </p>
+<p>All names are relative to the document's filename.</p>
+<p>For example:</p>
+<p><pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="font-weight: 600;">\version</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">2.14.2</span><span style="color: #c00000;">"</span>
+<span style="color: #808080; font-style: italic;">% -*- output: pdfs/;</span>
+<span style="font-weight: 600;">\book</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #0000c0; font-weight: 600;">\bookOutputName</span> <span style="color: #a04900;">#</span><span style="color: #a04900;">(</span><span style="color: #a04900;">string-append</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">pdfs/</span><span style="color: #c00000;">"</span> <span style="color: #a04900;">some-variable</span><span style="color: #a04900;">)</span>
+  <span style="font-weight: 600;">\score</span> <span style="font-weight: 600;">{</span>
+    <span style="color: #0000c0; font-weight: 600;">\relative</span> c' <span style="font-weight: 600;">{</span>
+      c d e f g
+    <span style="font-weight: 600;">}</span>
+  <span style="font-weight: 600;">}</span>
+<span style="font-weight: 600;">}</span></pre></p>
+<p>You can set this variable if the automatic output file name determination would be time-consuming (as Frescobaldi parses the document and all the documents it includes, searching for the LilyPond commands that specify the output name, such as <code>\bookOutputName</code>, etc); or when the automatic output file name determination does not work due to complicated LilyPond code.</p>
+<h4 id="help_sessions"><a name="help_sessions"></a>Sessions</h4>
 <p>A session is basically a list of open files. At any time you can choose <em>Sezení&#8594;Save</em> or <em>Sezení&#8594;New</em> and save the current list of open files to a named session.</p>
 <p>When you switch sessions, all current documents are closed first and then the documents of the other session are opened.</p>
 <p>Inside the session properties dialog, you can choose whether to always save the list of open documents to that session, or to only save on creation (or via <em>Sezení&#8594;Save</em>). This can be useful if you want to keep the list of documents in session the same, even if you open or close documents while working.</p>
-<p>You can also specify a default directory for the session.</p><p>Podívejte se také na: <a href="#help_preferences_general">Obecné volby</a></p>
+<p>You can also specify a default directory for the session.</p>
+<p>Podívejte se také na: <a href="#help_preferences_general">Obecné volby</a></p>
 <h3 id="help_preferences_dialog"><a name="help_preferences_dialog"></a>Nastavení</h3>
 <p>In the Preferences Dialog (under <em>Úpravy&#8594;Nastavení</em>) you can configure many aspects of Frescobaldi and LilyPond.</p>
 <h4 id="help_preferences_general"><a name="help_preferences_general"></a>Obecné volby</h4>
 <p>Under <em>Obecné volby</em>, you can choose in which language Frescobaldi's user interface is translated, which user interface style you want to use, and whether you want to use the built-in Tango iconset or to use the system-wide configured icon set.</p>
-
 <p>Language and style take effect immediately, but the new iconset is visible after Frescobaldi has been restarted.</p>
-
 <p>Under <em>Sezení, které se má nahrát, je-li Frescobaldi spuštěn bez argumentů</em> you can configure which session to load if Frescobaldi is started without a filename. You can choose whether to start with one empty document, with the last used session, or with a specific session. See also <a href="#help_sessions">Sessions</a>.</p>
-
 <p>Under <em>Při ukládání dokumentů</em>, you can choose what to do when a document is saved, such as remembering the cursor position and marked lines, or leaving a backup copy of the document (with a ~ appended). Also, you can specify a default folder in which you keep your LilyPond documents.</p>
 <h4 id="help_preferences_lilypond"><a name="help_preferences_lilypond"></a>Nastavení LilyPondu</h4>
 <p>Here you can configure how LilyPond is run when you engrave your document.</p>
-
 <p>If you have multiple versions of LilyPond installed you can specify them here, and configure Frescobaldi to automatically choose the right one, based on the version number that is set in the document (<a href="#help_preferences_lilypond_autoversion">more info</a>).</p>
-
 <p>You can also configure how LilyPond is run. See the tooltips of the settings for more information.</p>
-
 <p>Finally, you can specify a list of paths where the LilyPond <code>\include</code> command looks for files.</p>
 <h4 id="help_preferences_midi"><a name="help_preferences_midi"></a>Nastavení MIDI</h4>
 <p>Here you can configure Frescobaldi's MIDI settings.</p>
-
-<p>You can specify the MIDI port name to play to. If there are no port names visible in the drop-down box, it may be necessary to connect a hardware MIDI synthesizer to your computer, or to start a software synthesizer program such as TiMidity or Fluidsynth.On Linux, the synthesizer should be available as an ALSA MIDI device.</p>
-
+<p>You can specify the MIDI port name to play to. If there are no port names visible in the drop-down box, it may be necessary to connect a hardware MIDI synthesizer to your computer, or to start a software synthesizer program such as TiMidity or Fluidsynth. On Linux, the synthesizer should be available as an ALSA MIDI device.</p>
 <p>If you have a device with multiple ports, you can specify the first letters of the name, to have Frescobaldi automatically pick the first available one.</p>
-
 <p>And finally, when using a software synthesizer it is recommended to enable the option <em>Zavřít nepoužívaný výstup MIDI</em>.</p>
-
 <p>Je-li zaškrtnuto, Frescobaldi zavře přípojky pro výstupy MIDI, které se po jednu minutu nepoužívají.</p>
 <p>Toto může uvolnit systémové prostředky, které může používat softwarový syntetizátor MIDI, a tím ušetřit energie v baterii.</p>
 <p>Vedlejším účinkem je, že pokud pozastavíte soubor MIDI na delší dobu, nástroje jsou nastaveny znovu na výchozí klavír (nástroj 0). V tom případě přehrávání souboru od začátku nastaví nástroje znovu.</p>
 <h4 id="help_preferences_helpers"><a name="help_preferences_helpers"></a>Pomocné programy</h4>
 <p>In this page you can enter commands to open different file types. <code>$f</code> is replaced with the filename, <code>$u</code> with the URL. Leave a field empty to use the operating system default application.</p>
-
 <p>For the e-mail setting, the command should accept a <code>mailto:</code> url. For the command prompt, the command should open a console window. A <code>$f</code> value is replaced with the directory of the current document.</p>
 <h4 id="help_preferences_paths"><a name="help_preferences_paths"></a>Cesty</h4>
 <p>Here, directories can be added that contain <code>hyph_*.dic</code> files, where the <code>*</code> stands for different language codes.</p>
-
 <p>These hyphenation dictionaries are used by Frescobaldi to break lyrics text into syllabes.</p>
 <h4 id="help_preferences_documentation"><a name="help_preferences_documentation"></a>Dokumentace k LilyPondu</h4>
 <p>Zde můžete přidat místní cesty nebo adresy (URL) ukazující na dokumentaci k LilyPondu. Místní cesta by měla ukazovat na adresář, kde je buď adresář "Documentation", nebo celou cestu "share/doc/lilypond/html/offline-root".</p>
 <p>Pokud tyto nelze najít, dokumentace se hledá ve všech podadresářích zadané cesty, o jednu úroveň hlouběji. Tímto je možné dát více verzí dokumentace k LilyPondu do různých podadresářů a nechat Frescobaldi, aby je automaticky našel.</p><h4 id="help_preferences_shortcuts"><a name="help_preferences_shortcuts"></a>Klávesové zkratky</h4>
 <p>Here you can add keyboard shortcuts to all commands available. Also the <a href="#help_snippet_help">Kousky</a> or <a href="#help_quickinsert_help">Rychlé vložení</a> buttons that have keyboard shortcuts are listed here.</p>
-
 <p>To change a keyboard shortcut, highlight an action in the list and click the Edit button, or double-click an action. In the dialog that appears, you can enter up to four shortcuts for the action by clicking the button and typing the shortcut. </p>
-
 <p>You can define a new scheme by using the New button.</p>
 <h4 id="help_preferences_fontscolors"><a name="help_preferences_fontscolors"></a>Písma a barvy</h4>
 <p>Here you can set the editor font (a monospace font is recommended) and all colors.</p>
-
 <p>The first item lets you set the colors for the text editor backgroud, foreground, selection background, the current line, line markings, the paper color in the Music View, etcetera.</p>
-
 <p>The second item lets you set color and other attributes of the general highlighting styles, e.g. keyword, variable, value, comment, etcetera.</p>
-
 <p>The other items contain the types of text the syntax highlighter recognizes for every particular document type Frescobaldi supports. Some of these types inherit a general style. It is possible to set the attributes bold, italic, underline and the foreground, background and underline color.</p>
-
 <p>You can define a new scheme by using the New button.</p>
 <h4 id="help_preferences_tools"><a name="help_preferences_tools"></a>Nástroje</h4>
 <p>Here you can change the settings for various tools.</p>
+<h3 id="help_troubleshooting"><a name="help_troubleshooting"></a>Troubleshooting</h3>
+<p>Sometimes things don't go the way you would expect; this section may give some solutions.</p>
+<h4 id="help_ts_no_music_visible"><a name="help_ts_no_music_visible"></a>After engraving a score, the Music View does not show the music</h4>
+<ol><li><p>Does the <code>\score</code> block have a layout section?</p>
+<p>If a <code>\score</code> block has a <code>\midi</code> section but no <code>\layout</code> section, no PDF output is generated.</p>
+</li>
+<li><p>Do you use an exotic way to specify the output filename?</p>
+<p>Frescobaldi is able to determine the output file names by looking at the document's filename and the various LilyPond commands that specify the output filename or -suffix. Frescobaldi even searches <code>\include</code> files for commands like <code>\bookOutputName</code> and <code>\bookOutputSuffix</code>.</p>
+<p>But if you use more complicated Scheme code in your document to specify the output filenames, Frescobaldi may not be able to correctly determine those filenames.</p>
+<p>In that case you can override the base name(s) using the <a href="#help_docvar_output"><code>output</code></a> document variable.</p>
+</li>
+</ol>
+<p>Podívejte se také na: <a href="#help_document_variables">Proměnné pro dokument</a></p>
+<h4 id="help_ts_midi_generate"><a name="help_ts_midi_generate"></a>How to generate a MIDI file?</h4>
+<p>By default, LilyPond creates only a PDF file of the music. To create a MIDI file, you must wrap the music in a <code>\score</code> block and add a <code>\midi</code> block to it.</p>
+<p>For example:</p>
+<p><pre style="color: #000000; background: #fcfcfc; font-family: &quot;monospace&quot;; font-size: 10.0pt;"><span style="font-weight: 600;">\version</span> <span style="color: #c00000;">"</span><span style="color: #c00000;">2.14.2</span><span style="color: #c00000;">"</span>
+
+music = <span style="color: #0000c0; font-weight: 600;">\relative</span> c' <span style="font-weight: 600;">{</span>
+  c<span style="color: #008080;">4</span> d e f g<span style="color: #008080;">2</span>
+<span style="font-weight: 600;">}</span>
+
+<span style="font-weight: 600;">\score</span> <span style="font-weight: 600;">{</span>
+  <span style="color: #0000ff;">\music</span>
+  <span style="font-weight: 600;">\layout</span> <span style="font-weight: 600;">{</span><span style="font-weight: 600;">}</span>
+  <span style="font-weight: 600;">\midi</span> <span style="font-weight: 600;">{</span><span style="font-weight: 600;">}</span>
+<span style="font-weight: 600;">}</span></pre></p>
+<p>If you omit the <code>\layout</code> block, no PDF file will be generated, only a MIDI file.</p>
 <h3 id="help_about"><a name="help_about"></a>O Frescobaldi</h3>
 <p>
 Frescobaldi je pojmenován po
@@ -584,7 +680,8 @@ a je tu i poštovní seznam na
 <p>Russisch: Sergey Poltavski, Artem Zolochevskiy</p>
 <p>Spaans: Francisco Vila</p>
 <p>Tsjechisch: Pavel Fric</p>
-<p>Turks: Server ACİM</p><h4 id="help_contributing"><a name="help_contributing"></a>Příspěvky</h4>
+<p>Turks: Server ACİM</p>
+<h4 id="help_contributing"><a name="help_contributing"></a>Příspěvky</h4>
 <p>
 Frescobaldi je <a href="http://www.gnu.org/philosophy/free-sw.html">&#11008;projekt svobodného
 programu</a> pro vytvoření uživatelsky přátelského editoru notového zápisu hudby v LilyPond.
@@ -626,8 +723,25 @@ je cíleno na Vánoce 2011.
 </p>
 
 
+<hr />
+
+<h3 id="help_preferences_lilypond_autoversion"><a name="help_preferences_lilypond_autoversion"></a>Automaticky vybrat verzi LilyPondu z dokumentu.</h3>
+<p>Je-li povoleno toto nastavení, dokument se prohledává na příkaz LilyPondu <code>\version<code> nebo proměnnou dokumentu <code>version</code>.</p>
+<p>Příkaz pro verzi LilyPondu vypadá takto:</p>
+<pre>\version "2.14.0"</pre>
+<p>Proměnná dokumentu vypadá takto:</p>
+<pre>-*- version: 2.14.0;</pre>
+<p>někde (v části s poznámkami) na prvních pěti nebo posledních pěti řádcích dokumentu. Tímto způsobem se dá verze LilyPondu, která se má použít, taktéž zadat v dokumentech,které nejsou LilyPond, jako jsou HTML, LaTeX, atd.</p>
+<p>Pokud dokument stanoví verzi, je vybrána nejstarší vhodná verze LilyPondu. Jinak je zvolena výchozí verze.</p>
+<p>Podívejte se také na: <a href="#help_document_variables">Proměnné pro dokument</a></p>
+<h3 id="help_help_musicview_editinplace"><a name="help_help_musicview_editinplace"></a>Edit in Place</h3>
+<p>In this dialog you can edit one line of the text document.</p>
+<p>Click OK or press Ctrl+Return to place the modified text in the document.</p>
+<p>You can open the "Edit in Place" dialog by Shift-clicking a clickable object in the Music View or by right-clicking the object and selecting <em>Edit in Place</em>.</p>
+
+
 <address>
-<a href="uguide.html">English</a>, <a href="uguide.nl.html">Nederlands</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a> | Last Modified: 13 mrt 2012
+<a href="uguide.html">English</a>, <a href="uguide.nl.html">Nederlands</a>, <a href="uguide.es.html">Español</a>, <a href="uguide.fr.html">Français</a>, <a href="uguide.it.html">Italiano</a> | Last Modified: 01 mei 2012
 </address>
 
 </div>
