@@ -59,7 +59,7 @@ Installeer ook een exemplaar van <a href="http://lilypond.org/">LilyPond</a>.
 
 <p>
 Voor MS Windows is er een <a href="https://github.com/wbsoft/frescobaldi/releases">complete installer</a> die Frescobaldi en alle benodigde
-modules installeert (het "Frescobaldi.Setup.2.x.x.exe" bestand).
+modules installeert (het "Frescobaldi.Setup.x.y.z.exe" bestand).
 Het kan nodig zijn de 
 <a href="http://www.microsoft.com/download/en/details.aspx?id=29">Visual C++ 2008 runtime module</a>
 van Microsoft te installeren.
@@ -87,21 +87,21 @@ geïnstalleerd worden, zie onder.
 <h4>Van broncode installeren</h4>
 
 <p>
-U kunt Frescobaldi 2 downloaden van de
+U kunt Frescobaldi downloaden van de
 <a href="https://github.com/wbsoft/frescobaldi/releases">GitHub project releases pagina.</a>
 </p>
 
 <p>
 Voor het installeren van broncode is er een installeerbare Python-module
-(het "frescobaldi-2.x.x.tar.gz" bestand).
+(het "frescobaldi-x.y.z.tar.gz" bestand).
 Deze kan op alle besturingssystemen worden gebruikt.
 Pak hem uit en lees het INSTALL bestand voor verdere informatie.
 </p>
 
 <p>
-Frescobaldi heeft de
+<strong>Frescobaldi 2</strong> heeft de
 <a href="http://www.python.org/">Python-interpreter</a>
-versie 2.7 nodig, de
+versie 2.7+ nodig (niet 2.7.0) of hoger (Python 3.2+ werkt ook!), de
 <a href="http://www.riverbankcomputing.co.uk/">PyQt4-bibliotheek</a> en
 het <a href="https://pypi.python.org/pypi/python-ly">python-ly</a> pakket.
 Optioneel, maar sterk aanbevolen, zijn
@@ -115,15 +115,42 @@ Installatievolgorde:
 </p>
 
 <ul>
-<li>Installeer <a href="http://www.python.org/download/">Python 2.7</a> (niet 2.7.0)</li>
+<li>Installeer <a href="http://www.python.org/download/">Python</a> 2.7+ (niet 2.7.0)</li>
 <li>Installeer <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4</a>, voor dezelfde Python-versie uiteraard.</li>
 <li>Installeer <a href="https://pypi.python.org/pypi/python-ly">python-ly</a></li>
 <li>Installeer Frescobaldi (werkt dan, maar nog zonder PDF en MIDI-ondersteuning)</li>
 <li>Installeer <a href="https://github.com/wbsoft/python-poppler-qt4">Python-Poppler-Qt</a></li>
-<li>Installeer <a href="http://portmedia.sf.net/">Python-PortMidi</a>.
+<li>Installeer <a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>.
 Mocht deze lastig te installeren zijn, dan kan ook
 <a href="http://www.pygame.org/download.shtml">Pygame</a> worden geïnstalleerd, deze bevat
 ook de Python-PortMidi bibliotheek.
+</li>
+</ul>
+
+<p>
+<strong>Frescobaldi 3</strong> <a href="http://www.python.org/">Python</a>
+3.4 of hoger nodig,
+<a href="http://www.riverbankcomputing.co.uk/">PyQt5</a> en
+<a href="https://github.com/wbsoft/python-poppler-qt5">Python-Poppler-Qt5</a>.
+En uiteraard ook <a href="https://pypi.python.org/pypi/python-ly">python-ly</a>
+en <a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>,
+geïnstalleerd met Python3.
+</p>
+
+<p>
+Installatievolgorde:
+</p>
+
+<ul>
+<li>Installeer <a href="http://www.python.org/download/">Python</a> 3.4 of hoger</li>
+<li>Installeer <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt5</a>, voor dezelfde Python-versie uiteraard.</li>
+<li>Installeer <a href="https://pypi.python.org/pypi/python-ly">python-ly</a></li>
+<li>Installeer Frescobaldi (werkt dan, maar nog zonder PDF en MIDI-ondersteuning)</li>
+<li>Installeer <a href="https://github.com/wbsoft/python-poppler-qt5">Python-Poppler-Qt5</a></li>
+<li>Installeer <a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>.
+Mocht deze lastig te installeren zijn, dan kan ook
+<a href="http://www.pygame.org/download.shtml">Pygame</a> worden geïnstalleerd, deze bevat
+ook de Python-PortMidi bibliotheek. Gebruik de goede Python versie!
 </li>
 </ul>
 

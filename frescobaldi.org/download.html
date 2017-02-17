@@ -53,7 +53,7 @@ Install a copy of <a href="http://lilypond.org/">LilyPond</a> as well.
 
 <p>
 For MS Windows a <a href="https://github.com/wbsoft/frescobaldi/releases">full installer</a> is provided, containing all components needed
-by Frescobaldi (the "Frescobaldi.Setup.2.x.x.exe" file).
+by Frescobaldi (the "Frescobaldi.Setup.x.y.z.exe" file).
 It might be necessary to install the
 <a href="http://www.microsoft.com/download/en/details.aspx?id=29">Visual C++ 2008 runtime module</a>
 from Microsoft.
@@ -81,26 +81,26 @@ from source, see below.
 <h4>Installing from source</h4>
 
 <p>
-You can download Frescobaldi 2 from the
+You can download Frescobaldi from the
 <a href="https://github.com/wbsoft/frescobaldi/releases">GitHub project releases page</a>.
 </p>
 
 <p>
-An installable Python module is provided (the "frescobaldi-2.x.x.tar.gz" file).
+An installable Python module is provided (the "frescobaldi-x.y.z.tar.gz" file).
 This can be used on all operating systems.
 Unpack and then read the INSTALL file about installation options.
 </p>
 
 <p>
-Frescobaldi needs the
+<strong>Frescobaldi 2</strong> needs the
 <a href="http://www.python.org/">Python interpreter</a>
-version 2.7, the
+version 2.7 or higher (3.2+ is also supported), the
 <a href="http://www.riverbankcomputing.co.uk/">PyQt4 library</a>
 and the <a href="https://pypi.python.org/pypi/python-ly">python-ly</a> package.
 Optional but strongly recommended are
 <a href="https://github.com/wbsoft/python-poppler-qt4">Python-Poppler-Qt4</a>
 for viewing PDF documents and
-<a href="http://portmedia.sf.net/">Python-PortMidi</a>
+<a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>
 for MIDI playback.
 </p>
 
@@ -114,9 +114,36 @@ Installation order:
 <li>Install <a href="https://pypi.python.org/pypi/python-ly">python-ly</a></a>
 <li>Install Frescobaldi (will work, but without PDF and MIDI support)</li>
 <li>Install <a href="https://github.com/wbsoft/python-poppler-qt4">Python-Poppler-Qt</a></li>
-<li>Install <a href="http://portmedia.sf.net/">Python-PortMidi</a>.
+<li>Install <a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>.
 If this one is difficult to install, you can also use
 <a href="http://www.pygame.org/download.shtml">Pygame</a>, which too contains the Python-PortMidi library.
+</li>
+</ul>
+
+<p>
+<strong>Frescobaldi 3</strong> needs <a href="http://www.python.org/">Python</a>
+version 3.4+,
+<a href="http://www.riverbankcomputing.co.uk/">PyQt5</a> and
+<a href="https://github.com/wbsoft/python-poppler-qt5">Python-Poppler-Qt5</a>.
+And of course <a href="https://pypi.python.org/pypi/python-ly">python-ly</a> and
+<a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>,
+installed for the same Python version.
+</p>
+
+<p>
+Installation order:
+</p>
+
+<ul>
+<li>Install <a href="http://www.python.org/download/">Python 3.4 or higher</a></li>
+<li>Install <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt5</a>, using the same Python version of course.</li>
+<li>Install <a href="https://pypi.python.org/pypi/python-ly">python-ly</a></a>
+<li>Install Frescobaldi (will work, but without PDF and MIDI support)</li>
+<li>Install <a href="https://github.com/wbsoft/python-poppler-qt5">Python-Poppler-Qt5</a></li>
+<li>Install <a href="http://portmedia.sourceforge.net/portmidi/">Python-PortMidi</a>.
+If this one is difficult to install, you can also use
+<a href="http://www.pygame.org/download.shtml">Pygame</a>, which too contains the Python-PortMidi library.
+Use the correct Python version!
 </li>
 </ul>
 
